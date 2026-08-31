@@ -1,0 +1,1837 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input{preamble}
+\end_preamble
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Hajlékony útpályaszerkezetek méretezése
+\end_layout
+
+\begin_layout Section
+Bevezetés
+\end_layout
+
+\begin_layout Standard
+Érdemes rögtön a dolgozat elején egy távlati képet alkotnunk a hajlékony
+ útpályaszerkezetek méretezési folyamatról, mielőtt rátérnénk a méretezését
+ közvetlenül érintő legfontosabb kérdések tárgyalására.
+ Remélhetőleg ez segíteni fogja a későbbiekben az egyes fejezetek megértését,
+ és megmagyarázza az eltérő tudományterületek eredményeink összekapcsolódását.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "haas2007mechanisticempirical"
+literal "false"
+
+\end_inset
+
+ szerint az útépítések modern időszaka, és ezzel az útgazdálkodás új kora
+ a II.
+ világháborút követően, az 1940-es évek végén kezdődött.
+ Az 1958–61-ben lezajlott AASHO-útkísérletek (American Association of State
+ Highway Officials) számos tudományos eredményt, és az útgazdálkodáshoz
+ rengeteg alapadatot szolgáltattak 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pethho2008ahh"
+literal "true"
+
+\end_inset
+
+.
+ Ilyen volt többek között a szolgáltatási szint, a hosszirányú egyenetlenség,
+ vagy az egységtengely koncepciója, valamint az anyagi és a szerkezeti tulajdons
+ágok leírása.
+ Az útügyi szervezetek felismerték annak a szükségességét, hogy a pályaszerkezet
+ek tervezésének, kivitelezésének és fenntartásának tevékenységeit egymással
+ összefüggésben kezeljék 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gaspar2003utgazdalkodas"
+literal "false"
+
+\end_inset
+
+.
+ Ebben az időszakban a szerkezetek teherbírását a könnyen mérhető és ellenőrizhe
+tő behajlásokkal minősítették, és gyakran ezt választották méretezési kritériumn
+ak.
+\end_layout
+
+\begin_layout Standard
+A nemzetközi útügyi gyakorlatban bekövetkező változások nyomán az 1980-as
+ évek végére szinte alig maradt olyan fejlett ország, amely ne tért volna
+ át a mechanikai alapú méretezésre, így a hazai szabályozásunk is jelentős
+ átalakítások elé nézett.
+ A behajlási kritérium korlátozottsága a burkolatmegerősítések méretezésénél
+ fokozatosan bekerült a köztudatba, majd az aszfaltmechanika fejlődésével
+ megteremtődött annak a lehetősége, hogy a megengedett behajláson alapuló
+ méretezést felváltsa a fáradási korlátozáson alapuló módszer.
+ A szerkezet erőjátékán alapuló mechanikai-empirikus (M-E) méretezési eljárás
+ az útpályaszerkezetet leggyakrabban lineárisan rugalmas, homogén és izotrop
+ végtelen féltéren nyugvó, többrétegű hajlékony rétegrendszerrel modellezi.
+ A méretezési rendszer annak érdekében, hogy a rétegek feszültség- és alakváltoz
+ás-viszonyait a lehető legpontosabban megadja, számos alrendszer eredményét
+ feldolgozza és szintetizálja.
+ Ezek közül az útpályaszerkezetek viselkedését és élettartamát leginkább
+ meghatározóak a következők:
+\end_layout
+
+\begin_layout Enumerate
+az éghajlat és az út teljes környezete;
+\end_layout
+
+\begin_layout Enumerate
+a forgalom nagysága és fejlődése az út élettartama alatt;
+\end_layout
+
+\begin_layout Enumerate
+az útpályaszerkezet felépítése és az egyes rétegek anyagjellemzői.
+\end_layout
+
+\begin_layout Standard
+A felsoroltak alapján az útpályaszerkezetek méretezése 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "boromisza1997aszfaltburkolatu"
+literal "true"
+
+\end_inset
+
+ szerint a következő fő munkarészekre bontható:
+\end_layout
+
+\begin_layout Itemize
+forgalomelemzés,
+\end_layout
+
+\begin_layout Itemize
+környezeti tényezők feltárása,
+\end_layout
+
+\begin_layout Itemize
+vastagsági méretezés,
+\end_layout
+
+\begin_layout Itemize
+anyagválasztás és
+\end_layout
+
+\begin_layout Itemize
+költségszámítás.
+\end_layout
+
+\begin_layout Standard
+Az egyes munkarészek között az információáramlást 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:flow-of-info-pavement-design}.
+\end_layout
+
+\end_inset
+
+ ábra szemlélteti.
+\end_layout
+
+\begin_layout Standard
+A forgalomelemzés célja, hogy a vastagsági méretezés számára megadja a számított
+ vagy becsült nehéz forgalom nagyságát, az ún.
+ tervezési forgalmat.
+ Ez az alapinformáció nélkülözhetetlen és nagy jelentőséggel bír a méretezés
+ folyamatában, mivel a szerkezet teljesítményét elsősorban ez alapján ítéljük
+ meg.
+ A forgalom nagysága és fejlődése mellett ismernünk kell még a kerékterhelés
+ nagyságát, a gumiabroncs belső légnyomását, a tengelyek és kerekek elrendezését
+, a járművek sebességét és a forgalom megoszlását (a kerékvándorlást) az
+ út keresztmetszetében.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/general/flow_of_information_in_pavement_design.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Információáramlás az útpályaszerkezet-méretezés egyes fő részei között 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lea2010theeffect"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:flow-of-info-pavement-design"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A környezeti tényezők közül a legfontosabb a talajfajták feltárása, a felszíni
+ és felszín alatti vizek helyzete, a csapadék, a hőmérséklet és a fagy.
+ A légköri csapadék – tágabban értelmezve a víz – az útpályaszerkezet szemcsés
+ rétegeinek és a földműnek az elvárt teljesítményét befolyásolja, mivel
+ azok csak meghatározott tartományba lévő víztartalom mellett tudnak jó
+ teherbírást mutatni 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gaspar2017akozlekedesi"
+literal "false"
+
+\end_inset
+
+.
+ A hőmérséklet elsősorban az aszfaltrétegek viszkózus tulajdonságaival hozható
+ kapcsolatba, mivel nagymértékben meghatározza azok merevségét.
+ A környezeti tényezőket az ún.
+ talajvizsgálati jelentés foglalja össze, és tesz javaslatot a tervezőnek
+ a szükséges beavatkozásokra.
+ Ez alapján tudjuk megítélni a földmű elérhető legmagasabb, de egyben tartósan
+ biztosítható teherbírási modulus értékét és az alkalmazható talajstabilizációs
+ eljárásokat.
+\end_layout
+
+\begin_layout Standard
+A vastagsági méretezés a fenti alrendszerek figyelembevételével történik.
+ A mechanikai-empirikus méretezési eljárás következő fő lépése, hogy meghatározz
+uk a kerékterhelés hatására kialakuló reakciókat.
+ A számítás 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "burmister1943thetheory"
+literal "false"
+
+\end_inset
+
+ munkáján, a rugalmas rétegek parciális differenciálegyenletein alapul,
+ és a lemezelmélettel ellentétben lehetővé teszi a teljes feszültségállapot
+ meghatározását az útpályaszerkezet bármely pontjában.
+ Mivel az egyenletek megoldása igen nagy számítási munkával jár, ma már
+ kizárólag számítógépes programokat alkalmazunk erre a feladatra (ALIZE,
+ BISAR, WESLEA).
+ Közös jellemzőjük, hogy a számításokhoz előzetesen rögzíteni kell a pályaszerke
+zeti rétegek számát, az egyes rétegek vastagságát, a rétegek rugalmassági
+ modulusát és Poisson-féle tényezőjét, valamint a rétegek együttdolgozásának
+ mértékét (pl.
+ teljes tapadás vagy elcsúszás).
+ Tetszőleges terhelési adatokat inputként megadva ezt követően lehetséges
+ az útpályaszerkezet bármely pontjában az ébredő feszültségek, illetve fajlagos
+ alakváltozások meghatározása.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/general/me_empirical_part.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az útpályaszerkezet időben változó teljesítménye, amihez a mechanikai válaszokat
+ kapcsoljuk 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "haas2007mechanisticempirical"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:me-empirical-part"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az egzakt mechanikai számítások ugyan képesek a mértékadó feszültségek és
+ alakváltozások pontos meghatározására, de a méretezés végrehajtásához szükséges
+ határ-igénybevételek felvételére már nem tudnak támpontot adni.
+ Ezért egyelőre abból kell kiindulnunk, hogy az útpályaszerkezet állapota
+ a rajta folyó forgalom miatt az idő előrehaladásával okszerűen leromlik.
+ A pályaszerkezet fáradását a következő tipikus kárlánc jellemzi: alakváltozás
+ → repedés → mozaikos törés → kátyú 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "boromisza1958hajlekony"
+literal "false"
+
+\end_inset
+
+.
+ A keresett határigénybevételeket ezért a forgalom függvényében laboratóriumban
+ vagy kísérleti útszakaszokon végzett hosszú távú megfigyelések alapján
+ felállított empirikus teljesítményegyenletekkel, ún.
+ leromlási modellekkel vesszük számításba (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:me-empirical-part"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A mértékadó és a határ-igénybevételekkel együtt már megjósolható az útpályaszer
+kezet élettartama a fáradási repedések és a nyomvályúképződés szempontjából.
+ A pályaszerkezet méretezésekor a leromlási folyamatnak csupán az első két
+ tagját, az alakváltozás → repedés folyamatot tudjuk figyelembe venni, a
+ későbbi kárképeket egyelőre a fenntartás kérdéskörébe utaljuk.
+ Ugyanilyen folyamatot a plasztikus alakváltozásokra, vagy a termikus húzó-igény
+bevételekből kialakuló repedésekre is felírhatunk 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pethho2008ahh"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A mechanikai-empirikus (M-E) méretezési eljárás tehát a szerkezetben igénybevéte
+lt okozó fizikai hatásokat összekapcsolja a tényelegesen megfigyelt leromlási
+ képpel, és erre a célra olyan kalibrált összefüggéseket alkalmaz, amelyeket
+ a gyakorlat és a tapasztalat már visszaigazolt.
+\end_layout
+
+\begin_layout Standard
+Az útépítési anyagok megválasztása nagy felelősséggel bíró munkarész, mivel
+ a méretezési folyamatnak ebben a szakaszában hozott döntéseink alapvetően
+ befolyásolják az építési költségeket.
+ Az útpályaszerkezet felépítésekor megvizsgáljuk, hogy a rendelkezésre álló
+ különböző anyagokból létrehozható-e műszakilag egyenértékű szerkezet, figyelemb
+e véve az eszközállomány és a technológia által szabott korlátokat.
+ Természetesen a kiválasztott anyagok mindegyikének alkalmasnak kell lennie
+ arra az igénybevételre, amelyet a forgalmi terhelés kelt.
+\end_layout
+
+\begin_layout Standard
+Végül fontos kiemelnünk, hogy az útpályaszerkezetet igyekszünk mindig úgy
+ felépíteni, hogy arra az út élettartama alatt – ami nem azonos a pályaszerkezet
+ élettartamával – a legkisebb költségeket kelljen fordítanunk.
+ Ehhez adott forgalmi igénybevétel mellett megkeressük azt a megoldást,
+ amelynél az építési, útfenntartási és forgalmi költségek összege minimumot
+ ad 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kosztka2009erdeszeti"
+literal "false"
+
+\end_inset
+
+.
+ Az útpályaszerkezetek méretezése tehát egy olyan összetett műszaki és közgazdas
+ági feladat, amit csak hosszú távú szemlélettel lehet jól elvégezni.
+\end_layout
+
+\begin_layout Section
+Az M-E méretezési módszer bemutatása
+\end_layout
+
+\begin_layout Standard
+A mechanikai-empirikus (M-E) útpályaszerkezet méretezés elve nagyon egyszerű,
+ megegyezik bármely más tartószerkezet méretezési gyakorlatával.
+ A külső kerékterhelés következtében ébredő kritikus igénybevételeket összevetjü
+k azokkal a határ-igénybevételekkel, amelyeket még a rétegek az anyagi tulajdons
+ágaikból adódóan elviselni képesek.
+ Ez a gondolatmenet jól megfelel az általános építőmérnöki gyakorlat acél-
+ és vasbeton szerkezeteknél megszokott méretezési gondolatmenetének, ugyanakkor
+ útpályaszerkezeteknél a valóságos anyag viselkedése és a rugalmasságtani
+ modell erősen eltér egymástól.
+ A határ-igénybevételeket a forgalom függvényében legtöbbször laboratóriumban
+ vagy kísérleti útszakaszokon végzett hosszú távú megfigyelések alapján
+ felállított empirikus teljesítményegyenletekkel, ún.
+ leromlási modellekkel vesszük számításba.
+ Főleg ez az oka, hogy a mechanikai alapon álló módszerek is sok empirikus
+ részletet tartalmaznak, és így szemiempirikusnak vagy mechanikai-empirikusnak
+ tekinthetők.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/general/me_pavement_design_flowchart.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az M-E méretezési rendszer folyamatábrája 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "monismith2004evolution,pereira2017mainflexible"
+literal "false"
+
+\end_inset
+
+ munkája alapján szerkesztve
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:me-pave-design-flowchart"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A mechanikai-empirikus (M-E) útpályaszerkezet-méretezés általános munkamenete
+ a következőképpen foglalható össze 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nemesdy1977azutpalyaszerkezetek"
+literal "true"
+
+\end_inset
+
+ szerint:
+\end_layout
+
+\begin_layout Enumerate
+Meghatározandók a legfontosabb kiindulási adatok:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+a tervezési időtartam (az útpályaszerkezet élettartama),
+\end_layout
+
+\begin_layout Itemize
+a tervezési forgalomnagyság (az élettartam alatt lefutó nehéz teherjárművek
+ egységtengelyekre átszámított áthaladási száma),
+\end_layout
+
+\begin_layout Itemize
+a tervezési földműteherbírás a talajvizsgálati jelentés alapján,
+\end_layout
+
+\begin_layout Itemize
+a tervezési klimatikus jellemzők, pl.
+ a hőmérséklet és a csapadék átlagos értékeinek feltárása az anyagjellemzők
+ reális megválasztásához.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Előzetes útpályaszerkezet összeállítás az adott forgalomnak és földműteherbírásn
+ak megfelelően.
+\end_layout
+
+\begin_layout Enumerate
+A rugalmasságtan alapján kiszámítjuk a kerékterhelés hatására a többrétegű
+ rendszerben ébredő kritikus feszültségeket, alakváltozásokat és elmozdulásokat.
+\end_layout
+
+\begin_layout Enumerate
+Ellenőrzés határ-igénybevételekkel az egyes méretezési kritériumok szerint.
+ A határ-igénybevételek számszerű nagysága anyagfajtánként külön-külön vizsgálva
+ általában az egység-tengelyáthaladási számnak függvénye.
+\end_layout
+
+\begin_layout Enumerate
+Az útépítési technológia alapján a szerkezeti adatok véglegesítése.
+\end_layout
+
+\begin_layout Standard
+Az M-E méretezési rendszer munkamenetének lépéseit grafikusan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:me-pave-design-flowchart}.
+\end_layout
+
+\end_inset
+
+ folyamatábra mutatja be, a következőkben pedig ezeket a lépéseket fogjuk
+ részletesen megvizsgálni és végigkövetni.
+\end_layout
+
+\begin_layout Subsection
+Kerékterhelés
+\end_layout
+
+\begin_layout Standard
+Az utak pályaszerkezetét a nehéz szállítójárművek gumiabroncsainak közvetlen
+ 
+\begin_inset Formula $q$
+\end_inset
+
+ kontakt nyomása terheli.
+ Abban az esetben, ha egy ikerabroncs két ellipszis alakú abroncslenyomatát
+ egy körrel helyettesítjük, akkor felírható az 
+\begin_inset Formula $F$
+\end_inset
+
+ kerékterhelés az egyenértékű 
+\begin_inset Formula $A$
+\end_inset
+
+ körfelülettel:
+\begin_inset Formula 
+\begin{equation}
+F=Aq=a^{2}\pi q
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Magyarországon a 100 kN-os egységtengely-terhelésnek 
+\begin_inset Formula $F\textrm{=}\unit[50]{kN}$
+\end_inset
+
+ terhelőerő felel meg kerekenként, így a várható maximális kör alakú terhelés
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ sugara:
+\begin_inset Formula 
+\begin{equation}
+a=\sqrt{\frac{F}{\pi q}}\longrightarrow a=\unit[150\,]{mm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A kísérletek szerint az átadódó nyomóerő eloszlása a kerékabroncs fajtájától
+ erősen függ, erről bővebben 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{sec:tire-pave-contact}
+\end_layout
+
+\end_inset
+
+ fejezetben lesz szó.
+\end_layout
+
+\begin_layout Subsection
+Forgalmi terhelés
+\end_layout
+
+\begin_layout Standard
+A méretezés szempontjából terhelésnek az úton haladó nehéz járművek által
+ okozott igénybevételeket nevezzük.
+ A forgalomból származó hatásokat a tervezési élettartam alatt áthaladó
+ forgalomnagyság alapján határozzuk meg.
+ Mivel a különböző járműtípusok által keltett terhelések jelentősen eltérnek,
+ ezért a forgalmat méretezési egységtengely-áthaladásban szükséges kifejezni,
+ hogy a pályaszerkezetre gyakorolt hatásuk összemérhető legyen.
+ A méretezési egységtengely az útpályaszerkezetek vastagsági méretezésére
+ alkalmasan megválasztott nehéz tengelysúly.
+ Hazánkban, több európai országhoz hasonlóan az egységtengely terhelés 100
+\begin_inset space \space{}
+\end_inset
+
+kN.
+\end_layout
+
+\begin_layout Standard
+A tervezési forgalom meghatározható több módszer szerint is, mint pl.
+ összevont vagy részletes járműosztályok, esetleg tengelysúlyok alapján.
+ A hazai gyakorlat elsősorban az első – azaz az összevont járműosztályok
+ alapján történő – számítást használja.
+ Mivel a tervezési forgalom a vastagsági méretezés szempontjából alapadatnak
+ számít, ezért meghatározásának részleteitől most eltekintünk.
+\end_layout
+
+\begin_layout Subsection
+Szerkezeti adatok
+\end_layout
+
+\begin_layout Standard
+A valóságos többrétegű útpályaszerkezetet – a hasonló tulajdonságú rétegek
+ összevonása után – három-, négy- vagy ötrétegű rugalmas rendszerrel helyettesít
+jük, és a választott rétegek anyagának megfelelően felvesszük a mértékadó
+ időszakra vagy hőmérsékletre érvényes 
+\begin_inset Formula $E$
+\end_inset
+
+ rugalmassági modulusokat, valamint 
+\begin_inset Formula $\mu$
+\end_inset
+
+ Poisson-tényezőket.
+ A klasszikus útpályaszerkezet-méretezés szabálya szerint a rétegmerevség
+ felülről lefelé csökken, amit növekvő rétegvastagsággal ellensúlyozunk.
+ A rétegfajták kiválasztásakor elsősorban a műszaki előírásokra és a már
+ bevált szerkezetek ismeretére tudunk támaszkodni.
+\end_layout
+
+\begin_layout Standard
+A rétegek merevsége és geometriai vastagságán túl, még ismernünk kell a
+ réteghatárok jellegét is, ahol két határesetet különböztetünk meg:
+\end_layout
+
+\begin_layout Itemize
+a rétegek tökéletesen tapadnak egymáshoz, vagy
+\end_layout
+
+\begin_layout Itemize
+a rétegek közötti érintkezési felület teljesen súrlódásmentes, azaz a rétegek
+ elcsúsznak egymáson.
+\end_layout
+
+\begin_layout Standard
+Hajlékony útpályaszerkezetek méretezésénél a réteghatárok viselkedésének
+ helyes felvétele már kifejezetten technológiai tapasztalatokat is megkövetel
+ a tervezőtől, így pl.
+ egy aszfaltbeton réteg és egy kötőanyag nélküli szemcsés alapréteg kapcsolatát
+ kizárólag a súrlódás biztosítja, amit általában el szoktunk hanyagolni.
+ Fontos végül megjegyeznünk, hogy a réteghatárok jellege a számított igénybevéte
+lek nagyságára nagy hatással van.
+ Ha pl.
+ a szerkezetet felépítő rétegek között az együttdolgozás megvalósul, vagyis
+ a rétegek nem csúsznak el a határfelületen, úgy a pályaszerkezet igénybevételei
+ (ugyanazon teher hatására) jóval kisebbek lesznek.
+\end_layout
+
+\begin_layout Subsection
+Igénybevételek számítása
+\end_layout
+
+\begin_layout Standard
+A szerkezeti adatok és a külső kerékterhelés felvétele után lehetővé válik
+ a pályaszerkezet egy tetszőleges pontjában ébredő feszültségek, fajlagos
+ alakváltozások és elmozdulások számítása.
+ A méretezési feladat megoldásánál rendszerint megelégszünk azzal, hogy
+ csak a terhelés tengelyében a 
+\emph on
+kritikus helyeken
+\emph default
+ ismerjük ezeket az igénybevételeket, mivel ezek lesznek mértékadók.
+\end_layout
+
+\begin_layout Standard
+A mértékadó igénybevételek helye a kohézióval rendelkező szerkezeti anyagok
+ esetében a terhelés tengelyében a réteg alsó szála, a kohézióval nem rendelkező
+ szerkezeti anyagok esetében (szemcsés rétegek és földmű) a réteg teteje.
+ A korszerű mechanikai alapú pályaszerkezet-méretezési eljárások – az adott
+ anyag fáradási tulajdonságai alapján – a következő igénybevételeket számítják
+ a rétegekben:
+\end_layout
+
+\begin_layout Itemize
+aszfaltrétegek alsó szálában ébredő vízszintes 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+ fajlagos megnyúlást,
+\end_layout
+
+\begin_layout Itemize
+hidraulikusan kötött rétegek alsó szálában keletkező 
+\begin_inset Formula $\sigma_{t}$
+\end_inset
+
+ húzófeszültséget,
+\end_layout
+
+\begin_layout Itemize
+szemcsés rétegek, illetve a földmű esetén a réteg(ek) felszínén fellépő
+ függőleges 
+\begin_inset Formula $\varepsilon_{v}$
+\end_inset
+
+ fajlagos összenyomódást.
+\end_layout
+
+\begin_layout Standard
+Aszfaltrétegeknél a megnyúlás, mint igénybevétel használatát az indokolja,
+ hogy a nem rugalmas – azaz a Hooke-törvényt nem követő – anyagok esetében
+ a feszültség a relaxáció miatt időben változik, míg a megnyúlás változatlan
+ marad.
+\end_layout
+
+\begin_layout Subsection
+Méretezési kritériumok
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:design-criterions"
+
+\end_inset
+
+A hajlékony útpályaszerkezetek háromrétegű modellje már alkalmas arra, hogy
+ a mechanika méretezés gyakorlatában legtöbbször előforduló ún.
+ 
+\emph on
+méretezési kritériumokat
+\emph default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:pavement_design_criteria}.
+\end_layout
+
+\end_inset
+
+ ábra alapján felsoroljuk:
+\end_layout
+
+\begin_layout Itemize
+lehajlási (teherbírási),
+\end_layout
+
+\begin_layout Itemize
+fáradási (hajlítóhúzási),
+\end_layout
+
+\begin_layout Itemize
+keréknyom-képződési,
+\end_layout
+
+\begin_layout Itemize
+altalaj-összenyomódási,
+\end_layout
+
+\begin_layout Itemize
+altalajtörési kritérium.
+\end_layout
+
+\begin_layout Standard
+A felsoroltak közül az első kritérium tipikusan empirikus jellegű, a maradék
+ négy feltételei pedig már részben laboratóriumi kísérletekkel is megállapítható
+k.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/general/pavement_design_criteria.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Útpályaszerkezet-méretezési kritériumok
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pavement_design_criteria"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+lehajlási kritérium
+\series default
+ jellemzően az empirikus modellek elsődleges méretezési kritériuma.
+ Használatának alapját az 1950-es és 1960-as években elvégzett nagyléptékű
+ útkísérletek eredményei adják.
+ Statisztikai összefüggésekkel kimutatható, hogy a teljes rendszer teher
+ alatti lehajlása egyértelműen előrevetíti azt az 
+\begin_inset Formula $N$
+\end_inset
+
+ tengelyismétlődési számot, amit a pályaszerkezet élettartama alatt nagyobb
+ károsodás nélkül még el tud viselni.
+ A méretezett pályaszerkezet maximális lehajlásának tehát kisebbnek kell
+ lennie, mint amit az élettartam alatt jelentkező nehéz teherforgalom megenged.
+ A lehajlási kritérium a teljes útpályaszerkezetet egyben jellemzi, nem
+ lehet vele az egyes rétegek teljesítményére külön-külön következtetni.
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+fáradási kritérium 
+\series default
+más alapon közelíti meg a pályaszerkezet élettartamát.
+ Jellemzően a vizsgált anyag alsó szálában fellépő 
+\begin_inset Formula $\sigma_{t}$
+\end_inset
+
+ húzófeszültségek vagy 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+ fajlagos megnyúlások és laboratóriumi fáradási görbék együttes felhasználásával
+ számítjuk a tönkremenetelhez szükséges ismétlődési számot.
+ A kritérium főleg kötött, kohézióval rendelkező útépítési anyagoknál (pl.
+ aszfaltbeton, hidraulikus kötésű cementstabilizáció vagy soványbeton alap)
+ alkalmazható.
+ Hajlékony útpályaszerkezeteknél az aszfaltrétegek alján ébredő 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+ fajlagos húzási nyúlásoknak többféle hőmérsékletnél sem szabad nagyobbnak
+ lennie, mint amit a fáradási görbe a tervezési forgalom alapján megenged.
+ Ez az egyik legfontosabb méretezési kritérium, hiszen a fáradási repedések
+ megjelenése után az útpályaszerkezet rohamosan leromlik.
+ A fáradási kritérium rávilágít arra is, hogy egy adott anyagot nem minősíthetün
+k csak annak rugalmassági modulusa alapján, mindig ismernünk kell hozzá
+ a fáradási tulajdonságokat is.
+\end_layout
+
+\begin_layout Standard
+Az 
+\series bold
+altalaj-összenyomódási kritérium
+\series default
+ talajok és szemcsés anyagok esetében egyaránt jól alkalmazható.
+ A földmű kifáradásáról akkor beszélünk, ha a járműterhelésnek a pályaszerkezet
+ által lecsökkentett hatása még olyan magas marad, hogy az a talaj maradó
+ deformációját és ezzel a pályaszerkezet nyomvályúsodását okozza.
+ A mechanikai útpályaszerkezet-méretezési rendszerek a megengedhető talaj-igényb
+evételt a függőleges 
+\begin_inset Formula $\varepsilon_{v}$
+\end_inset
+
+ fajlagos összenyomódással hozzák kapcsolatba.
+ A forgalmi terheléshez megengedhető összenyomódási érték ismételt laboratóriumi
+ vizsgálatokból és útmegfigyelésekből szemiempirikus módon megállapítható.
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+keréknyom-képződési kritérium
+\series default
+ szerint az aszfaltrétegek összegzett maradó plasztikus alakváltozásának
+ az élettartam alatt egy még forgalmi szempontból biztonságosan megengedhető
+ keréknyommélységet nem szabad meghaladnia.
+ A kritérium hátterét az adja, hogy nagy forgalmú utakon a maradó alakváltozások
+ jelentős részét nem az altalaj, hanem az aszfaltrétegek szenvedik el.
+ Ezért célszerű a maradó alakváltozást minden rétegben külön-külön meghatározni,
+ és az eredményeket összegezni.
+ A kritérium elsősorban az aszfaltrétegek kedvezőtlen technológiai összetételére
+ hívja fel a figyelmet.
+\end_layout
+
+\begin_layout Standard
+Az 
+\series bold
+altalajtörési kritérium
+\series default
+ a teherbírási határállapotot – nevének megfelelően – egy adott mértékadó
+ egyszeri terhelés hatására kialakuló repedés vagy törés képében fogalmazza
+ meg.
+ Ez a klasszikus megközelítés talajok, talajstabilizációk, ritkábban szemcsés
+ útalapoknál szokás alkalmazni.
+ A kritériumot elsősorban kis forgalmú utak pályaszerkezeteinek méretezésénél
+ ajánlják használni, mivel ott még jobban támaszkodunk az altalaj teherfelvevő
+ képességére.
+\end_layout
+
+\begin_layout Subsection
+Ellenőrzés határ-igénybevétel alapján
+\end_layout
+
+\begin_layout Standard
+Az erőtani méretezés elve szerint a külső kerékterhelés okozta mértékadó
+ 
+\emph on
+S
+\emph default
+ igénybevételek nem haladhatják meg, a még károsodás nélkül elviselhető
+ – a tervezési élettartam alatt várható egységtengely-áthaladási szám alapján
+ meghatározott – 
+\emph on
+R
+\emph default
+ határ-igénybevételeket:
+\begin_inset Formula 
+\begin{equation}
+S\leq R\label{eq:sr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az állapotjellemzők mértékadó értékei (Strength)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az állapotjellemzők megengedett határértékei (Resistance)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ha a számított mértékadó igénybevétel nagyobb, mint a megengedett határ-igénybev
+étel, akkor a szerkezet nem felel meg, az anyagjellemzők és a rétegvastagságok
+ újraszámítása szükséges.
+ Ha a számított mértékadó igénybevétel kisebb, mint a megengedett határ-igénybev
+étel, akkor a szerkezet mechanikai szempontból megfelel, és a túlméretezés
+ ellenőrzése után a rétegvastagságokat véglegesítjük az alkalmazott technológián
+ak megfelelően.
+ Hajlékony útpályaszerkezeteknél tulajdonképpen két fő méretezési kritériumot
+\emph on
+ 
+\emph default
+alkalmazunk: a fáradási és az altalaj-összenyomódási kritériumot.
+\end_layout
+
+\begin_layout Standard
+A fáradási (repedési) kritérium szerint az aszfaltrétegek alsó szálában
+ ébredő vízszintes 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+ fajlagos megnyúlás a fáradási nyúlásnál kisebb legyen:
+\begin_inset Formula 
+\begin{equation}
+\varepsilon_{t}\leq\varepsilon_{f}\left(N\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $\varepsilon_{f}\left(N\right)$
+\end_inset
+
+ a megengedett fáradási nyúlás, ami a tervezési élettartam előrebecsült
+ nehéz teherforgalmából számított 
+\emph on
+N
+\emph default
+ egységtengely-áthaladási számnak függvénye.
+\end_layout
+
+\begin_layout Standard
+Az altalaj-összenyomódási vagy -deformációs kritérium szerint a földműre
+ jutó fajlagos függőleges 
+\begin_inset Formula $\varepsilon_{v}$
+\end_inset
+
+ összenyomódás legyen kisebb, mint az 
+\emph on
+N
+\emph default
+ egységtengely-áthaladási számnál a talajra megengedhető 
+\begin_inset Formula $\varepsilon_{r}\left(N\right)$
+\end_inset
+
+ határérték:
+\begin_inset Formula 
+\begin{equation}
+\varepsilon_{v}\leq\varepsilon_{r}\left(N\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ezen utóbbi kritérium magában foglalja a túl nagy nyomvályúképződés, vagyis
+ a maradó alakváltozások elleni védekezés kritériumát is.
+\end_layout
+
+\begin_layout Standard
+Az útpályaszerkezetet alkotó különféle útépítési anyagok 
+\begin_inset Formula $\varepsilon_{f}$
+\end_inset
+
+ fáradási határ-igénybevételét laboratóriumi fárasztó vizsgálatokkal tudjuk
+ meghatározni.
+ A fáradási repedések megjelenésének szempontjából az anyag Wöhler-féle
+ görbéjéről leolvashatjuk a tervezési forgalomhoz tartozó határ-igénybevételt.
+ Szemcsés anyagoknál és a földműnél általában nem a konkrét anyagra, hanem
+ az anyagcsoportra kellő biztonsággal kifejlesztett összefüggéseket használunk
+ a különböző méretezési rendszerekben.
+\end_layout
+
+\begin_layout Section
+A magyar típus-útpályaszerkezet katalógus
+\end_layout
+
+\begin_layout Standard
+A magyar típus-útpályaszerkezet katalógusrendszer összeállításánál a vizsgált
+ hajlékony útpályaszerkezeteket egy többrétegű rugalmas rétegrendszerrel
+ helyettesítették (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pavement-types"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+ábra), ahol a földművet is beleszámítva az egyes rétegek anyagi viselkedését
+ csak a Young-modulus, a Poisson-tényező és a Wöhler-féle fáradási görbe
+ befolyásolta.
+ A mechanikai méretezési számításokhoz 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{subsec:design-criterions}.
+\end_layout
+
+\end_inset
+
+ pontban bemutatott aszfalt fáradási és altalaj-összenyomódási kritériumokat
+ alkalmazták.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/hun-catalog/pavement_types.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A katalógus útpályaszerkezeteinek többrétegű rugalmas rendszermodellje:
+ (a) hajlékony, és (b) félmerev szerkezet 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nemesdy1992azuj"
+literal "false"
+
+\end_inset
+
+ munkája alapján szerkesztve
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pavement-types"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nemesdy1992azuj"
+literal "false"
+
+\end_inset
+
+ szerint a fáradási kritériumok az egyes szerkezetek élettartamának végét
+ a következőképpen definiálják: 
+\emph on
+az útpályaszerkezet a tervezett élettartam évei alatt lefutott terhelő járműátme
+netek következtében ismétlődő, különféle nagyságú feszültségek és fajlagos
+ alakváltozások fárasztó hatásainak az összegződése következtében csak a
+ tervezési élettartam vége után érje el azt a rohamos leromlási állapotot,
+ amelyet az egyes pályaszerkezeti rétegek Wöhler-féle fáradási görbéi meghatároz
+nak
+\emph default
+.
+ Az így értelmezett élettartam végén az útpályát meg kell erősíteni az aktuális
+ pályaszerkezet gazdálkodási rendszer szempontrendszerei alapján.
+\end_layout
+
+\begin_layout Standard
+A katalógusrendszer kidolgozásának pontos menete részletesen megismerhető
+ Nemesdy
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citeyearpar
+key "nemesdy1992azuj,nemesdy1993azuj"
+literal "false"
+
+\end_inset
+
+ eredeti munkáiból, így itt most csak a dolgozat szempontjából érdekes elemeit
+ tárgyalom.
+\end_layout
+
+\begin_layout Subsection
+A katalógusrendszer használata
+\end_layout
+
+\begin_layout Standard
+Az aktuális magyar pályaszerkezet-méretezési eljárás alapjaiban ugyan követi
+ az M-E módszert, mégis csak a típus-útpályaszerkezetek előre összeállított
+ katalógusából teszi lehetővé az alkalmazandó szerkezet kiválasztását a
+ gyakorló mérnöknek.
+ Ennek legnagyobb előnye, hogy a nehézkes mechanikai számítások teljes mellőzésé
+vel lehetséges a szükséges aszfaltvastagság megállapítása.
+ A katalógusból a szükséges aszfaltvastagság az alapréteg és a forgalmi
+ terhelési osztály függvényében egyszerűen kiolvasható (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pavement-type3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A típus-útpályaszerkezet katalógusrendszer az alábbi felépítéseket tartalmazza
+ jelenleg:
+\end_layout
+
+\begin_layout Enumerate
+Teljes aszfalt pályaszerkezet
+\end_layout
+
+\begin_layout Enumerate
+Kötőanyag nélküli szemcsés alapréteg
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Zúzottkő alapréteg, ZA vagy M20 mechanikai stabilizáció
+\end_layout
+
+\begin_layout Enumerate
+Zúzottkő alapréteg, FZKA vagy M50 mechanikai stabilizáció
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hidraulikus kötőanyagú stabilizációs alapréteg
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+15 cm vastag hidraulikus kötőanyagú stabilizáció
+\end_layout
+
+\begin_layout Enumerate
+20 cm vastag hidraulikus kötőanyagú stabilizáció
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Soványbeton alapréteg
+\end_layout
+
+\begin_layout Standard
+Technológiai okokból a fenti pályaszerkezetek alaprétegeinek (15–20
+\begin_inset space ~
+\end_inset
+
+cm) vastagságát már nem érdemes jelentősebben változtatni, ezért azok az
+ aszfaltrétegek összvastagságát lépcsősen növelve igazodnak az egyes forgalmi
+ terhelési osztályokhoz.
+ A katalógusból kiolvasott szükséges aszfaltvastagságot végül a tervező
+ fogja technológiailag ténylegesen beépíthető aszfaltrétegekre bontani.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/hun-catalog/pavement_type3.pdf
+	scale 93
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A hidraulikus kötőanyagú stabilizációs alapréteg szükséges rétegvastagsága
+ az A–R terhelési osztályoktól függően (ÚT 2-1.202:2005)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pavement-type3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Elvileg a különböző alapréteggel tervezett típus-útpályaszerkezetek a pályaszerk
+ezet teherbírása és élettartama szerint egyenértékűnek tekinthetőek, így
+ a típusok közül való választás helyi és regionális fenntartási tapasztalatok,
+ műszaki és gazdaságossági, valamint környezeti szempontok mérlegelésével
+ történik.
+\end_layout
+
+\begin_layout Subsection
+A katalógusrendszer kritikai értékelés
+\end_layout
+
+\begin_layout Standard
+A katalógusrendszer négyféle alaprétege közül a soványbeton alaprétegek
+ tervezése mára – a reflexiós repedések kialakulásának kockázata miatt –
+ teljesen leállt.
+ Teljes aszfalt pályaszerkezet – bár az elvi lehetőség régóta rendelkezésre
+ állt – gyakorlatilag Magyarországon még nem épült, így a tervezési variációk
+ száma a négyről két alaprétegre szűkült.
+ Figyelembe véve továbbá, hogy az ország ásványvagyona nem különösebben
+ kedvező, és a kőbányák területi eloszlása is egyenlőtlen, így a kötőanyag
+ nélküli szemcsés alaprétegek építése folyamatosan visszaszorult, így mára
+ a hidraulikus kötőanyagú stabilizációs alaprétegek tervezése és építése
+ vált egyeduralkodóvá.
+\end_layout
+
+\begin_layout Standard
+A beszűkült alapréteg-kínálat mellett egy másik problémás kérdése a katalógusren
+dszernek a földműteherbírás.
+ A katalógus szerkezetei azon a feltételezésen alapulnak, hogy a földmű
+ dinamikus teherbírási modulusa min.
+ 50 MPa, a statikus modulus, pedig min.
+ 40 MPa.
+ Ha a földmű várható teherbírása ennél kisebb, akkor javítóréteget építünk.
+ Viszont, ha a földmű várható tervezési teherbírásának értéke 15–20 MPa
+ értékkel meghaladja a minimumot, akkor a jelenleg érvényes típus-pályaszerkezet
+ek esetében egy forgalmi osztállyal kisebb aszfaltvastagságú pályaszerkezet-vari
+ánst lehet választani! Ez utóbbi lehetőség mára a mérnöki gyakorlatból teljesen
+ kikopott, helyét az a tévhit vette át, hogy egy jól megépített hidraulikus
+ réteg mindenhol egységes teherbírást tud biztosítani, függetlenül attól,
+ mi van alatta.
+ Ez a megközelítés pedig azzal járt, hogy sem a tervező, sem a kivitelező
+ nem lett érdekelt a minél magasabb teljesítményű földműtükör előállításában,
+ hiszen annak előnye egyértelműen csak alig vagy egyáltalán nem mutatható
+ ki, ha elfeledkezünk az utasítás erről szóló záradékáról.
+ A gyakorlatban tehát az eleve egyszerű méretezési eljárás a tervezők napi
+ feladataiban továbbegyszerűsödött.
+\end_layout
+
+\begin_layout Standard
+A katalógusrendszer az összes aszfaltrétegre egy olyan állandó (mértékadó)
+ aszfaltmodulus-értéket vezetett be (10
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space ~
+\end_inset
+
+MPa), amellyel a többrétegű rendszerekben az aszfalt-igénybevételeket számítva,
+ ugyanakkora fáradási hatások keletkeznek, mintha a számításokat az állandóan
+ változó hőmérsékletekkel és modulusokkal végezték volna el.
+ Az eljárás az ekvivalens (egyenértékű) hőmérséklet elvén alapult, amiről
+ résszeletesen olvashatunk 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hornych2013evaluation,pszczo2014equivalent"
+literal "false"
+
+\end_inset
+
+ munkáiban.
+ Magyarországon 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nemesdy1992azuj"
+literal "false"
+
+\end_inset
+
+ számításai szerit az ekvivalens hőmérséklet 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $10\textdegree\textrm{C}$
+\end_inset
+
+.
+ Újabb hazai kutatási eredmények alapján 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "fi2008calculation"
+literal "false"
+
+\end_inset
+
+ az ekvivalens hőmérsékletre a 
+\begin_inset Formula $17,7\textdegree\textrm{C}$
+\end_inset
+
+ értéket javasolta.
+ Később 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "toth2021calculating"
+literal "false"
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ a típus-útpályaszerkezetek hőmérsékleti profiljainak és fáradási ellenállásának
+ elemzésével arra jutott, hogy az ekvivalens hőmérséklet Magyarországon
+ valahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $20,5\textdegree\textrm{C}$
+\end_inset
+
+ és 
+\begin_inset Formula $22\textdegree\textrm{C}$
+\end_inset
+
+ között helyezkedik el.
+ Mivel a hőmérséklet növekedésével az aszfaltmerevség csökken, a katalógusban
+ alkalmazott 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space ~
+\end_inset
+
+MPa-os érték mindképpen túlzónak tekinthető.
+ Ha azt is figyelembe vesszük, hogy az ekvivalens hőmérsékleti módszerrel
+ végzett egyszerűsített számítások jóval pontatlanabbak, mint a részletes
+ hőmérsékleti profilon alapuló modellszámítások 
+\begin_inset CommandInset citation
+LatexCommand Citep
+key "seoyoung2020aszfaltburkolatu"
+literal "false"
+
+\end_inset
+
+, akkor az is kijelenthető, hogy katalógus rendszer aszfaltvastagságai mindenkép
+pen felülvizsgálandóak.
+ Az aszfaltmerevséget a hőmérséklet mellett az 
+\begin_inset Formula $f$
+\end_inset
+
+ terhelési frekvencia is nagymértékben tudja befolyásolni.
+ A katalógus pályaszerkezeteinek összeállításánál kétféle technológiai összetéte
+lű aszfaltkeveréket használtak.
+ A teljes aszfaltszerkezeteknél és a hajlékony, pl.
+ zúzottkő alapú pályáknál az aszfaltalap jellemzői a következők voltak (A
+ jelű aszfalt): 4,0 tm% B-90 bitumen, 9 tf% szabad hézag és 
+\begin_inset Formula $f\textrm{=}\unit[10]{Hz}$
+\end_inset
+
+.
+ A cementstabilizációnál és a soványbetonoknál az általában kisebb aszfaltvastag
+ság miatt a burkolati rétegek magasabb bitumentartalma nagyobb jelentőségű;
+ ezért módosított keveréket alkalmaztak (B jelű aszfalt): 4,3 tm% B-90 bitumen,
+ 6 tf% szabad hézag és 
+\begin_inset Formula $f\textrm{=}\unit[20]{Hz}$
+\end_inset
+
+.
+ Jól látható, hogy a katalógusban a vastagabb aszfaltvastagságokhoz kisebb
+ a vékonyabbakhoz pedig nagyobb terhelési frekvenciát rendeltek, feltételezhetőe
+n a tényleges kerékterhelés sebességétől függetlenül.
+\end_layout
+
+\begin_layout Standard
+Az előbbiekben ismertetett kritikákon túl – a típus-útpályaszerkezetek vitathata
+tlanul kényelmes használata mellett –, napjainkra megfogalmazódtak egyéb
+ olyan szempontok is, amelyek egyre markánsabban igénylik egy olyan hazai
+ eljárás kidolgozást, amely jobban tudja kezelni az anyagi tulajdonságokban
+ rejlő lehetőségeket, és konzerv megoldások helyett olyan eszközt ad a tervezők
+ kezébe, amellyel valódi műszaki alternatívák dolgozhatók ki, vagy hasonlíthatók
+ össze.
+ A mechanikai-empirikus (M-E) útpályaszerkezet-méretezési rendszer egyértelműen
+ képes a legtöbb felmerülő probléma kezelésére.
+ Erre mutat példát 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "toth2020newhungarian"
+literal "false"
+
+\end_inset
+
+ munkája, ahol az új építésű aszfaltburkolatú útpályaszerkezetek tervezéséhez
+ és építéséhez egy olyan alternatív méretezési eljárást találunk, amely
+ – a típus-útpályaszerkezetekhez képest – megnöveli az altalaj, illetve
+ az épített pályaszerkezeti rétegek anyagi tulajdonságaiban rejlő lehetőségek
+ jobb kihasználásának keretfeltételeit, továbbá lehetőséget teremt a helyi,
+ környezeti, földrajzi és egyéb adottságok, illetve innovatív kivitelezői
+ és műszaki képességek esetleges figyelembevételére is.
+\end_layout
+
+\begin_layout Section
+Összefoglalás
+\end_layout
+
+\begin_layout Standard
+Jelen fejezetben röviden áttekintettük a hajlékony útpályaszerkezetek M-E
+ alapú méretezési rendszerét, valamint annak jelenlegi hazai alkalmazását,
+ a típus-útpályaszerkezet katalógust.
+ Tettük mindezt azért, hogy betudjuk azonosítani a méretezés azon elemeit,
+ amiknél valóban jelentkezik a továbbfejlesztés igénye.
+ Érzékenységvizsgálatokkal kimutatható, hogy az M-E méretezési eljárás eredményé
+t leginkább az éghajlat (hőmérséklet, csapadék) és a forgalmi terhelés spektruma
+ befolyásolja.
+ Figyelembe véve továbbá a katalógusrendszerrel szemben megfogalmazott egyéb
+ kritikákat, beazonosíthatók az alábbi fő fejlesztési területek:
+\end_layout
+
+\begin_layout Enumerate
+A kerékterhelés pontos felvétele.
+\end_layout
+
+\begin_layout Enumerate
+A terhelési idő / frekvencia meghatározása a kerékterhelés sebességből.
+\end_layout
+
+\begin_layout Enumerate
+Az aszfaltkeverék merevségének modellezése a terhelési idő / frekvencia
+ és a hőmérséklet függvényében.
+\end_layout
+
+\begin_layout Enumerate
+Az M-E méretezési rendszer továbbfejlesztése, bővítése viszkoelasztikus
+ elemekkel.
+\end_layout
+
+\begin_layout Enumerate
+A földműmerevség meghatározása a nedvességtartalom függvényében.
+\end_layout
+
+\begin_layout Standard
+Az értekezés az első négy ponttal foglalkozik, mivel tárgyát elsősorban
+ az aszfaltkeverékek idő és hőmérséklet függő viselkedése adja.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status open
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd,literature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

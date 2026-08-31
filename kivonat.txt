@@ -1,0 +1,21 @@
+A kutatás célja: az aszfaltburkolatú útpályaszerkezetek mechanikai-empirikus (M-E) méretezési rendszerének fejlesztése. Ennek egyik iránya, hogy a hazai méretezési eljárásba is beemeljük az anyagtudományokban elért újabb eredményeket, míg a másik az, hogy a mozgó kerékterhelést a lehető legpontosabban figyelembe vegyük a viszkoelasztikus számításoknál.
+
+A végeselem módszerre támaszkodva – a tehergépkocsik radiál gumiabroncsának térbeli modelljét elkészítve – sikerült egy olyan egyszerű nyomásmodellt megalkotni, amivel nagy pontossággal lehet a kerékterhelést figyelembe venni útpályaszerkezetek méretezésekor a hagyományos többrétegű rugalmas rendszerek elméletét alkalmazó programokban is.
+
+A mechanisztikus-empirikus útpályaszerkezet méretezési módszerek igénylik, hogy a méretezéshez ismerjük az aszfaltkeverékek dinamikus modulus mestergörbéjét. Ez egyben az útpályaszerkezetben uralkodó hőmérsékleten túl a terhelési frekvencia helyes meghatározását is megköveteli a tervezőtől. A terhelési frekvencia a laboratóriumi fárasztási vizsgálatoknak is az egyik igen fontos beállítási paramétere. A valóságban az útpályaszerkezetek viszont nem frekvenciatartományban, hanem időtartományban vannak terhelve, ezért a pontos frekvencia felvétel a tervezéshez nem egyértelmű feladat.
+
+A probléma megoldására kidolgozásra került egy új 4 paraméteres empirikus anyagmodell, amelynek paramétereivel megadható az aszfaltkeverékre jellemző idő-frekvencia egyenértékűségi tényező. A segítségével jól tárgyalható a mozgó kerékterhelés sebességének és a terhelési impulzusidőnek vagy frekvenciának a kapcsolata. A dolgozat bemutat egy számítási eljárást a terhelési impulzus hullámhosszának meghatározására. Az elméleti úton levezetett összefüggés szerint feszültség impulzus esetén a 100 km/h sebességgel mozgó kerékterhelés megfeleltethető a 10 Hz-es dinamikus terhelési frekvenciának. Nyúlás impulzust vizsgálva viszont ennél egy jóval kisebb, 3–4 Hz-es frekvenciát kapunk ugyanerre a sebességre.
+
+A dolgozatba bemutatott új tudományos eredményekkel olyan új hazai méretezési rendszer alakítható ki, amivel jobban kezelhetők az anyagi tulajdonságokban rejlő lehetőségek és részletesebb műszaki alternatívák dolgozhatóak ki vagy hasonlíthatóak össze.
+
+Developing a Pavement Design System
+
+The aim of the research is to develop a mechanical-empirical (M-E) design system for asphalt pavement structures. One of the directions is to implement newer results in materials science into the national design procedure. Another way is to consider the moving wheel load as accurately as possible in viscoelastic calculations.
+
+Based on the finite element method, using a 3D model of a radial truck tyre, a simple pressure model has been developed that can be used to account for wheel loads with high accuracy in the design of pavement structures in programs using the theory of traditional multilayer elastic systems.
+
+The mechanical-empirical road pavement design methods require knowledge of the dynamic modulus master curve of asphalt mixtures for the design. This also demands the designer to correctly define the load frequency in addition to the temperature of the pavement structure. The load frequency is also one of the key setting parameters for laboratory fatigue tests. However, pavement structures are not loaded in the frequency domain, but in the time domain, and therefore the accurate setup of the frequency for design purposes is not an obvious task.
+
+To solve this problem, a new 4-parameter empirical material model was developed that can be used to determine the time-frequency equivalence factor for the asphalt mixture. It is a useful tool to discuss the relationship between the speed of the moving wheel load and the load impulse time or frequency. The thesis presents a computational procedure to determine the wavelength of the load pulse. The theoretically derived relationship is that, for a stress pulse, the wheel load moving at 100 km/h corresponds to a dynamic load frequency of 10 Hz. However, when considering a strain pulse, a much lower frequency of 3–4 Hz is obtained for the same speed.
+
+With the new scientific results presented in this thesis, a new national design system can be developed to better manage the potential of material properties and to develop or compare more detailed technological alternatives.

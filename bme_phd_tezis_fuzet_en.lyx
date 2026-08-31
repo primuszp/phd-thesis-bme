@@ -1,0 +1,1885 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input{preamble}
+\usepackage{graphicx}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plain
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+cime}{Development of an Asphalt Pavement Design System}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=6 cm]{figures/bme/bme_logo_nagy.pdf}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+BUDAPEST UNIVERSITY OF TECHNOLOGY AND ECONOMICS
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Faculty of Civil Engineering - Since 1782
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Department of Highway and Railway Engineering
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Large
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scshape
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+{}
+\backslash
+textbf{
+\backslash
+cime}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize Theses of doctoral {(
+\backslash
+upshape PhD)} dissertation
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+upshape
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{by}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.5 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{large}
+\end_layout
+
+\begin_layout Plain Layout
+
+Dr.
+ Péter Primusz
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{large}
+\end_layout
+
+\begin_layout Plain Layout
+
+assistant professor
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Supervisor}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.5 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{large}
+\end_layout
+
+\begin_layout Plain Layout
+
+Dr.
+ Csaba Tóth
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{large}
+\end_layout
+
+\begin_layout Plain Layout
+
+associate professor
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{
+\backslash
+fill}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Budapest
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2024
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\begin_layout Plain Layout
+
+Vásárhelyi Doctoral School of Civil Engineering and Earth Sciences
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Infrastructure Civil Engineering Programme
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Supervisor: Dr.
+ Csaba Tóth PhD associate professor
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction and aims
+\end_layout
+
+\begin_layout Standard
+Sooner or later, the pavement structures will reach the end of their useful
+ life and will need to be rehabilitated.
+ Flexible road structures can be reinforced by the addition of a new layer
+ of asphalt, where the required thickness of the strengthening layer is
+ usually determined by the elastic deformation of the existing deteriorated
+ pavement structure under standard loading.
+ However, a problem in correctly interpreting the observed deformations
+ is to eliminate stiffness variations due to the viscoelastic behavior of
+ asphalt materials – as a function of temperature and loading frequency
+ – and the varying moisture content of the subgrade, which is also a basic
+ requirement for accurate pavement structure diagnostics.
+\end_layout
+
+\begin_layout Standard
+Many elements of existing and new pavement design procedures now follow
+ the design principles of mechanics, so it is possible to take these effects
+ into account or correct for them.
+ The primary objective of this research is therefore to develop a mechanically
+ based pavement structure design framework that uses in-situ pavement structure
+ diagnostics in addition to laboratory material testing for structural analysis.
+\end_layout
+
+\begin_layout Standard
+The background of the research is the work of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "toth2020newhungarian"
+literal "false"
+
+\end_inset
+
+ entitled 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+New Hungarian Mechanistic-Empirical Design Procedure for Asphalt Pavements
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+, where the authors present an alternative design procedure for the design
+ and construction of new asphalt pavement structures, which allows to better
+ take into account the potential of the sub-grade and the material properties
+ of the constructed pavement layers compared to the application of standard
+ pavement structures.
+ The alternative design procedure, however, only models the behavior of
+ asphalt layers as an elastic material and should be further developed towards
+ viscoelastic calculations.
+ To this end, the thesis focuses on the following sub-tasks:
+\end_layout
+
+\begin_layout Enumerate
+Analysis of the interaction between wheel load and road structure.
+\end_layout
+
+\begin_layout Enumerate
+Development of a new material model for asphalt mixtures.
+\end_layout
+
+\begin_layout Enumerate
+Develop a method to determine the load frequency.
+\end_layout
+
+\begin_layout Standard
+The first point is important because it has a major influence on the stresses
+ induced in the flexible road structure under evaluation.
+ It is important to know that the contact pressure 
+\begin_inset Formula $q$
+\end_inset
+
+ depends on the wheel load and the type of selected tire.
+ The aim of this work is to propose a simple computational method to account
+ for the contact behavior of the complex finite element tire model in programs
+ using the much simpler elastic layer theory.
+ The impact of model simplification can be measured by the magnitude of
+ the stresses experienced in road structures, and this requires comparative
+ calculations between layered elastic analysis computer programs and finite
+ element tire models.
+\end_layout
+
+\begin_layout Standard
+The second point concerns the so-called asphalt mix master curve.
+ This is based on the time-temperature superposition principle known from
+ rheology.
+ From a practical point of view, it is not easy to incorporate the dynamic
+ modulus determined from laboratory data at different temperatures and frequenci
+es into mechanical calculations.
+ This is because, in reality, road structures are not loaded in the frequency
+ domain but in the time domain.
+ The third point is related to this issue and is the relationship between
+ the moving wheel load and the load frequency.
+ The load frequency is a critical parameter for laboratory testing of asphalt
+ mixes and must therefore be able to be matched to the wheel speed of the
+ moving vehicles in the mechanistic-empirical (M-E) design system.
+\end_layout
+
+\begin_layout Section*
+Interaction between wheel load and pavement structure
+\end_layout
+
+\begin_layout Standard
+Concerning wheel loading, the main focus of the thesis has been to investigate
+ how the results of the complex three-dimensional tire model built using
+ the Finite Element Method can be incorporated into simple computational
+ procedures.
+ Accordingly, a finite element based tire model is presented, which can
+ now be used to investigate the tire-road structure interaction with high
+ accuracy (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3D-mesh-fem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a).
+ Analysis of the exact contact pressure values calculated by the finite
+ element method has shown (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3D-mesh-fem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b) that a simple tire pressure model, based on the work of 
+\size small
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+
+\size default
+, can be developed to obtain the average contact pressure magnitude with
+ sufficient accuracy for mechanistic-empirical (M-E) road pavement structure
+ design.
+ Comparative calculations show that the results of finite element simulations
+ carried out in the ABAQUS program and the structural responses determined
+ using equivalent circular tire patch models are well within this average
+ pressure value.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/3D_mesh_fem.png
+	lyxscale 15
+	scale 13.5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/730kPa_25kN.png
+	lyxscale 50
+	scale 73
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Studying the interaction between wheel load and pavement structure in ABAQUS:
+ 3D body model (
+\series bold
+a
+\series default
+) and results of pavement-tire contact simulation (
+\series bold
+b
+\series default
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:3D-mesh-fem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the future, a 
+\emph on
+virtual road pavement structure laboratory
+\emph default
+ based on the finite element method may be developed to replace a large
+ number of very costly field tests.
+ In the meantime, it is recommended that wheel loads be considered when
+ designing pavement structures using the simple pressure model presented
+ in this paper.
+\end_layout
+
+\begin_layout Section*
+New RAMBO material model for asphalt mixes
+\end_layout
+
+\begin_layout Standard
+Sigmoid functions can be widely used for the description of the viscoelastic
+ properties of asphalt mixes.
+ Unfortunately, closed relationships between known model coefficients in
+ time or frequency domain are not known.
+ Therefore, to convert viscoelastic material properties into each other,
+ complicated interconversion methods have to be used in many cases.
+ To solve this problem, a new RAMBO material model is presented in this
+ thesis.
+ It describes the temperature and frequency dependent behavior of asphalt
+ mixtures based on Kramers-Kronig relations (fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:rambo-graphical-abstract"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The new model is based on the mathematical form of the Ramberg-Osgood material
+ model and its main advantage is that its coefficients are completely independen
+t of each other.
+ The RAMBO model is a good alternative to the sigmoid function for describing
+ stiffness data, and the independence of its coefficients allows the full
+ morphology of the master curve to be characterized numerically.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rambo/rambo_graphical_abstract_en.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parameterize of the new RAMBO material model and time-frequency interconversion
+ based on the R parameter
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:rambo-graphical-abstract"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Time-frequency conversion factors were derived using Ninomiya and Ferry's
+ (
+\begin_inset CommandInset citation
+LatexCommand citebyear
+key "ninomiya1959someapproximate"
+literal "false"
+
+\end_inset
+
+) approximation.
+ The analysis of the data has shown that the time-frequency conversion factors
+ are only dependent on the slope of the new empirical model.
+ This means that no additional computations are required.
+ The RAMBO models determined in the frequency domain provide an excellent
+ characterization of the mixture in the time domain.
+ The developed new empirical material model has been verified with laboratory
+ data and accurate numerical calculations.
+\end_layout
+
+\begin_layout Standard
+The paper shows that the conversion of the viscoelastic material properties
+ of asphalt mixes from the frequency domain to the time domain depends not
+ only on the reciprocity between the two variables but also on the parameter
+ 
+\emph on
+R
+\emph default
+ of the RAMBO material model, which determines the slope of the master curve
+ between the upper and lower asymptotic.
+\end_layout
+
+\begin_layout Section*
+Method for determining the load frequency
+\end_layout
+
+\begin_layout Standard
+Mechanistic-empirical pavement design methods require knowing the dynamic
+ modulus master curve of asphalt mixes to design.
+ This requires the engineer to correctly determine the loading frequency
+ along with the temperature of the paved structure.
+ Frequency is also a key parameter for laboratory fatigue testing.
+\end_layout
+
+\begin_layout Standard
+In the real world, accurate frequency estimation for design is a difficult
+ task because pavement structures are not loaded in the frequency domain
+ but in the time domain.
+ To solve this problem, researchers have developed various time-frequency
+ conversion methods to accurately calculate the corresponding frequency
+ from the duration of traffic-generated stress or strain pulses.
+ However, the latest results show that the time-frequency equivalence factor
+ required for the conversion is much lower than the one used by researchers
+ in the past.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/frequency/def_func_curvature_en.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Away from load axis deflection and curvature change
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:func-def-curvature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper discusses the relationship between the speed of the moving wheel
+ load and the load frequency using the RAMBO model.
+ It also presents a new calculation method for determining the wavelength
+ of the load pulse from the measured vertical deflections (fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:func-def-curvature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ According to the theoretically derived relationship, for a stress pulse,
+ a wheel load moving at a speed of 100 km/h can be equated to a dynamic
+ load frequency of 10 Hz.
+ However, when a strain pulse is considered, a much lower frequency of 3–4
+ Hz is obtained for the same speed.
+\end_layout
+
+\begin_layout Section*
+Significance for the practice
+\end_layout
+
+\begin_layout Standard
+The design of pavement structures is an extremely important task in the
+ development and maintenance of transport infrastructure.
+ A good design system helps the engineer to determine the required thickness
+ and economic material composition of the pavement structure to withstand
+ traffic and environmental loads over the lifetime of the road.
+ In addition, a good pavement design system can also help to reduce environmenta
+l impact, for example by minimizing material use and CO
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ emissions.
+\end_layout
+
+\begin_layout Standard
+Taking into account the above aspects, the new scientific results presented
+ in this thesis can be used to develop a new national design system that
+ not only takes better account of the potential of material properties,
+ but also allows for the development or comparison of more detailed technical
+ alternatives to the currently used standard solutions.
+ This is also an important task as pavement design systems and the associated
+ technical standards and guidelines need to be updated from time to time
+ to keep pace with technological developments and changing environmental
+ challenges.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Theses
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+The mechanistic-empirical (M-E) pavement design systems commonly use an
+ approximation that assumes the tire's internal inflation pressure is nearly
+ equal to the specific contact pressure the tire transfers to the pavement.
+ However, this overestimates values typical of diagonal tires.
+ The average contact pressure of a tire depends not only on the internal
+ inflation pressure but also on the tire's flexural constant.
+ The pressure model used to establish the relationship is limited to the
+ depth at which the measured vertical compressive stress in the road structure
+ is less than the average contact pressure value.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+The contact pressure values calculated by the finite element method from
+ the diagonal tire model built from literature data were compared with the
+ laboratory results of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ and good agreement was found.
+ This is because stress peaks caused by non-uniform load distribution, which
+ are typical of overloaded tires, are equalized 5–8 centimeters below the
+ pavement surface.
+ The simple pressure model proposed by can accurately account for wheel
+ loads in pavement structure design.
+ The proposed wheel pressure model is suitable for mechanistic-empirical
+ (M-E) pavement design
+\begin_inset Formula 
+\[
+q=0.454p+197.87
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $q$
+\end_inset
+
+ is the average contact pressure and 
+\begin_inset Formula $p$
+\end_inset
+
+ is the internal tire pressure in kPa.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 3
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P1
+\series default
+, 
+\series bold
+P2
+\series default
+, 
+\series bold
+P3
+\series default
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+For the asphalt fatigue cracking and sub-grade rutting criteria used in
+ mechanistic-empirical (M-E) pavement design systems, the critical stresses
+ can be determined with high accuracy using both the equivalent circular
+ and twin circular tire patch models, if the specific contact pressure of
+ the tire transmitted through the pavement is known with sufficient accuracy.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+To determine the average contact pressure and radius of the equivalent circle,
+ a comparison was made between the twin-tire finite element simulation and
+ the equivalent circular tire patch models.
+ The results of the ABAQUS finite element simulations were found to be in
+ good agreement with the calculations of the WESLEA (Waterways Experiment
+ Station Layered Elastic Analysis) program, except for the vertical 
+\begin_inset Formula $u_{zz}$
+\end_inset
+
+ displacements
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 3
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P1
+\series default
+, 
+\series bold
+P2
+\series default
+, 
+\series bold
+P3
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+The Ramberg-Osgood relationship's mathematical form is suitable for describing
+ the temperature and frequency-dependent behavior of asphalt mixtures.
+ The coefficients of the new four-parameter RAMBO model are independent
+ of each other and remain constant when moving from the frequency domain
+ to the time domain.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+The new model is based on the paper by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kweon2008application"
+literal "true"
+
+\end_inset
+
+, which successfully applied the mathematical form of the Ramberg-Osgood
+ material model to describe the dynamic modulus 
+\begin_inset Formula $E^{\ast}$
+\end_inset
+
+ master curve of asphalt mixtures:
+\begin_inset Formula 
+\[
+E^{\ast}\left(f_{r}\right)=E_{e}^{*}+\frac{E_{g}^{*}-E_{e}^{*}}{1+Cf_{r}^{R-1}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{e}^{*}$
+\end_inset
+
+ is the asymptotic of low frequencies or high temperatures, 
+\begin_inset Formula $E_{g}^{*}$
+\end_inset
+
+ is the asymptotic of high frequencies or low temperatures, 
+\begin_inset Formula $f_{r}$
+\end_inset
+
+ is the reduced frequency, 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+ are the material-dependent constants.
+ The thesis compares the dynamic modulus master curves obtained with the
+ RAMBO and sigmoid function and establishes a relationship between their
+ model coefficients.
+ It is shown that the RAMBO model is a good substitute for the sigmoid function
+ in describing stiffness data, and its coefficients are independent, allowing
+ for the numerical characterization of the full morphology of the master
+ curve.
+ The RAMBO model was extended to predict the phase angle 
+\begin_inset Formula $\phi$
+\end_inset
+
+ using 
+\size default
+\lang magyar
+
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "kramers1927ladiffusion"
+literal "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "kronig1926onthe"
+literal "false"
+
+\end_inset
+
+
+\size small
+\lang english
+ relations:
+\begin_inset Formula 
+\[
+\phi\left(f_{r}\right)=-c\frac{\pi}{2}\dfrac{\left(E_{g}^{*}-E_{e}^{*}\right)\left(R-1\right)Cf_{r}^{R-1}}{\left(Cf_{r}^{R-1}+1\right)\left(E_{e}^{*}Cf_{r}^{R-1}+E_{g}^{*}\right)}
+\]
+
+\end_inset
+
+Comparative calculations have shown that the new phase angle function matches
+ the results of the general Maxwell model very closely.
+ Additionally, time-frequency conversion relations (
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+) have been developed to generate time-domain master curves of material
+ parameters with model parameters in the frequency domain:
+\begin_inset Formula 
+\begin{alignat*}{1}
+E\left(t_{r}\right) & =E_{e}^{*}+\frac{E_{g}^{*}-E_{e}^{*}}{1+C\left(k_{r}t_{r}\right)^{1-R}}\\
+\\
+D\left(t_{r}\right) & =\frac{1+C\left(k_{c}t_{r}\right)^{1-R}}{E_{g}^{*}+E_{e}^{*}C\left(k_{c}t_{r}\right)^{1-R}}
+\end{alignat*}
+
+\end_inset
+
+where 
+\begin_inset Formula $E\left(t_{r}\right)$
+\end_inset
+
+ is the relaxation modulus, 
+\begin_inset Formula $D\left(t_{r}\right)$
+\end_inset
+
+ is the creep compliance and 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ is the reduced time.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 4
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P4
+\series default
+, 
+\series bold
+P5
+\series default
+, 
+\series bold
+P6
+\series default
+,
+\series bold
+ P7
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+The conversion of the viscoelastic properties of asphalt mixes from the
+ frequency domain to the time domain depends on the reciprocal relationship
+ between the two variables and the parameter 
+\emph on
+R
+\emph default
+ of the RAMBO material model, which determines the slope of the master curve
+ between the upper and lower asymptotes.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+To determine the constants 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+ for the time-frequency conversion, model calculations were performed.
+ A database of 400 hypothetical master curves was created by varying the
+ RAMBO model parameters over a wide range.
+ The relaxation modulus and creep compliance of the hypothetical master
+ curves were estimated using the relations of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ninomiya1959someapproximate"
+literal "true"
+
+\end_inset
+
+, which proved to be a good choice.
+ Finally, regression calculations were used to determine the relationship
+ between the coefficients of the RAMBO model and the constants 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+k_{r}= & 16.31-7.04R\\
+k_{c}= & 5.150+6.26R
+\end{align*}
+
+\end_inset
+
+where 
+\emph on
+R
+\emph default
+ is the shape parameter of the RAMBO material model.
+ The proposed relation for time-frequency conversion:
+\begin_inset Formula 
+\[
+f=\dfrac{1}{k_{r}t}=\frac{\beta}{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta=1/k_{r}$
+\end_inset
+
+ time-frequency equivalence factor.
+ Comparative calculations have shown that the RAMBO model coefficients defined
+ in the frequency domain also provide an excellent characterization of the
+ mixture under study in the time domain.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 4
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+The relationship between the speed of the moving wheel load (
+\emph on
+V
+\emph default
+) and the load frequency of the dynamic modulus (
+\emph on
+f
+\emph default
+) is determined by the time-frequency equivalence factor of the asphalt
+ layer in the road structure and the wavelength of the mechanical response
+ (stress or deformation).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+The model is based on the distance-time physics relation.
+ The time-frequency equivalence factor 
+\begin_inset Formula $\beta$
+\end_inset
+
+ of the RAMBO material model was used for the time-frequency conversion:
+\begin_inset Formula 
+\[
+f=\frac{\beta}{\lambda}V^{k}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the wavelength of the mechanical response of the asphalt layer to stress
+ or deformation, 
+\begin_inset Formula $V$
+\end_inset
+
+ is the speed of the moving wheel load, and 
+\begin_inset Formula $k$
+\end_inset
+
+ is an experimental constant whose value is assumed to be one in the general
+ case.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 5
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+From the deflection curve measured on the pavement surface, the deformation
+ wavelength of the asphalt layer under test can be determined.
+ The wavelength is equal to twice the distance marked by the inflection
+ point on the curvature plot of the function fitted to the measured vertical
+ deformations.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+For the model, I used the 
+\begin_inset Formula $D\left(r\right)$
+\end_inset
+
+ deflection function proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "primusz2009abehajlasi"
+literal "false"
+
+\end_inset
+
+, from which I approximated the curvature change by 
+\begin_inset Formula $\kappa\left(r\right)\approx D^{''}\left(r\right)$
+\end_inset
+
+ (fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:func-def-curvature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Taking into account that, according to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jung1988directcalculation"
+literal "true"
+
+\end_inset
+
+, the radius of curvature at the center of the load gives the approximate
+ value of the 
+\begin_inset Formula $\varepsilon_{xx}$
+\end_inset
+
+ strain at the bottom of the asphalt layer of thickness 
+\begin_inset Formula $h$
+\end_inset
+
+, the inflection point 
+\begin_inset Formula $r_{\textrm{inf}}$
+\end_inset
+
+ of the function 
+\begin_inset Formula $\kappa\left(r\right)$
+\end_inset
+
+ can be taken as the strain wavelength of the specific elongation at the
+ bottom of the asphalt layer of thickness 
+\begin_inset Formula $h$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\lambda=2r_{\textrm{inf}}=\frac{4a_{c}}{\sqrt{3c}}
+\]
+
+\end_inset
+
+According to the derived relationship, the deformation wavelength 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ depends on the contact radius 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ of the load wheel and the shape parameter 
+\begin_inset Formula $c$
+\end_inset
+
+ of the deflection curve.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 5
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+For periodic loading of asphalt mixtures, the load frequency in the mechanistic-
+empirical (M-E) design system should be set according to the mechanical
+ response under test.
+ In the M-E pavement structure design systems, a loading frequency of 10
+ Hz is recommended for stress mechanical response, while a loading frequency
+ of 5 Hz is recommended for strain mechanical response.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+When considering a stress pulse, the wavelength is approximated by 
+\begin_inset Formula $\lambda=2a_{c}$
+\end_inset
+
+, so the load frequency 
+\begin_inset Formula $f$
+\end_inset
+
+ can be calculated using the following general formula:
+\begin_inset Formula 
+\[
+f=\frac{\beta}{2a_{c}}V^{k}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the time-frequency equivalence factor, 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ is the contact radius of the load wheel, 
+\begin_inset Formula $V$
+\end_inset
+
+ is the speed of the moving wheel, and 
+\begin_inset Formula $k$
+\end_inset
+
+ is an experimental constant.
+ For the asphalt mixtures considered in this thesis, 
+\begin_inset Formula $k_{r}=12$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\beta=1/12=0.085$
+\end_inset
+
+ and the contact radius of the twin tires 
+\begin_inset Formula $a_{c}=\unit[0.12]{m}$
+\end_inset
+
+, so substituting this into the stress pulse formula gives the simple relationsh
+ip below:
+\begin_inset Formula 
+\[
+f\approx0.1V
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $V$
+\end_inset
+
+ is used in km/h.
+ The approximate relationship confirms the value of 10 Hz proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "witzcak2002simpleperformance"
+literal "false"
+
+\end_inset
+
+, that at typical highway speeds (~110 km/h) the load pulse duration is
+ approximately 0.1 s.
+ When examining a strain pulse, the wavelength is approximated by 
+\begin_inset Formula $\lambda=4a_{c}/\sqrt{3c}$
+\end_inset
+
+, so that the load frequency 
+\begin_inset Formula $f$
+\end_inset
+
+ can be calculated using the following general formula:
+\begin_inset Formula 
+\[
+f=\sqrt{0.75c}\frac{\beta}{2a_{c}}V^{k}
+\]
+
+\end_inset
+
+Taking into account that the deflection curve shape factor 
+\begin_inset Formula $c$
+\end_inset
+
+ varies between 0.2 and 0.4 for flexible and especially flexible pavement
+ structures, the correction factor 
+\begin_inset Formula $\sqrt{0.75c}$
+\end_inset
+
+ limits the load frequency 
+\begin_inset Formula $f$
+\end_inset
+
+ to a range between 3.8 Hz and 5.3 Hz with respect to the stress pulse.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Related part of the thesis: 
+\series bold
+chapter 5
+\end_layout
+
+\begin_layout Standard
+
+\size small
+Publications related to the thesis: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Publications related to theses
+\end_layout
+
+\begin_layout Description
+P0 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "toth2020newhungarian"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P1 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2020agumiabroncs"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P2 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2021ikerabroncsterheles"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P3 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2022simulation"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P4 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "toth2020arambergosgood"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P5 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "cho2020application"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P6 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2023useof"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P7 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2020aszfaltkeverekek"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P8 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2024therelationship"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

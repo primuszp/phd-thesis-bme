@@ -1,0 +1,434 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Témafelvetés, célkitűzések
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Témafelvetés, célkitűzések} % add it to the
+ ToC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+A meglévő útpályaszerkezetek teljesítőképessége előbb vagy utóbb kimerül,
+ így felújításra vagy erősítésre szorulnak.
+ A hajlékony útpályaszerkezetek megerősíthetők egy új aszfaltréteg ráépítésével,
+ ahol az erősítőréteg szükséges vastagságát a meglévő, leromlott állapotú
+ útpályaszerkezet szabványterhelés hatására ébredő rugalmas alakváltozásából
+ kiindulva határozzuk meg.
+ Megnehezíti viszont az alakváltozások helyes értelmezését az aszfaltanyagok
+ viszkoelasztikus viselkedéséből, valamint a földmű változó nedvességtartalmából
+ következő merevség ingadozások.
+ A pontos pályaszerkezet-diagnosztika viszont megköveteli, hogy ezeket a
+ problémákat a méretezési rendszerből – a lehetőségeknek megfelelően – kiküszöbö
+ljük.
+\end_layout
+
+\begin_layout Standard
+A kutatás előzményét 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "toth2020newhungarian"
+literal "false"
+
+\end_inset
+
+ 
+\emph on
+
+\begin_inset Quotes pld
+\end_inset
+
+Aszfaltburkolatú útpályaszerkezetek egyszerűsített analitikus méretezése
+\emph default
+
+\begin_inset Quotes prd
+\end_inset
+
+ című munkája adja, ahol az új építésű aszfaltburkolatú útpályaszerkezetek
+ tervezéséhez és építéséhez olyan alternatív méretezési eljárást mutatnak
+ be a szerzők, amivel a típus-útpályaszerkezetek alkalmazásához képest jobban
+ figyelembe lehet venni az altalaj, illetve az épített pályaszerkezeti rétegek
+ anyagi tulajdonságaiban rejlő lehetőségeket.
+ Az alternatív méretezési eljárás viszont még csak elasztikus anyagként
+ modellezi az aszfaltrétegek viselkedését, ezért azt mindenképpen tovább
+ kell fejleszteni a viszkoelasztikus számítások irányába.
+\end_layout
+
+\begin_layout Standard
+A mechanikai modell kidolgozása az aszfaltanyag viszkoelasztikus viselkedésének
+ – a merevség hőmérséklet és terhelési idő függésének – figyelembevételével
+ történik.
+ A reológiából ismert hőmérséklet-idő hasonlósági elv alapján a laboratóriumi
+ vizsgálatokból megkonstruált ún.
+ aszfaltkeverék mestergörbével a különböző hőmérsékleten és frekvencián
+ mért anyagjellemzők, mint pl.
+ az 
+\begin_inset Formula $E^{*}\left(f\right)$
+\end_inset
+
+ komplex rugalmassági modulus, vagy az 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E\left(t\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ relaxációs modulus is jól tanulmányozható és beépíthető a mechanikai számítások
+ba.
+ A számítás alapját az adja, hogy kvázi-statikus terhelésnél a viszkoelasztikus
+ 
+\begin_inset Formula $u_{H}^{ve}\left(t\right)$
+\end_inset
+
+ elmozdulások bármely tetszőleges 
+\begin_inset Formula $t$
+\end_inset
+
+ időpillanatban jól közelíthetők lineárisan rugalmas 
+\begin_inset Formula $u_{H}^{e}\left(E^{ve}\left(t\right)\right)$
+\end_inset
+
+ elmozdulásokkal, ha az anyag 
+\begin_inset Formula $E$
+\end_inset
+
+ rugalmassági modulusát az adott 
+\begin_inset Formula $t$
+\end_inset
+
+ időponthoz tartozó 
+\begin_inset Formula $E^{ve}\left(t\right)$
+\end_inset
+
+ viszkoelasztikus (relaxációs) modulusának megfeleltetjük:
+\begin_inset Formula 
+\[
+u_{H}^{ve}\left(t\right)\approx u_{H}^{e}\left(E^{ve}\left(t\right),E_{2},\ldots,E_{5};\mu_{1},\ldots,\mu_{5};h_{1},\ldots,h_{4};q,a_{c}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol a hirtelen fellépő kerékterhelést matematikailag a 
+\begin_inset Formula $H\left(t\right)$
+\end_inset
+
+ Heaviside (egységugrás) függvénnyel történő szorzás fejezi ki, 
+\begin_inset Formula $q$
+\end_inset
+
+ a kerékterhelés kontakt nyomása, 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ pedig a kör alakú terhelés sugara.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+A felírt összefüggés az 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+inverz Laplace-transzformáció ún.
+ kvázi-elasztikus közelítésén alapul 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schapery1965amethod"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A laboratóriumi anyagvizsgálatok közül a henger alakú aszfaltkeverék minták
+ komplex rugalmassági modulusának meghatározására kidolgozott eljárást használta
+m.
+ A reológiai anyagfüggvények szerint a relaxációs modulus és a kúszási érzékenys
+ég, valamint a relaxációs modulus és a komplex rugalmassági modulus között
+ kapcsolat van, így azok egymásba átszámolhatóak.
+ Ez lehetőséget teremt arra, hogy a készített és a fúrt magminták reológiai
+ jellemzőit közvetlenül megmérjük, valamint az átszámítási módszereket mérési
+ adatokkal igazoljuk.
+ A viszkoelasztikus elemeket tartalmazó mechanikai számítási modell egyrészt
+ így alkalmas a laboratóriumi adatok alapján új szerkezetek tervezésére,
+ másrészt pedig az in
+\begin_inset space ~
+\end_inset
+
+situ vizsgálatok feszültség-alakváltozás idősoraiból képes visszaszámolni
+ a meglévő és leromlott állapotú útpályaszerkezetek anyagjellemzőit.
+ A helyszínen fúrt magminták laboratóriumi vizsgálatainak és a mért szerkezeti
+ reakciókból visszaszámolt anyagjellemzők értékeinek összehangolásával pedig
+ tovább finomítható a meglévő leromlott állapotú szerkezet modellje, és
+ így a szükséges beavatkozás és annak hatása jobban előre jelezhető.
+\end_layout
+
+\begin_layout Section*
+Az értekezés felépítése
+\end_layout
+
+\begin_layout Standard
+Az értekezés összeállításánál törekedtem arra, hogy amennyire csak lehetséges,
+ az egyes fejezetek önmagukban is értelmezhetőek legyenek.
+ Ennek egyik oka, hogy az útpályaszerkezetek méretezési rendszerének fejlesztése
+ megköveteli, hogy néha egymástól távol eső tudományterületekkel is foglalkozzun
+k.
+ Könnyebb szerkesztést és vélhetően érthetőbb gondolatvezetést eredményez,
+ ha minden fejezet elején bemutatom az éppen vizsgált problémakör elméleti
+ hátterét és irodalmi feldolgozását, és csak után, a fejezet második felében
+ tárgyalom saját vizsgálataimat és tudományos eredményeimet.
+ Az értekezés 4 fő fejezetből tevődik össze:
+\end_layout
+
+\begin_layout Itemize
+Az 1.
+\begin_inset space ~
+\end_inset
+
+fejezet bemutatja a hajlékony útpályaszerkezetek mechanikai-empirikus (M-E)
+ méretezési rendszerét.
+ Elsődleges célja, hogy ismertesse az olvasót azzal a keretrendszerrel,
+ amihez jelen dolgozat tudományos eredményei kapcsolódnak.
+\end_layout
+
+\begin_layout Itemize
+A 2.
+\begin_inset space ~
+\end_inset
+
+fejezet bemutatja a kerékterhelésnek és az útpályaszerkezetnek a kölcsönhatását.
+ A végeselem-módszer eredményeire támaszkodva javaslatot teszek egy olyan
+ egyszerűsített modellre, amivel a kidolgozott végeselem abroncsmodell kontakt
+ viselkedését a végeselem modell hiányában is jól számításba lehet venni
+ a rugalmas rétegek elméletét használó programokban.
+\end_layout
+
+\begin_layout Itemize
+A 3.
+\begin_inset space ~
+\end_inset
+
+fejezetben bemutatom a RAMBO anyagmodellt, amivel az aszfaltkeverékek terhelési
+ frekvencia és hőmérséklet függő viselkedése egyaránt jól megadható.
+ Az itt tárgyalt idő-frekvencia átalakítási módszerrel nagyon kényelmesen
+ lehet a RAMBO anyagmodellt a mechanikai-empirikus (M-E) méretezési rendszerbe
+ beilleszteni, elkerülve a bonyolult konverziós számításokat.
+\end_layout
+
+\begin_layout Itemize
+A 4.
+\begin_inset space ~
+\end_inset
+
+fejezetben a mozgó kerékterhelésnek és a terhelési frekvenciának a kapcsolatát
+ vizsgálom a 3.
+\begin_inset space ~
+\end_inset
+
+fejezet eredményeire támaszkodva.
+ A terhelési frekvencia az aszfaltkeverékek laboratóriumi vizsgálatainak
+ döntő fontosságú paramétere, ezért azt a mozgó járművek keréksebességének
+ meg kell tudni feleltetni a mechanikai-empirikus (M-E) méretezési rendszerben.
+\end_layout
+
+\begin_layout Standard
+A dolgozatot végül az összefoglaló fejezet zárja a kutatás legfontosabb
+ megállapításaival és az új tudományos eredmények bemutatásával.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

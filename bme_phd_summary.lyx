@@ -1,0 +1,1638 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input{preamble}
+\end_preamble
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+\noindent
+Új tudományos eredmények
+\end_layout
+
+\begin_layout Standard
+Doktori munkám elsődleges célja az volt, hogy az aszfaltburkolatú útpályaszerkez
+etek mechanikai-empirikus (M-E) méretezési rendszerét fejlessze.
+ Ebből következően az értekezésben nem csupán egyetlen kérdéssel foglalkoztam,
+ hanem megkíséreltem a hazai méretezési eljárásba az anyagtudományokban
+ elért újabb eredmények beépítése mellett, a kerékterhelés pontosabb figyelembev
+ételének lehetőségét is megteremteni.
+\end_layout
+
+\begin_layout Standard
+A kerékterheléssel kapcsolatosan elsősorban azt vizsgáltam, hogyan lehetséges
+ a végeselem módszerrel felépített komplex térbeli gumiabroncs modell eredményei
+t egyszerű számítási eljárásokba is beilleszteni.
+ A végeselem analízis eredményei azt mutatták, hogy a létrejövő érintkezési
+ lenyomatok és feszültségek jól visszaadják a szakirodalmi értékeket.
+ Ezért a jövőben a végeselem módszerre támaszkodva kialakítható lesz egy
+ olyan „virtuális útpályaszerkezet labor”, amivel a nagyon költséges helyszíni
+ vizsgálatok jelentős körét kiválthatjuk majd.
+ Addig is, az útpályaszerkezetek méretezésekor az általam kifejlesztett
+ egyszerű nyomásmodellel ajánlott a kerékterhelést figyelembe venni.
+\end_layout
+
+\begin_layout Standard
+Az aszfaltkeverékek viszkoelasztikus anyagtulajdonságainak leírására kidolgoztam
+ egy új empirikus anyagmodellt, amelynek paramétereit gyorsan meg lehet
+ határozni frekvenciatartományban, majd ezeket változatlan módon tudjuk
+ felhasználni időtartományban az aszfaltkeverék anyagi viselkedésének leírására.
+ A RAMBO modell alkalmazásának egyik gyakorlati előnye, hogy segítségével
+ tárgyalható a mozgó kerékterhelés sebességének és a terhelési frekvenciának
+ a kapcsolata.
+ Az általam levezetett, valós szerkezeti behajlásokon alapuló összefüggés
+ szerint, feszültség impulzus esetén a 100 km/h sebességgel mozgó kerékterhelés
+ megfeleltethető a 10 Hz-es dinamikus alakváltozási frekvenciának.
+ Nyúlás impulzust vizsgálva viszont ennél egy jóval kisebb, 3–4 Hz-es frekvenciá
+t kapunk ugyanerre a sebességre.
+ Ezek alapján a terhelési frekvenciát a laboratóriumi fárasztási vizsgálatokhoz
+ is pontosabban be lehet állítani.
+\end_layout
+
+\begin_layout Standard
+További kutatási munkát igényel még a RAMBO anyagmodell paraméterinek függése
+ a kötőanyag és kőváz jellemzőktől.
+ Különösen fontos a 
+\begin_inset Formula $\beta$
+\end_inset
+
+ idő-frekvencia egyenértékűségi tényezőt laboratóriumi relaxációs modulus
+ és kúszási érzékenység adatokkal is ellenőrizni, nem csak elméleti számításokra
+ hagyatkozni.
+ Valamint tisztázni kell, hogy a mozgó járművek által mért alakváltozások
+ és az ejtősúlyos teherbírásmérők által mért alakváltozások, hogyan befolyásoljá
+k a terhelési frekvencia értékét.
+\end_layout
+
+\begin_layout Standard
+A dolgozatba bemutatott új tudományos eredményekkel olyan új hazai méretezési
+ rendszer alakítható ki, amivel nem csak jobban kezelhetők az anyagi tulajdonság
+okban rejlő lehetőségek, hanem még részletesebb műszaki alternatívák is
+ kidolgozhatóak vagy összehasonlíthatóak a jelenleg elterjedt típus megoldásokka
+l szemben.
+\end_layout
+
+\begin_layout Section
+Tézisek
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+A mechanikai-empirikus (M-E) útpályaszerkezet méretezési rendszerekben általános
+an használt közelítés – miszerint a gumiabroncs belső légnyomása közel azonosnak
+ tekinthető a gumiabroncs által a burkolatnak átadott fajlagos érintkezési
+ nyomásával – felülbecsüli a diagonál típusú gumiabroncsokra jellemző értékeket.
+ A gumiabroncsok átlagos érintkezési nyomása nem csak a belső légnyomástól,
+ hanem az abroncs hajlékonyságára jellemző konstanstól is függ.
+ A kapcsolatot megadó egyszerűsített nyomásmodell arra a határmélységre
+ korlátozódik, ahol az útpályaszerkezetben ébredő mértékadó függőleges nyomófesz
+ültség már kisebb az átlagos érintkezési nyomásértéknél.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+Az irodalmi adatok alapján felépített diagonál típusú gumiabroncsmodell
+ végeselem módszerrel kiszámított érintkezési nyomásértékeit 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ laboratóriumi eredményeivel összevetettem, és az eredmények jó egyezést
+ mutattak.
+ Megállapítottam, hogy 
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ által javasolt egyszerű nyomásmodellel nagy pontossággal lehet a kerékterhelést
+ figyelembe venni útpályaszerkezetek méretezésekor, mivel a túlterhelt abroncsok
+ra jellemző nem egyenletes teherelosztás következtében ébredő feszültségcsúcsok
+ az útburkolat felszíne alatt 5–8 centiméterre már kiegyenlítődnek.
+ A javasolt keréknyomás modell a mechanikai-empirikus (M-E) útpályaszerkezet
+ méretezés számára:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+q=0,454p+197,87
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size small
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ahol 
+\begin_inset Formula $q$
+\end_inset
+
+ az átlagos érintkezési nyomás és 
+\begin_inset Formula $p$
+\end_inset
+
+ a gumiabroncs belső légnyomása kPa-ban.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+3.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P1
+\series default
+, 
+\series bold
+P2
+\series default
+, 
+\series bold
+P3
+\series default
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+A mechanikai-empirikus (M-E) útpályaszerkezet méretezési rendszerekben használat
+os aszfalt-fáradási és altalaj-összenyomódási kritériumokhoz a mértékadó
+ igénybevételek a helyettesítő körtárcsa és az ikerabroncs körtárcsa modellel
+ egyaránt nagy pontossággal meghatározhatók, ha kielégítően ismerjük a gumiabron
+csnak a burkolaton keresztül átadott fajlagos érintkezési nyomását.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+Az átlagos kontaktfesztültség és a helyettesítő kör sugarának ismertében
+ összehasonlító számításokat végeztem az ikerabroncs végeselem szimuláció
+ és a helyettesítő körtárcsamodellek között.
+ Az ABAQUS programban lefuttatott végeselem szimulációk eredményei jó egyezést
+ mutattak a WESLEA (Waterways Experiment Station Layered Elastic Analysis)
+ program számításaival a függőleges 
+\begin_inset Formula $u_{zz}$
+\end_inset
+
+ elmozdulások kivételéve.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+3.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P1
+\series default
+, 
+\series bold
+P2
+\series default
+, 
+\series bold
+P3
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Az aszfaltkeverékek hőmérséklet és frekvencia függő viselkedésének leírására
+ jól alkalmazható
+\series default
+ 
+\series bold
+a Ramberg-Osgood összefüggés matematikai alakja.
+ Az új négyparaméteres RAMBO modell együtthatói egymástól teljesen függetlenek
+ és nem változnak meg, ha frekvenciatartományból áttérünk időtartományba.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Az új modell 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kweon2008application"
+literal "true"
+
+\end_inset
+
+ munkáján alapul, ami sikeresen alkalmazta az aszfaltkeverékek 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E^{\ast}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ dinamikus modulus mestergörbéjének leírására a Ramberg-Osgood anyagmodell
+ matematikai alakját:
+\begin_inset Formula 
+\[
+E^{\ast}\left(f_{r}\right)=E_{e}^{*}+\frac{E_{g}^{*}-E_{e}^{*}}{1+Cf_{r}^{R-1}}
+\]
+
+\end_inset
+
+ahol
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $E_{e}^{*}$
+\end_inset
+
+ az alacsony frekvenciák vagy magas hőmérsékletek, az 
+\begin_inset Formula $E_{g}^{*}$
+\end_inset
+
+ pedig a magas frekvenciák vagy alacsony hőmérsékletek aszimptotája, 
+\begin_inset Formula $f_{r}$
+\end_inset
+
+ redukált frekvencia, 
+\begin_inset Formula $C$
+\end_inset
+
+ és 
+\begin_inset Formula $R$
+\end_inset
+
+ a 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+vizsgált anyagtól függő konstansok.
+ Dolgozatomban összehasonlítottam a RAMBO és a szigmoid-függvénnyel készült
+ dinamikus modulus mestergörbéket, és kapcsolatot teremtettem azok modellegyütth
+atói között.
+ Kimutattam, hogy a RAMBO modell jól képes helyettesíteni a szigmoid-függvényt
+ a merevségadatok leírásában, együtthatóinak függetlensége pedig lehetővé
+ teszi a mestergörbe teljes morfológiájának numerikus jellemzését.
+ Kiterjesztettem a RAMBO modellt a 
+\begin_inset Formula $\phi$
+\end_inset
+
+ fázisszög előrejelzésére is a Kramers-Kronig-relációk felhasználásával:
+\begin_inset Formula 
+\[
+\phi\left(f_{r}\right)=-c\frac{\pi}{2}\dfrac{\left(E_{g}^{*}-E_{e}^{*}\right)\left(R-1\right)Cf_{r}^{R-1}}{\left(Cf_{r}^{R-1}+1\right)\left(E_{e}^{*}Cf_{r}^{R-1}+E_{g}^{*}\right)}
+\]
+
+\end_inset
+
+Összehasonlító számítások azt mutatták, hogy az új fázisszög-függvény nagyon
+ pontosan illeszkedik az általános Maxwell-modell eredményeire.
+ Végül kidolgoztam idő-frekvencia átalakítás összefüggéseit (
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+), amikkel már időtartományban is meglehet adni az anyagparaméterek mestergörbéi
+t a frekvenciatartományban meghatározott modellparaméterekkel:
+\begin_inset Formula 
+\begin{alignat*}{1}
+E\left(t_{r}\right) & =E_{e}^{*}+\frac{E_{g}^{*}-E_{e}^{*}}{1+C\left(k_{r}t_{r}\right)^{1-R}}\\
+\\
+D\left(t_{r}\right) & =\frac{1+C\left(k_{c}t_{r}\right)^{1-R}}{E_{g}^{*}+E_{e}^{*}C\left(k_{c}t_{r}\right)^{1-R}}
+\end{alignat*}
+
+\end_inset
+
+ahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E\left(t_{r}\right)$
+\end_inset
+
+ a relaxációs modulus, 
+\begin_inset Formula $D\left(t_{r}\right)$
+\end_inset
+
+ a kúszási érzékenység és 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ redukált idő.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+4.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P4
+\series default
+, 
+\series bold
+P5
+\series default
+, 
+\series bold
+P6
+\series default
+,
+\series bold
+ P7
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Az aszfaltkeverékek viszkoelasztikus anyagtulajdonságainak frekvenciatartománybó
+l az időtartományba történő átváltása, nem csak a két változó között fennálló
+ fordított arányosságtól, hanem a RAMBO anyagmodell – a mestergörbe meredekségét
+ az alsó és a felső aszimptoták között meghatározó – 
+\emph on
+R
+\emph default
+ paraméterétől is függ.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Az idő-frekvencia átszámításhoz szükséges 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+ konstansok megállapításához modellszámításokat végeztem.
+ A RAMBO modell paramétereit széles tartományban változtatva létrehoztam
+ egy 400 db hipotetikus mestergörbéből álló adatbázist.
+ A hipotetikus mestergörbék relaxációs modulusának és kúszás érzékenységének
+ becslésére 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ninomiya1959someapproximate"
+literal "true"
+
+\end_inset
+
+ összefüggéseit használtam, ami jó választásnak bizonyult.
+ Végül regresszió számítással kapcsolatot kerestem a RAMBO modell együtthatói
+ és a kérdéses 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+ konstansok között:
+\begin_inset Formula 
+\begin{align*}
+k_{r}= & 16,31-7,04R\\
+k_{c}= & 5,150+6,26R
+\end{align*}
+
+\end_inset
+
+ahol 
+\begin_inset Formula $R$
+\end_inset
+
+ a RAMBO anyagmodell alakparamétere.
+ Az idő-frekvencia átváltás javasolt összefüggése:
+\begin_inset Formula 
+\[
+f=\dfrac{1}{k_{r}t}=\frac{\beta}{t}
+\]
+
+\end_inset
+
+ahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta=1/k_{r}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ idő-frekvencia egyenértékűségi
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ tényező.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Összehasonlító számítások azt mutatták, hogy a frekvencia tartományban
+ meghatározott RAMBO modellegyütthatók az időtartományban is kiválóan jellemzik
+ a vizsgált keveréket.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+4.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+A mozgó kerékterhelés 
+\emph on
+V
+\emph default
+ sebessége és a dinamikus modulus 
+\emph on
+f
+\emph default
+ terhelési frekvenciája között az útpályaszerkezet aszfaltrétegének idő-frekvenc
+ia egyenértékűségi tényezője és a mechanikai válasz (feszültség vagy alakváltozá
+s) hullámhossza teremt kapcsolatot.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A modell alapvetően az út-idő fizikai összefüggésből indul ki, ahol az idő-frekv
+encia átváltáshoz alkalmaztam a RAMBO anyagmodell 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ idő-frekvencia egyenértékűségi
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ tényezőjét:
+\begin_inset Formula 
+\[
+f=\frac{\beta}{\lambda}V^{k}
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ az aszfaltréteg feszültség vagy alakváltozás mechanikai válaszának hullámhosszá
+t jelöli, 
+\begin_inset Formula $V$
+\end_inset
+
+ a mozgó kerékterhelés sebessége, 
+\begin_inset Formula $k$
+\end_inset
+
+ pedig kísérleti állandó aminek értékét általános esetben egynek feltételezzük.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+5.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Az útburkolat felszínén mért behajlási vonalból levezethető a vizsgált aszfaltré
+teg alakváltozási hullámhossza.
+ A hullámhossz megegyezik a mért függőleges deformációkra illesztett függvény
+ görbületi ábráján az inflexiós pont által kijelölt távolság kétszeresével.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A modellhez 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+felhasználtam 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "primusz2015effectof,primusz2009abehajlasi"
+literal "false"
+
+\end_inset
+
+ által javasolt 
+\begin_inset Formula $D\left(r\right)$
+\end_inset
+
+ behajlási függvényt, amiből a görbületváltozást a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\kappa\left(r\right)\approx D^{''}\left(r\right)$
+\end_inset
+
+ összefüggéssel közelítettem 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:func-def-curvature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+ábra)
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Figyelembe véve, hogy 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jung1988directcalculation"
+literal "true"
+
+\end_inset
+
+ szerint a görbületi sugár a terhelés középpontjában megadja a 
+\begin_inset Formula $h$
+\end_inset
+
+ vastagságú pályaszerkezeti réteg alján ébredő 
+\begin_inset Formula $ε_{xx}$
+\end_inset
+
+ megnyúlás közelítő értékét, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\kappa\left(r\right)$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+függvény 
+\begin_inset Formula $r_{\textrm{inf}}$
+\end_inset
+
+ inflexiós pontja felfogható a 
+\begin_inset Formula $h$
+\end_inset
+
+ vastagságú aszfaltréteg alsó szálában ébredő fajlagos nyúlás 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ alakváltozási hullámhosszának:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\lambda=2r_{\textrm{inf}}=\frac{4a_{c}}{\sqrt{3c}}
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+A levezetett összefüggés szerint a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ alakváltozási hullámhossz a terhelő kerék 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ érintkezési sugarától és a behajlási vonal 
+\begin_inset Formula $c$
+\end_inset
+
+ alaktényezőjétől függ.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+5.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Az aszfaltkeverékek periodikus gerjesztésekor a terhelési frekvenciát a
+ mechanikai-empirikus (M-E) méretezési rendszerben a vizsgált mechanikai
+ válasznak megfelelően kell beállítani.
+ Az M-E útpályaszerkezet méretezési rendszerekben feszültség mechanikai
+ válasznál a javasolt terhelési frekvencia értéke 10 Hz, míg alakváltozás
+ mechanikai válasznál a javasolt terhelési frekvencia értéke 5 Hz.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Feszültség impulzust vizsgálva a hullámhosszt
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\lambda=2a_{c}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ értékkel közelítjük
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, így az 
+\begin_inset Formula $f$
+\end_inset
+
+ terhelési frekvencia a következő általános képlettel számítható:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+f=\frac{\beta}{2a_{c}}V^{k}
+\]
+
+\end_inset
+
+ahol 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ idő-frekvencia egyenértékűségi tényező, 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ a terhelő kerék érintkezési sugara, 
+\begin_inset Formula $V$
+\end_inset
+
+ a mozgó kerékterhelés sebessége, 
+\begin_inset Formula $k$
+\end_inset
+
+ pedig kísérleti állandó.
+ Az értekezésben vizsgált aszfaltkeverékekre 
+\begin_inset Formula $k_{r}=12$
+\end_inset
+
+ ezért 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta=1/12=0,085$
+\end_inset
+
+ és 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+az ikerabroncsok érintkezési sugara 
+\begin_inset Formula $a_{c}=\unit[0,12]{m}$
+\end_inset
+
+, így azt behelyettesítve a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+feszültség impulzusra érvényes
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ képletbe az alábbi egyszerű összefüggésre jutunk:
+\begin_inset Formula 
+\[
+f\approx0,1V
+\]
+
+\end_inset
+
+ahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $V$
+\end_inset
+
+ km/h-ban van értelmezve.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+A közelítő összefüggés igazolja 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "witzcak2002simpleperformance"
+literal "false"
+
+\end_inset
+
+ által javasolt 10
+\begin_inset space ~
+\end_inset
+
+Hz-es értéket, miszerint az autópályákra jellemző sebességeknél (~110
+\begin_inset space ~
+\end_inset
+
+km/h) a terhelés impulzusideje megközelítően 0,1
+\begin_inset space ~
+\end_inset
+
+mp.
+ Alakváltozás impulzus vizsgálva 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+a hullámhossz
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+t 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\lambda=4a_{c}/\sqrt{3c}$
+\end_inset
+
+ értékkel közelítjük, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+így az 
+\begin_inset Formula $f$
+\end_inset
+
+ terhelési frekvencia a következő általános képlettel számítható:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+f=\sqrt{0,75c}\frac{\beta}{2a_{c}}V^{k}
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Figyelembe véve, hogy behajlási vonal 
+\begin_inset Formula $c$
+\end_inset
+
+ alaktényezője a hajlékony és a különösen hajlékony szerkezeteknél 0,2–0,4
+ között változik, a 
+\begin_inset Formula $\sqrt{0,75c}$
+\end_inset
+
+ korrekciós tényező az 
+\begin_inset Formula $f$
+\end_inset
+
+ terhelési frekvenciát 3,8 Hz és 5,3 Hz tartományra korlátozza a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+feszültség impulzushoz képest.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+5.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P8
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Publikációk
+\end_layout
+
+\begin_layout Description
+P0 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "toth2020newhungarian"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P1 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2020agumiabroncs"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P2 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2021ikerabroncsterheles"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P3 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2022simulation"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P4 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "toth2020arambergosgood"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P5 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "cho2020application"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P6 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2023useof"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P7 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2020aszfaltkeverekek"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P8 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2024therelationship"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

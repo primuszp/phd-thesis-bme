@@ -1,0 +1,41 @@
+% For press
+%\PassOptionsToPackage{cmyk}{xcolor}
+%\definecolor{lightgray}{cmyk}{0,0,0,0.14}	% CMYK values have range [0,1]
+%\definecolor{black}{cmyk}{0,0,0,1} 	 	% Redefine the basic black
+%\color{black}								% Force the new black into effect, because xcolor issues \color{black} with the old black before all its initialisations
+
+\usepackage{xcolor}
+\definecolor{lightgray}{RGB}{220,220,220}
+
+\usepackage{emptypage} 						% Remove page numbers on empty pages
+\usepackage[toctitles]{titlesec}
+\usepackage{amsmath}
+%\usepackage{siunitx}
+
+\PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
+%\setlength{\overfullrule}{5pt}
+%\tolerance=9999        % allows as much whitespace as possible
+\emergencystretch=10pt  % allows some extra whitespace per line
+\frenchspacing
+
+% The pages of the TOC is numbered roman and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+\usepackage{enumitem}
+\setlist{itemsep=2.5pt}
+
+\usepackage{booktabs}
+
+\usepackage[labelfont=bf]{caption}
+\usepackage[font={small,it}]{caption}
+
+\AtBeginDocument{%
+\DeclareNameAlias{sortname}{last-first}%
+\DeclareRedundantLanguages{english,american}{english,american,british,canadian,australian}%
+\AtEveryBibitem{\clearlist{language}}%
+}

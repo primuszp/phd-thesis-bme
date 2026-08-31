@@ -1,0 +1,31 @@
+# LyX backups
+*.lyx~
+*.bak
+
+# LaTeX/LyX generated files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Reproducible build output and local diagnostics
+/build/
+*-test.pdf
+*-test.txt
+bme-pass*.txt
+bme_phd_diagnostic.*
+bme_phd_*.tex
+bme_phd_maindoc.pdf
+
+# Local PDF render checks
+/tmp/
+/tmp-bme-main.txt

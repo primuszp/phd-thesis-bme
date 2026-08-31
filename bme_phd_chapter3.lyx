@@ -1,0 +1,4453 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input{preamble}
+\end_preamble
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\begin_modules
+eqs-within-sections
+figs-within-sections
+tabs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_author "Primusz Péter"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Gumiabroncs-útpályaszerkezet kölcsönhatás
+\end_layout
+
+\begin_layout Section
+Bevezetés
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:tire-pave-contact"
+
+\end_inset
+
+A mechanikai-empirikus (M-E) útpályaszerkezet méretezési rendszerek a pályaszerk
+ezetet rugalmasságtani elven számítható szerkezetként fogják fel, és alapvetően
+ a vékony lemezek vagy a rugalmas rétegek elméletét alkalmazzák 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mccullough1969useof"
+literal "true"
+
+\end_inset
+
+.
+ Bármilyen méretezési eljárást is alkalmazzunk, annak előfeltétele, hogy
+ ismerjük az útburkolatra ható erőket, vagyis azt a felületet, amin a terhelés
+ a szerkezetre átadódik.
+\end_layout
+
+\begin_layout Standard
+Kezdetben a Boussinesq-féle egyenleteken alapuló módszerek feltételezték,
+ hogy az erő koncentráltan vagy vonalmenti eloszlásban működik a kerék teljes
+ szélességén 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kezdi1954talajmechanika"
+literal "false"
+
+\end_inset
+
+.
+ A pneumatikus kerekek elterjedésével már azt gondolták, hogy a terhelés
+ olyan körlakú érintkezési felületen adódik át, amin a keréksúly egyenletesen
+ megoszlik.
+ Ez a feltevés sokáig megmaradt, mivel egyszerű számítást tett lehetővé
+ és a rugalmas rétegek parciális differenciálegyenleteinek megoldása is
+ csak erre a terhelési esetre létezett.
+\end_layout
+
+\begin_layout Standard
+Az elméleti megközelítéseket később a probléma kísérleti megoldása egészítette
+ ki.
+ Különböző terhelésű kerekeket papírlapok közé helyezett festékes fóliára
+ ráengedve 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kezdi1954talajmechanika"
+literal "false"
+
+\end_inset
+
+, vagy azok homok körbeszórásával 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zsichla1990amertekado"
+literal "false"
+
+\end_inset
+
+ a gumiabroncsok lenyomata meghatározhatóvá vált (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:wheel-footprint"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.a
+\begin_inset space ~
+\end_inset
+
+ábra).
+ Később a technika fejlődésével ezt a módszert felváltották 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:wheel-footprint}.b
+\end_layout
+
+\end_inset
+
+ ábrán látható, a kontaktfeszültségek közvetlen mérésére kifejlesztett VRSPTA
+ (Vehicle-Road Surface Pressure Transducer Array) berendezéshez hasonló
+ műszaki megoldások 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "debeer1996measurement"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/weight_on_footprint.jpg
+	scale 51
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A terhelés hatása a lenyomatra 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hutton2005beadell"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/vrspta_mark2.jpg
+	scale 51
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+VRSPTA Mark II 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "debeer1996measurement"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gumiabroncs talplenyomat mérései módszerek
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:wheel-footprint"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Betonburkolatok esetén a kerék és az útburkolat érintkezési felülete ellipszis
+ alakú volt a korra jellemző diagonál abroncsoknál, nagysága pedig a belső
+ tömlőnyomástól és a kerékterheléstől egyaránt függött.
+ A jóval később megjelenő és merevebb radiál abroncsok keresztirányban nem,
+ csak hosszirányban képesek az alakváltozásra, így lenyomatuk képe inkább
+ téglalapra hasonlít 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gent2006thepneumatic"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ma már tudjuk, hogy az érintkezési feszültségek nagysága és eloszlása nagymérték
+ben meghatározza a szerkezetben ébredő igénybevételeket.
+ Olyan hibajelenségek magyarázhatók meg vele, mint pl.
+ a felülről lefele induló repedések 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wang2013analysis"
+literal "false"
+
+\end_inset
+
+.
+ A kísérleti eredmények ellenére a legtöbb méretezési eljárás – a számítási
+ nehézségekből adódóan – a tehergépkocsi ikerabroncs két ellipszis vagy
+ inkább téglalap alakú lenyomatát a továbbiakban is egy azokkal megegyező
+ nagyságú helyettesítő körfelülettel veszi figyelembe.
+ Ezt a megközelítést alkalmazta 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nemesdy1992azuj"
+literal "false"
+
+\end_inset
+
+ is a magyar új építésű típus-útpályaszerkezet katalógusrendszer megalkotásakor.
+ Szakmai körökben viszont újra és újra felerősödtek azok a kritikus hangok,
+ akik ezt az egyszerűsítést nem tartották elfogadhatónak.
+ A számítástechnika fejlődésével ugyanis lehetővé vált, hogy a szuperpozíció
+ elvét felhasználva a kör alakú terhelési esetre levezett egyenletekkel
+ már kerékelrendezéseket is modellezzünk.
+ Erre mutat példát 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "adorjanyi2009bemenho"
+literal "false"
+
+\end_inset
+
+ aki a 2×25
+\begin_inset space ~
+\end_inset
+
+kN nagyságú ikerabroncs terhelést két egymástól 315
+\begin_inset space ~
+\end_inset
+
+mm-re elhelyezett 210
+\begin_inset space ~
+\end_inset
+
+mm átmérőjű körfelületen egyenletesen megoszló erőrendszerrel veszi számításba.
+ Szokás szerint a megoszló erőrendszer nagyságát, vagyis a felületi nyomást
+ – jó közelítéssel – a gumiabroncsok belső légnyomásával megegyezőnek tételezzük
+ fel.
+ Ezt a gyakorlatot csak nagyon ritkán kérdőjelezzük meg, pedig az érintkezési
+ lenyomatnál sokkal jobban meghatározza a szerkezetben ébredő igénybevételeket.
+\end_layout
+
+\begin_layout Standard
+A számítástechnika jelenlegi szintjén jól vizsgálható a gumiabroncs-útburkolat
+ érintkezési kapcsolat a végeselem módszerrel a drága és időigényes helyszíni
+ vagy laboratóriumi mérésekkel szemben.
+ A témát jól bemutatja 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "wang2010threedimensional"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hernandez2017numerical"
+literal "false"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "hernandez2017tiretextendashpavement"
+literal "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citeyearpar
+key "hernandez2017semicoupled,hernandez2017tiretextendashpavement"
+literal "false"
+
+\end_inset
+
+ korábbi munkái.
+ A számítógépes szimulációk eredményeiből olyan megállapításokat lehetséges
+ levezetni, amelyekkel az egyszerűbb modellek paramétereit úgy tudjuk megválaszt
+ani, hogy azok a valóságos körülményeket és folyamatokat jobban reprezentálják.
+ Az ilyen irányú fejlesztéseket az indukálja, hogy a végeselem módszerrel
+ dolgozó tanulmányok eredményeit sokszor nehézkes reprodukálni a nem elérhető
+ szoftverkomponensek miatt, így az irodalomban közölt különféle abroncsmodellek
+ összehasonlítása sem mindig lehetséges.
+ Ezért egy olyan módszer, ami a komplex végeselem gumiabroncsmodellek érintkezés
+i viselkedését egyszerűen képes megragadni és számszerűsíteni, nagy előnyt
+ jelenthet a tématerület kutatási eredményeinek rendszerezésében.
+\end_layout
+
+\begin_layout Subsection
+Célkitűzések
+\end_layout
+
+\begin_layout Standard
+Jelen munka elsődleges célja az, hogy javaslatot tegyen egy olyan egyszerű
+ számítási módszerre, amivel a bonyolult végeselem gumiabroncs modell kontakt
+ viselkedését a jóval egyszerűbb rugalmas rétegek elméletét használó programokba
+n is figyelembe tudjuk venni.
+ A modellegyszerűsítés hatását az útpályaszerkezetekben ébredő igénybevételek
+ nagyságával vizsgálom, ehhez pedig összehasonlító számításokat végzek a
+ többrétegű hajlékony rétegek elméletén alapuló számítógépes programok és
+ a végeselem abroncsmodellek között.
+ A fejezetben olvasható kutatási koncepció kidolgozását a saját munkámnak
+ tekintem, de fontos megjegyeznem, hogy a végeselem modelleket az ABAQUS
+ programban Király Tamás szerzőtársam készítette el.
+ A levezett tudományos eredmények érthetősége megkívánja, hogy a végeselem
+ modellépítés legfontosabb lépéseit 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kiraly2020agumiabroncs,kiraly2021ikerabroncsterheles,kiraly2022simulation"
+literal "false"
+
+\end_inset
+
+ publikációk alapján a szükséges szinten bemutassam.
+\end_layout
+
+\begin_layout Subsection
+A vizsgálat hatóköre
+\end_layout
+
+\begin_layout Standard
+A kutatás elsősorban a mai modern radiál gumiabroncsok végeselem modellezésére
+ fókuszál statikus terhelési körülményeket feltételezve.
+ A gumiabroncsot felépítő alapanyagoknál a lineárisan rugalmas, a hiperelasztiku
+s és a viszkoelasztikus anyagmodellek egyaránt megjelennek.
+ Korábbi vizsgálatok eredményei azt mutatták, hogy a gumiabroncs és az útburkola
+t érintkezési határfelületén ébredő feszültségek nagysága és eloszlása független
+ az útpályaszerkezet rétegeinek mechanikai tulajdonságától 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wang2010threedimensional"
+literal "false"
+
+\end_inset
+
+.
+ A gumiabroncs-útburkolat kölcsönhatást ezért csak két jellemző hazai útpályasze
+rkezet típuson, egy hajlékony és egy félmerev szerkezeten vizsgáltam, minden
+ rétegtípusnál lineárisan rugalmas anyagmodellt alkalmazva.
+\end_layout
+
+\begin_layout Section
+Elméleti háttér
+\end_layout
+
+\begin_layout Subsection
+A gumiabroncs felépítése
+\end_layout
+
+\begin_layout Standard
+A gumiabroncsok a külső szemlélő számára egyszerű felépítésűnek tűnnek,
+ pedig a modern abroncsok nagyságrendileg 10–20 különböző alkatrészt tartalmazna
+k, amik együttesen adják a gumiabroncsoktól megkívánt műszaki tulajdonságokat.
+ A modern abroncsok legfontosabb részei a következőek (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:radial-tire-parts}.
+\end_layout
+
+\end_inset
+
+ ábra szerint számozva):
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/radial_tire_parts.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A gumiabroncs fő részei, az ábra 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hernandez2017numerical"
+literal "false"
+
+\end_inset
+
+ munkájában (a 21.
+ oldalon) közölt DTA 275/80R22.5 típusú abroncs keresztmetszete alapján készült
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:radial-tire-parts"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A futófelület (tread) az abroncs útfelülettel érintkező része, feladata
+ biztosítani a tapadást, a kopásállóságot és a menetstabilitást a járműnek
+ (
+\series bold
+1
+\series default
+).
+ Jellemzően szintetikus és természetes kaucsukból készül.
+\end_layout
+
+\begin_layout Itemize
+Az övrétegek (belt) erősítik az abroncsot, elnyelik az ütéseket, az optimális
+ menetstabilitást és gördülési ellenállást biztosítják a járműnek (
+\series bold
+2
+\series default
+).
+ Gumírozott nagy szilárdságú acélszálakból készülnek, a szálak helyzete
+ a radiál abroncs felhasználási céljának és terhelhetőségének függvényében
+ ±10–30° a középvonalhoz képest.
+\end_layout
+
+\begin_layout Itemize
+A szövetváz (carcass) az abroncs vázát adja, magas légnyomások esetén is
+ megőrzi a gumiabroncs alakját és elosztja a terhelést (
+\series bold
+3
+\series default
+).
+ Gumírozott rayon vagy poliészter textilszálakból készül.
+\end_layout
+
+\begin_layout Itemize
+Az oldalfal (sidewall) természetes gumiból készül, védi a karkaszt az oldalirány
+ú behatásoktól és átviszi a nyomatékot a futófelületre (
+\series bold
+4
+\series default
+).
+\end_layout
+
+\begin_layout Itemize
+A peremék (filler) elősegíti a menetstabilitást, a kormányzási és kényelmi
+ adottságokat, szintetikus gumiból készül (
+\series bold
+5
+\series default
+).
+\end_layout
+
+\begin_layout Itemize
+A peremerősítő öv (chafer belt) fokozza a menetstabilitást és a kormányzás
+ pontosságát (
+\series bold
+6
+\series default
+), anyaga lehet acél vagy nejlon, így megkülönböztettünk nejlon (
+\series bold
+7
+\series default
+) és acél (
+\series bold
+8
+\series default
+) peremerősítőt.
+\end_layout
+
+\begin_layout Itemize
+Az acél peremhuzal-mag vagy huzalkarika (strands) gumiba ágyazott nagy szilárdsá
+gú acélhuzalokból készül, ami stabil illeszkedést biztosít a gumiabroncs
+ és a keréktárcsa között (
+\series bold
+9
+\series default
+).
+ Az alkalmazott gyártástechnológiától függően a huzalkarika lehet magtöltős
+ (bead) vagy magtöltő nélküli (
+\series bold
+10
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+A gumiabroncs legbelső rétege légzáró, feladata, hogy megtartsa a gumiabroncsba
+ fújt levegőt, valamint megakadályozza a pára és nedvesség bejutását.
+\end_layout
+
+\begin_layout Subsection
+A gumiabroncs nyomásviszonyai
+\end_layout
+
+\begin_layout Standard
+A gépjárművek a kerekeiken keresztül támaszkodnak fel az úttestre.
+ A kerékterhelést pedig a gumiabroncsok adják át az útpályaszerkezetnek.
+ Feltevésünk szerint a járműterhelésből adódó 
+\begin_inset Formula $F$
+\end_inset
+
+ nyomóerő egyenletesen megoszlik a gumiabroncs 
+\begin_inset Formula $A$
+\end_inset
+
+ érintkezési felületén (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ballon-pressure-model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.a
+\begin_inset space ~
+\end_inset
+
+ábra):
+\begin_inset Formula 
+\begin{equation}
+p=\frac{F}{A}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $p$
+\end_inset
+
+ a gumiabroncs belső légnyomása.
+ Előírásnak megfelelő belső 
+\emph on
+p
+\emph default
+ légnyomásnál az útfelületre ható legnagyobb fajlagos nyomás és az átlagos
+ fajlagos nyomás gyakorlatilag egyenlő.
+ Így az átadott 
+\emph on
+q
+\emph default
+ felületi nyomás körülbelül azonosnak tekinthető a gumiabroncsok előírt
+ belső 
+\emph on
+p
+\emph default
+ légnyomásával (megengedett kerékterhelés esetén), melynek közel legnagyobb
+ értéke tehergépkocsik esetében 
+\begin_inset Formula $\unit[0,6-0,7]{MN/m^{2}}$
+\end_inset
+
+ (6–7 bár).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/ballon_pressure_model.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A tökéletesen hajlékony (a) és a falmerevséggel rendelkező léggömb (b) erőjátéka
+ sima vízszintes síkkal érintkezve, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ alapján szerkesztve 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ballon-pressure-model"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Szigorúan véve a 
+\begin_inset Formula $q=p$
+\end_inset
+
+ egyenlőség csak tökéletesen hajlékony, vagyis saját merevséggel nem rendelkező
+ keréktömlő esetén igaz.
+ Abban az esetben, ha a gumiabroncsnak van saját merevsége, akkor a kontakt
+ feszültség akár 10–30 százalékkel lehet nagyobb vagy akár kisebb, mint
+ az abroncs belső légnyomása a korabeli szakirodalom szerint 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kezdi1954talajmechanika,lawton1957staticload,yoder1959principles,lister1968contact"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Az ellentmondásos eredményekre 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ munkája adott később magyarázatot, aki fizikai levezetéssel igazolta, hogy
+ egy léggömb 
+\begin_inset Formula $q$
+\end_inset
+
+ fajlagos érintkezési nyomása miért szükségszerűen kisebb, mint annak belső
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ légnyomása (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ballon-pressure-model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.b ábra):
+\begin_inset Formula 
+\begin{equation}
+q=p-\frac{4T}{D}\sin\left(\theta\right)+\frac{F^{\prime}}{A}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+átlagos kontakt nyomás
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+húzóerő / egységhossz (a kontakt felület peremén)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\begin_inset Formula $T$
+\end_inset
+
+ húzóerő és a vízszintes által bezárt szög
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kontakt körfelület
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kontakt körfelület átmérője
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a léggömb fala által közvetített terhelés
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mivel a 
+\begin_inset Formula $T$
+\end_inset
+
+ húzóerő a belső 
+\begin_inset Formula $p$
+\end_inset
+
+ légnyomásnak és a külső 
+\begin_inset Formula $F$
+\end_inset
+
+ erőnek egyaránt függvénye, így a keresett átlagos 
+\begin_inset Formula $q$
+\end_inset
+
+ kontakt nyomás is 
+\begin_inset Formula $p$
+\end_inset
+
+ és 
+\begin_inset Formula $F$
+\end_inset
+
+ függvényének tekinthető, vagyis általánosságban megfogalmazható a következő
+ összefüggés:
+\begin_inset Formula 
+\begin{equation}
+q=f_{1}\left(p\right)+f_{2}\left(F,p\right)\label{eq:contact-press-ballon-gen}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $f_{1}\left(p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a belső légnyomás függvénye
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f_{2}\left(F,p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a belső légnyomásnak és a külső terhelésnek az együttes függvénye (hatása)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ a léggömbre levezetett 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:contact-press-ballon-gen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggést kiterjesztette gumiabroncsokra is, ahol az abroncs fizikai
+ felépítését, méreteit, a futófelület kialakítását, a gumi keménységet és
+ falvastagságot egy 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ tényezővel vette számításba:
+\begin_inset Formula 
+\begin{eqnarray}
+q & = & f_{1}\left(p\right)+f_{2}\left(F,p\right)+C^{\prime}\label{eq:contact-press-tyre-gen}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A fenti összefüggés gumiabroncsokra érvényes alakja:
+\begin_inset Formula 
+\begin{equation}
+q=a_{1}p+\left(a_{2}p+a_{3}\right)F+C^{\prime}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A levezett 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:contact-press-tyre-gen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggést 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ laboratórium mérésekkel igazolta egy 8.25-20x10 típusú gumiabroncsra:
+\begin_inset Formula 
+\begin{equation}
+q=\left(0,013p+10,5\right)F+0,119p+125,9\label{eq:contact-press-tyre}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $q$
+\end_inset
+
+ és 
+\begin_inset Formula $p$
+\end_inset
+
+ kPa-ban, az 
+\begin_inset Formula $F$
+\end_inset
+
+ kerékterhelés pedig kN-ban értendő.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref({eq:contact-press-tyre})
+\end_layout
+
+\end_inset
+
+ tapasztalati összefüggés szerint az érintkezési (kontakt) nyomás a kerékterhelé
+stől, az abroncs belső légnyomásától és nagymértékben az abroncs „hajlékonyságár
+a” jellemző 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ konstans értékétől függ.
+ Hasonló összefüggéseket közölt 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ a laborban vizsgált további gumiabroncs típusokra is, amik paraméterkészletét
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:tire-models-van-vuuren}.
+\end_layout
+
+\end_inset
+
+ táblázatban találjuk.
+ 
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/fem-tire/tire_models_van_vuuren.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az érintkezési nyomás, a gumiabroncsnyomás és a kerékterhelés kapcsolata
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ szerint
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tire-models-van-vuuren"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Anyagok és módszerek
+\end_layout
+
+\begin_layout Subsection
+Anyagmodellek
+\end_layout
+
+\begin_layout Standard
+A modern gumiabroncsok felépítésükből következően többféle alapanyagból
+ készülnek, és ezeknek csak egy kis részére igaz, hogy a lineárisan rugalmas
+ (Hooke) anyagmodellt követik.
+ A gumira például a nagyon nagy és nem lineáris deformációk jellemzőek.
+ Ezt az anyagviselkedést az ún.
+ hiper-viszkoelasztikus anyagmodellel írhatjuk le, ami egy hiperelasztikus
+ és egy viszkoelasztikus modell összekapcsolásán alapszik 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fazekas2017gumiszerh"
+literal "false"
+
+\end_inset
+
+.
+ Előbbi az anyag időfüggetlen, utóbbi az időfüggő viselkedést jellemzi 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "brinson2015polymer"
+literal "false"
+
+\end_inset
+
+.
+ A mérnöki gyakorlatban a hiper-viszkoelasztikus modellparaméterek meghatározása
+ nem egyértelmű feladat, ezért inkább a szeparált illesztés terjedt el 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fazekas2017gumiszerh"
+literal "false"
+
+\end_inset
+
+.
+ Ez azt jelenti, hogy a hiperelasztikus és a viszkoelasztikus paramétereket
+ külön-külön illesszük a mérésekre, ez viszont pontatlanabb eredményeket
+ ad a direkt módszerhez képest.
+\end_layout
+
+\begin_layout Standard
+A hiperelasztikus anyagmodellben a feszültség és a nyúlás közötti kapcsolatot
+ az alakváltozási energia sűrűségfüggvény írja le.
+ Több általános hiperelasztikus konstitutív törvény ismert, mint pl.
+ a Neo-Hooke, a Mooney-Rivlin, a Yeoh és az Ogden.
+ A Yeoh modell az első deformációs invariánson alapszik, és a háromparaméteres
+ változata jó illeszkedést biztosít a nagy deformációk tartományában 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "madocsai2011gumialkatreszek"
+literal "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+W=C_{10}\left(\bar{I}_{1}-3\right)+C_{20}\left(\bar{I}_{1}-3\right)^{2}+C_{30}\left(\bar{I}_{1}-3\right)^{3}+\frac{1}{D_{1}}\left(J_{e\ell}-1\right)^{2}+\frac{1}{D_{2}}\left(J_{e\ell}-1\right)^{4}+\frac{1}{D_{3}}\left(J_{e\ell}-1\right)^{6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $C_{i0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+anyagparaméterek 
+\begin_inset Formula $\left[\unit{Pa}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{I}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deformációs invariáns
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+összenyomhatatlansági paraméterek 
+\begin_inset Formula $\left[\unit{1/Pa}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $J_{e\ell}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+elasztikus térfogati állandó
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az anyag időfüggő (
+\begin_inset Formula $t$
+\end_inset
+
+) viszkoelasztikus viselkedése Prony-sorral közelíthető az alábbi formában:
+\begin_inset Formula 
+\begin{equation}
+g_{r}\left(t\right)=1-\sum_{i=1}^{N}g_{i}\left(1-e^{-\unitfrac{t}{\tau_{i}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $N$
+\end_inset
+
+ a viszkoelasztikus modell elemeinek száma, 
+\begin_inset Formula $\tau_{i}$
+\end_inset
+
+ az 
+\emph on
+i
+\emph default
+.
+ relaxációs idő, míg 
+\begin_inset Formula $g_{i}$
+\end_inset
+
+ az 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ relatív csúsztató rugalmassági modulus.
+ A dimenziótlan 
+\begin_inset Formula $g_{r}\left(t\right)$
+\end_inset
+
+ relaxációsmodulus-függvény az időfüggő 
+\begin_inset Formula $G\left(t\right)$
+\end_inset
+
+ és a pillanatnyi (üveges) 
+\begin_inset Formula $G_{0}$
+\end_inset
+
+ csúsztató modulus hányadosaként értelmezzük:
+\begin_inset Formula 
+\begin{equation}
+g_{r}\left(t\right)=\frac{G\left(t\right)}{G_{0}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A most bemutatott anyagmodellekről további részleteket olvashatunk 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "tamas2014vegeselem"
+literal "false"
+
+\end_inset
+
+ szabadon elérhető oktatási anyagában.
+\end_layout
+
+\begin_layout Subsection
+Modellezési technika
+\end_layout
+
+\begin_layout Standard
+A végeselem modellezési technikára azért esett a választás, mert a segítségével
+ megfelelő pontossággal lehetséges megadni a gumiabroncsok komplex felépítését,
+ vagyis a különböző anyagú rétegek egymásra épülő rendszerét, és azok eltérő
+ anyagtulajdonságait.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/fem_2D_problem.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Egy kétdimenziós 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ problématartomány (a), annak 
+\begin_inset Formula $\Omega_{d}$
+\end_inset
+
+ végeselemes felosztása háromszögelemekre (b), valamint az erő- és elmozdulási
+ peremfeltételek (c) 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "tekkaya2014finiteelement"
+literal "false"
+
+\end_inset
+
+ munkája alapján
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fem-2D-problem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A végeselem módszer lehetővé teszi, hogy a vizsgált tetszőleges geometriai
+ kialakítású, tetszőleges peremfeltételű és tetszőleges terhelésfeltételekkel
+ rendelkező testet véges számú, kicsiny, de geometriailag jól meghatározott
+ ún.
+ véges elemekből felépített modellel helyettesítjük 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "molnar2011cadalapjai"
+literal "false"
+
+\end_inset
+
+.
+ Ezek a végeselemek csak a csomópontjaikban kapcsolódnak egymással (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fem-2D-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A csomópontok elmozdulása és a csomópontokban ható erők közötti kapcsolatot
+ a végeselemek viselkedését leíró törvényszerűségek és az anyagmodellek
+ meghatározzák 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kakucs2020avegeselemmodszer"
+literal "false"
+
+\end_inset
+
+.
+ Statikus elemzéseknél, mint amivel jelen fejezet is foglalkozik, a végeselem
+ módszer alapegyenlete a következő:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{K}\mathbf{u}=\mathbf{F}\label{eq:fem-linear}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az 
+\begin_inset Formula $m\times m$
+\end_inset
+
+ elemű szimmetrikus mátrix, a rendszer merevségi mátrixa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az 
+\begin_inset Formula $m$
+\end_inset
+
+ elemű elmozdulásvektor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az 
+\begin_inset Formula $m$
+\end_inset
+
+ elemű terhelésvektor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az összekapcsolódó végeselemek együttes viselkedését egy egyenletrendszer
+ írja le, amelynek megoldása a vizsgált tárgy alakváltozási állapotát adja.
+ A csomópontok egymáshoz viszonyított relatív elmozdulása a végeselemek
+ torzulásához vezet, amiből a fellépő feszültségek a már említett törvényszerűsé
+gekkel kiszámíthatók 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kakucs2020avegeselemmodszer"
+literal "false"
+
+\end_inset
+
+.
+ Mivel 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:fem-linear})
+\end_layout
+
+\end_inset
+
+ egyenletből az ismeretlen 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ vektor explicit módon (egyértelműen) kifejezhető, a lineáris analízis eljárásai
+t közvetlenül alkalmazhatjuk.
+ A gyakorlatban viszont sokszor, pl.
+ a gyártási folyamatok természetéből következően, nemlineáris egyenletrendszerre
+l kell dolgozni:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\left[K\left(\mathbf{u}\right)\right]}\mathbf{u}=\mathbf{F}\label{eq:fem-nonlinear}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+amiből az 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ vektor explicit módon már nem kifejezhető.
+ Az ilyen típusú implicit egyenleteket általában iteratív sémákkal, pl.
+ Newton-Raphson módszerrel oldjuk meg.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref({eq:fem-linear})
+\end_layout
+
+\end_inset
+
+ típusú egyenleteket megengedő végeselemes módszereket lineárisnak, míg
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:fem-nonlinear})
+\end_layout
+
+\end_inset
+
+ típusú egyenleteket eredményező módszereket nemlineáris végeselemes módszerekne
+k nevezzük 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tekkaya2014finiteelement"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A végeselemes módszer kézi számításokra alkalmatlan, mivel nagyon sok elemi
+ művelet elvégzését igényli már egy igen egyszerű feladat is.
+ Ezért ma már mindenhol számítógépes programokat használnak, hogy az iparban
+ is fontos feladatok megoldhatóak legyenek.
+ Az egyik legelterjedtebb végeselem szoftver jelenleg az ABAQUS/CAE (Complete
+ Abaqus Environment) ami hatékony és komplett megoldást jelent az ipari
+ feladatok széles spektrumához.
+ A program implicit és explicit mechanikai, áramlástani és elektromágneses
+ megoldóval (solver) rendelkezik, de SPH (Smoothed Particle Hydrodynamics),
+ DEM (Discrete Element Method) és több-test dinamikai problémákat is modellezhet
+ünk vele 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tamas2014vegeselem"
+literal "false"
+
+\end_inset
+
+.
+ Fontos alprogramja a TOSCA, ami geometria vagy paraméter optimalizálásra
+ használatos.
+ A nagy gumiabroncsgyártók, mint amilyen pl.
+ a Hankook, a 2000-es évek elején kezdték el használni az ABAQUS programot
+ a manapság ismertnek mondható modellezési technikák kifejlesztésére 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kennedy2013introducing"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Útpályaszerkezet modell
+\end_layout
+
+\begin_layout Standard
+A mechanikai alapú útpályaszerkezet méretezés alapvetően 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "burmister1943thetheory"
+literal "false"
+
+\end_inset
+
+ elméletét felhasználva a lineárisan rugalmas, homogén és izotróp végtelen
+ féltéren nyugvó, többrétegű hajlékony rétegek rendszerével modellezi a
+ valóságos útpályaszerkezeteket (Multi-layer Elastic Analysis, MLEA).
+ A modellen belül egy 
+\begin_inset Formula $h$
+\end_inset
+
+ vastagságú réteg mechanikai viselkedését a Hooke-féle anyagtörvénynek megfelelő
+en az 
+\begin_inset Formula $E$
+\end_inset
+
+ rugalmassági vagy Young-modulus és a 
+\begin_inset Formula $\mu$
+\end_inset
+
+ harántkontrakciós, vagy Poisson-tényező adja meg.
+ A rétegek a szerkezeteken belül egymáshoz tökéletesen tapadnak, vagyis
+ a rétegek nem tudnak elcsúszni a határfelületen.
+\end_layout
+
+\begin_layout Standard
+A többrétegű rugalmas rendszerek (MLEA) elmélete mellett, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "duncan1968finiteelement"
+literal "false"
+
+\end_inset
+
+ munkájának köszönhetően a végeselemes modellezés (VEM) már az 1960-as évek
+ végén megjelenik az útpályaszerkezetek tanulmányozásában is, mivel többek
+ között lehetővé teszi az anyag nemlineáris viselkedésének figyelembevételét
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cho2018finiteelement"
+literal "false"
+
+\end_inset
+
+.
+ A végeselem-módszer egyik jellegzetes velejárója, hogy az analitikus megoldások
+nál használt végtelen tartományokat végessé kell alakítani.
+ Ez azonban sokszor nem észszerű, főleg végtelen vagy félvégtelen kiterjedésű
+ kontinuumokra megfogalmazott feladatok esetében.
+ A probléma útpályaszerkezeteknél a legalsó homogén végtelen féltérnél,
+ vagyis a földműnél jelentkezik.
+ A megoldást a végtelen végeselemek jelentik, amelyekkel már figyelembe
+ vehetők a végtelenbe nyúló résztartományok is 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "scharle1986avegeselemmodszer"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/pavement_fem_model.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az útpályaszerkezet vizsgált tartománya (a) és végeselem hálója (b)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pavement-fem-model"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az elemzéshez elkészített végeselem modellben az útpályaszerkezet vizsgált
+ tartománya hengeralakú (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pavement-fem-model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.a
+\begin_inset space ~
+\end_inset
+
+ábra), ahol a C3D8I (8 csomópontú lineáris) végeselemeket a határfelületen
+ radiális irányban CIN3D8 (8 csomópontú lineáris) végtelen elemek veszik
+ körül (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pavement-fem-model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.b
+\begin_inset space ~
+\end_inset
+
+ábra), és a földmű alulról szintén végtelen elemekbe megy át (amik a lesüllyedés
+ nagyságát szabályozzák).
+ A gumiabroncs és az útburkolat kontaktfelületének környezetében 6 mm élhosszúsá
+gú elemek, míg a vizsgált területtől távolodva rohamosan durvul a háló,
+ egészen a 100 mm élhosszig.
+ A háló finomból durvába történő átmenete lineáris vagy más néven ragasztott
+ (ún.
+ TIED) kapcsolattal lett figyelembe véve, mivel már a durvább háló elemeiben
+ sem várható nagy feszültséggradiens.
+ Ez az egyszerű megoldás jobb minőségű hálót és gyorsabb futásidőt biztosít.
+ Az útpályaszerkezet minden véges vastagságú rétegében legalább 5 nem-redukáltan
+ integrált elemmel van biztosítva a hajlításból származó feszültségek megfelelő
+ leképzése.
+ A rétegek egymáson elcsúszni nem tudnak, azok idealizáltan egymáshoz tapadnak.
+ A kutatásban vizsgált hajlékony és félmerev útpályaszerkezetek rétegrendjét
+ és a rétegek mechanikai tulajdonságait 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:pavement-structures}.
+\end_layout
+
+\end_inset
+
+ táblázat foglalja össze.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/fem-tire/pavement_structures.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A vizsgált útpályaszerkezetek rétegrendje és a rétegek anyagtulajdonságai
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:pavement-structures"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A modellben a térbeli kontinuum elem csomópontjainak 3 elmozdulás szabadságfoka
+ van (
+\begin_inset Formula $u_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $u_{3}$
+\end_inset
+
+), míg a végtelen végeselem végtelen irányban elhelyezett csomópontjainak
+ elmozdulásait alulról a 
+\emph on
+z
+\emph default
+-tengely, oldalról pedig az 
+\emph on
+x
+\emph default
+-tengely és 
+\emph on
+y
+\emph default
+-tengely mentén korlátozzuk.
+ A befogásból eredő feszültségi anomáliák lecsengését az adott pályaszerkezeti
+ réteghez tartozó rugalmas anyagtulajdonsággal rendelkező végtelen elemek
+ biztosítják, és így a peremfeltételek elméletileg nem okoznak nagy hibát
+ a szimulációba.
+ Az útpályaszerkezethez felhasznált kontinuumelemeknek a száma 206
+\begin_inset space ~
+\end_inset
+
+421 db, a végtelen elemek száma pedig 1
+\begin_inset space ~
+\end_inset
+
+740 db.
+\end_layout
+
+\begin_layout Subsection
+Komplex gumiabroncs modell
+\end_layout
+
+\begin_layout Standard
+A valóságos gumiabroncs komplex végeselem modelljének felépítése két fő
+ lépésben történik.
+ Az eső lépésben egy síkbeli tengelyszimmetrikus modellel a peremhuzalkarika
+ előfeszítését és az abroncs belső légnyomását szimuláljuk.
+ A második lépésben a 2D-s modell eredményeit felhasználva kialakítjuk az
+ egyensúlyi állapotban lévő 3D-s gumiabroncs modellt.
+ A folyamat részletes leírása megtalálható az ABAQUS programcsomag kézikönyvében
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "https://docs.software.vt.edu/abaqusv2022/English/SIMACAEEXARefMap/simaexa-c-resultstrans.htm#simaexa-c-resultstrans-t-exafiguresect1__simaexa-c-sxmtiretrans-xsection"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Tengelyszimmetrikus 2D modell
+\end_layout
+
+\begin_layout Standard
+A végeselem analízis (bizonyos feltételek mellett) lehetőséget ad a 3D-s
+ testek síkbeli vizsgálatára, amivel jelentős számítási idő-, tárhely- és
+ CPU kapacitás megspórolható.
+ A gumiabroncs felfújásához és keréktárcsára feszítéséhez elegendő egy síkbeli
+ tengelyszimmetrikus feladat megoldása, ami azt jelenti, hogy csak 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:tyre-fem-model-2d}.
+\end_layout
+
+\end_inset
+
+ ábrán látható radiális keresztmetszet modelljét kell elkészíteni.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/tyre_fem_model_2d.jpg
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A gumiabroncs végeselemhálója (a), a tengelyszimmetrikus modell befogása
+ (b) és a gumiabroncs alakváltozása felfújás után (c)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tyre-fem-model-2d"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A gumiabroncs szerkezeti geometriája 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hernandez2017numerical"
+literal "false"
+
+\end_inset
+
+ által közölt DTA 275/80R22.5 típusú abroncs keresztmetszeti rajza alapján
+ (21.
+\begin_inset space ~
+\end_inset
+
+oldal) készült, az abroncsok szélessége így (overall width) 288
+\begin_inset space ~
+\end_inset
+
+mm-re, az abroncsok távolsága (dual spacing) pedig 315
+\begin_inset space ~
+\end_inset
+
+mm-re adódott.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref{fig:tyre-fem-model-2d}.
+\end_layout
+
+\end_inset
+
+ ábrán látható abroncs kompozit szerkezetének a geometriai méreteit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:tire-geom-params}.
+\end_layout
+
+\end_inset
+
+ táblázat (a részek számozása 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:radial-tire-parts}.
+\end_layout
+
+\end_inset
+
+ ábrán láthatókkal megegyezik), az anyagparamétereket pedig 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:tire-material-params}.
+\end_layout
+
+\end_inset
+
+ táblázat foglalja össze irodalmi gyűjtés alapján.
+ A Yeoh-féle hiperelasztikus, a viszkoelasztikus és a szálerősítés (rebar)
+ anyagparamétereket 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "yazdandoost2016finiteelement"
+literal "false"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "behroozinia2020aninvestigation"
+literal "false"
+
+\end_inset
+
+ munkáiban találjuk.
+ A gumiabroncs anyagparamétereinek kísérleti meghatározásáról jó összefoglalást
+ nyújt 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanblommestein2016experimentally"
+literal "false"
+
+\end_inset
+
+ doktori dolgozata.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/fem-tire/tire_fem_geom_params.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DTA 275/80R22.5 típusú abroncs kompozit szerkezetének geometriai méretei
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tire-geom-params"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az ABAQUS program megszabja a 2D-s tengelyszimmetrikus feladat leírásához
+ szükséges hengerkoordináta rendszer elhelyezkedését, ahol az 
+\emph on
+x
+\emph default
+-tengely a sugárirányú (a radiális) tengely és az 
+\emph on
+y
+\emph default
+-tengely a 
+\emph on
+z
+\emph default
+-tengellyel esik egybe.
+ Ennek megfelelően az abroncs keresztmetszeti modellje az 
+\emph on
+xy
+\emph default
+-síkban készült el (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:tyre-fem-model-2d}
+\end_layout
+
+\end_inset
+
+.a
+\begin_inset space ~
+\end_inset
+
+ábra).
+ Az ABAQUS programban a tengelyszimmetrikus feladatok definiálásához nem
+ szükséges külön parancsot használni, azonban a hálót kötelezően csak tengelyszi
+mmetrikus elemekből lehet felépíteni.
+ A gumiabroncs modell a következő elemtípusokat tartalmazza:
+\end_layout
+
+\begin_layout Itemize
+CAX4 (4 csomópontú bilineáris kontinuum-elem) lineárisan rugalmas vagy elasztopl
+asztikus anyagokhoz.
+\end_layout
+
+\begin_layout Itemize
+CAX4H (4 csomópontú bilineáris hibrid kontinuum-elem) hiperelasztikus anyagokhoz.
+\end_layout
+
+\begin_layout Itemize
+SFMAX1 (2 csomópontú lineáris membrán-szerű felületelem) a szálerősítéshez.
+\end_layout
+
+\begin_layout Standard
+A felületelemek felépítésüket tekintve vastagsággal nem rendelkező membrán
+ elemek.
+ Általában többletsúly definiálásakor vagy felületre ható erők felvitelénél
+ alkalmazzuk őket, de jól megfelelnek a gumiabroncs szálerősítésének (rebar)
+ egyszerűsített figyelembevételéhez is.
+ Az SFMAX1 felületelem nagy előnye, hogy a szálerősítésnek csak a radiális
+ metszetben szükséges a lefutását modellezni, a szálerősítés keresztmetszetét
+ a végeselem hálótól független paraméterekkel tudjuk megadni.
+ További előny még, hogy nem kell a felületelemeknek a végeselemhaló egyéb
+ elemeihez csomópontjaikkal csatlakozniuk, hanem ún.
+ beágyazott elemekként (embeded element) definiálhatók.
+ A gumiabroncs modellnél a gumi anyaga a szálerősítéshez hozzárendelt „gazda-ele
+m”.
+\end_layout
+
+\begin_layout Standard
+A tengelyszimmetrikus modell befogása a kerék forgástengelyének és az abroncs
+ szimmetria tengelyének metszéspontjában van (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:tyre-fem-model-2d}.
+\end_layout
+
+\end_inset
+
+b
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A befogási pont 2.
+ (
+\begin_inset Formula $U_{2}$
+\end_inset
+
+) és 6.
+ (
+\begin_inset Formula $UR_{3}$
+\end_inset
+
+) szabadságfokát (Degrees of Freedom, DOF) korlátozzuk, hogy a forgástengely
+ mentén ne történhessen elmozdulás, illetve a radiális metszet ne tudjon
+ a síkjába elfordulni.
+ A gumiabroncs modell keresztmetszete 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:tyre-fem-model-2d}.
+\end_layout
+
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+ábrán még nem a keréktárcsára feszített és nyomás alá helyezett állapotot
+ tükrözi.
+ A keréktárcsa és a gumiabroncs interakcióját 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jeong2016prediction"
+literal "false"
+
+\end_inset
+
+ szálerősítés szakadás vizsgálata alapján dolgoztuk ki.
+\end_layout
+
+\begin_layout Standard
+A szimuláció kezdetekor a karikahuzalt – hosszanti irányban – 30 MPa nagyságú
+ húzófeszültséggel terheljük, ami az abroncs peremét finoman a keréktárcsára
+ feszíti.
+ Az abroncs pereme a felfújás közben a keréktárcsán elcsúszhat (a súrlódási
+ tényezőt 0,3-nak választva), valamint extrém túlnyomás esetén akár le is
+ válhat arról (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:tyre-fem-model-2d}.
+\end_layout
+
+\end_inset
+
+c
+\begin_inset space ~
+\end_inset
+
+ábra).
+ Ennél a pontnál a gumiabroncsban ébredő feszültségeket és a felfújt abroncsalak
+ot már érdemes összevetni a méréseinkkel 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jeong2016prediction,korunovic2007feaof"
+literal "false"
+
+\end_inset
+
+.
+ A későbbi gumiabroncs-útburkolat kontaktszimulációra tekintettel már a
+ tengelyszimmetrikus modellnél célszerű megadni a futófelület érintkezési
+ felületét.
+\end_layout
+
+\begin_layout Subsubsection
+Teljes 3D testmodell
+\end_layout
+
+\begin_layout Standard
+A gumiabroncs 2D-s tengelyszimmetrikus modellje a kontaktfelületek ellenére
+ is egy rendkívül gyorsan lefutó szimuláció, ami egy normál munkaállomáson
+ (workstation, 4 CPU, magonként 3,5
+\begin_inset space ~
+\end_inset
+
+GHz órajel) egy perc alatti futásidőt jelent.
+ Ugyanez a feladat térben – változatlan gépteljesítmény mellett is – több
+ tíz percet igényel.
+ A következő lépésekhez viszont, ahol az útburkolat és a gumiabroncs interakciój
+át vizsgáljuk, már elengedhetetlen, hogy növeljük a végeselem modell komplexitás
+át.
+ Az ABAQUS program szerencsére képes a tengelyszimmetrikus modellből a 
+\family sans
+*SYMMETRIC MODELL GENERATION
+\family default
+ paranccsal 3D-s modellt létrehozni úgy, hogy rávetíti a 3D-s hálóra a tengelysz
+immetrikus modell feszültségállapotát.
+ Ezt követően még egy egyensúlyi számításra (equlibrium step) van szükség,
+ aminek a hatására az átvetített feszültségi állapot a 3D-s modellben ténylegese
+n egyensúlyi állapotba kerül.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/tyre_pave_interaction.jpg
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A tengelyszimmetrikus modell feszültségállapotának projektelása a 3D-s gumiabron
+cs hálóra 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kiraly2022simulation"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tyre-pave-interaction"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A gumiabroncs 3D-s teljes testmodell generálásánál praktikus csak azokat
+ a részeket finomabban hálózni, ahol a gumiabroncs-útburkolat interakció
+ várható és a többi elemet durvábban közelíteni, ezzel is spórolva a számításhoz
+ szükséges idővel és gépteljesítménnyel (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tyre-pave-interaction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A modell durvábbra hálózott részein ezért CCL12 henger alakú végeselemek
+ szerepelnek, amelyek a kerületi irányban elhelyezett plusz csomópontjaikkal
+ az ívelt térrészeket jobban le tudják követni.
+ Kontaktfelületnek ajánlatos hagyományos elemeket választani, hogy a megoldás
+ gyorsabban elérje a stabil egyensúlyi helyzetet.
+ A 3D-s modell generálásakor a tengelyszimmetrikus modellben létrehozott
+ csomópont-, elem- és kontaktfelület csoportok automatikusan létrejönnek,
+ ezért volt érdemes megadni már a 2D-s modellben is a gumiabroncs-útburkolat
+ interakcióhoz szükséges kontaktfelületeket.
+ Ennél a lépésnél szükséges az 
+\family sans
+*INCLUDE
+\family default
+ paranccsal az útpályaszerkezet modellt beolvasni.
+ Érdemes az útburkolat hálóját az abroncstól távolabb elhelyezni, hogy azok
+ még ne érjenek össze.
+ A gumiabroncs-útburkolat kontaktszimulációhoz meg kell adni a kontaktpárokat
+ és az interakciós tulajdonságokat.
+ A helyes kontakt megadásánál mindig a „puhább” anyagot, azaz a gumiabroncs
+ futófelületet hálózzuk finomabban és így azt „slave”-nek definiáljuk a
+ kontakt párban.
+ Mivel jelen munka csak a statikus terhelés esetét vizsgálja, az útburkolat
+ (kopóréteg) és az abroncs között nem volt komplex súrlódási modell.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "nakajima2019advanced"
+literal "false"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "zhou2015effectof"
+literal "false"
+
+\end_inset
+
+ megállapítják, hogy az abroncslenyomat számításánál a súrlódásmentes érintkezés
+i kapcsolat valósághűbb eredményeket ad.
+ Ez azzal magyarázható, hogy a súrlódás hatására az abroncs profilmintájának
+ peremén nyírófeszültségek ébrednek és begyűrődések keletkeznek.
+ Ez a szcenárió az abroncs gördülő mozgásakor, illetve a gördülő mozgásból
+ levezetett álló helyzetében nem jelentkezik.
+ Az abroncs befogása továbbra is azonos pontban történik a 3D-s modellben,
+ azonban korlátozott mind a 6 szabadságfok, valamint az abroncs belső légnyomása
+ is megoszló terhelésként van figyelembe véve.
+\end_layout
+
+\begin_layout Subsection
+Gumiabroncs-útburkolat szimuláció
+\end_layout
+
+\begin_layout Standard
+A gumiabroncs-útburkolat végeselem kontakt szimuláció az egyensúlyi állapotba
+ helyezett 3D\SpecialChar nobreakdash
+s abroncsmodell analízisének a folytatása, így itt már nincs
+ lehetőség további módosításokra.
+ Az egyes számítási lépésekben (load step) legfeljebb csak a paraméterek
+ értékein pl.
+ súrlódási tényezőn lehet változtatni.
+\end_layout
+
+\begin_layout Standard
+A lenyomatvizsgálat első lépése, hogy az abroncsmodellt hozzányomjuk az
+ útburkolathoz.
+ A konvergencia miatt praktikus – a kontakt létrejöttéig – az abroncs befogására
+ egy rögzített eltolást, mint peremfeltételt megadni.
+ Kezdetben a felfújt gumiabroncs futófelülete és az útburkolat 2
+\begin_inset space ~
+\end_inset
+
+mm-re található egymástól.
+ Az előtolást 6
+\begin_inset space ~
+\end_inset
+
+mm-nek választva, a befogásban (egy abroncs esetén) mintegy 1600 N ellenerő
+ ébred.
+\end_layout
+
+\begin_layout Standard
+A szimuláció további részében fokozatosan ráengedve a pontszerű függőleges
+ kerékterhelést a modellre, a kontaktfelület kiterjed.
+ A lenyomat létrejöttéig fontos, hogy a súrlódás nulla legyen, mert az abroncs
+ profilja így jobban szét tud terülni az útburkolaton, nem ébrednek magas
+ nyírófeszültségek a lenyomat kialakulása közben, és így a gumiabroncs deformáci
+ója is jobban megegyezik a gördüléskori állapottal.
+ A gumiabroncs-útburkolat kontakt szimuláció mátrixot 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:pave-tire-contact-sim-matrix}.
+\end_layout
+
+\end_inset
+
+ táblázat foglalja össze, aminek összeállításánál figyelembe van véve az
+ abroncsgyártó (megengedett terhelés és gumiabroncsnyomás) ajánlása is.
+ Ennek megfelelően a szimuláció nem csak az előírt üzemi terhelés-nyomásérték
+ szcenárióra, hanem az alacsony nyomású gumiabroncs viselkedésre is lefutott.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/pavement_dual_single_tires.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Terhelési konfigurációk az összehasonlító számításokhoz: abroncslenyomatok
+ külön-külön (a) és összevontan modellezve (b)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pavement-dual-single-tires"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A kutatás elsődleges célja annak megállapítás, hogy az ikerabroncs átlagos
+ 
+\begin_inset Formula $q$
+\end_inset
+
+ érintkezési nyomása és átlagos 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $A_{c}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ felülete hogyan függ a kerékterheléstől, valamint mekkora igénybevételek
+ ébrednek a hatására a vizsgált hajlékony és félmerev szerkezetekben.
+ A hagyományos mechanikai-empirikus méretezési módszerek alapvetően kétféleképpe
+n tudják számításba venni az ikerabroncsok által közvetített terheket.
+ Az első esetben minden abroncslenyomatot külön-külön modelleznek egy 
+\emph on
+
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\emph default
+ és 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ sugarú körtárcsával és egy azokon egyenletesen megoszló erőrendszerrel
+ (ikerabroncs körtárcsa modell).
+ Ez a terhelési konfiguráció megfelel az ikerabroncsokon gördülő szóló hátsó
+ tengelyterhelésnek (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pavement-dual-single-tires"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.a
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A második eset az, amikor az ikerabroncsok lenyomatait összevontan, egy
+ azokkal teljesen egyenértékű 
+\emph on
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\emph default
+ sugarú körfelülettel helyettesítik.
+ Ezen a helyettesítő körfelületen a teljes kerékterhelés egy egyenletesen
+ megoszló erőrendszerként működik (helyettesítő körtárcsa modell).
+ Ez utóbbi megfelel a legtöbb méretezési programban a kormányzott első tengely
+ terhelési konfigurációjának (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pavement-dual-single-tires"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.b
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A klasszikus méretezési eljárások mind a kétféle kerékmodellt használják,
+ ezért mind a kettővel végeztem összehasonlító számításokat.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/fem-tire/pave_tire_contact_sim_matrix.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az útburkolat-gumiabroncs kontaktszimulációs matrix
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:pave-tire-contact-sim-matrix"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A méretezési feladatok megoldásánál rendszerint megelégszünk azzal, hogy
+ csak a kritikus helyeken ismerjük az igénybevételeket, mivel ezek lesznek
+ mértékadók.
+ Ikerabroncsok esetében ezek a mértékadó igénybevételek a kerekek között
+ (a terhelés tengelyében), és az egyik abroncs alatt közvetlenül, a kohézióval
+ rendelkező rétegek alján (pl.
+ aszfalt), és a kohézióval nem rendelkező rétegek (pl.
+ szemcsés rétegek és földmű) tetején ébrednek.
+ Ennek megfelelően a szerkezetek igénybevételeit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:pavement-dual-single-tires}
+\end_layout
+
+\end_inset
+
+ ábra szerinti 
+\family sans
+A
+\family default
+–
+\family sans
+B
+\family default
+–
+\family sans
+C
+\family default
+–
+\family sans
+D
+\family default
+–
+\family sans
+E
+\family default
+–
+\family sans
+F
+\family default
+ pontokban mindkét terhelési konfigurációra kiszámítottam:
+\end_layout
+
+\begin_layout Description
+A–D) a burkolat felszínének a függőleges 
+\begin_inset Formula $u_{zz}$
+\end_inset
+
+ elmozdulását;
+\end_layout
+
+\begin_layout Description
+B–E) az aszfaltréteg aljának az 
+\begin_inset Formula $\varepsilon_{xx}$
+\end_inset
+
+ és az 
+\begin_inset Formula $\varepsilon_{yy}$
+\end_inset
+
+ fajlagos megnyúlását;
+\end_layout
+
+\begin_layout Description
+C–F) a földműréteg tetejének a függőleges 
+\begin_inset Formula $\varepsilon_{zz}$
+\end_inset
+
+ fajlagos összenyomódását.
+\end_layout
+
+\begin_layout Standard
+A megadott pontokban 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:pavement-dual-single-tires}
+\end_layout
+
+\end_inset
+
+.a és 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:pavement-dual-single-tires}
+\end_layout
+
+\end_inset
+
+.b ábrákon látható modellek igénybevételeit a többrétegű rugalmas rendszerek
+ (MLE) elméletére támaszkodva a WESLEA (Waterways Experiment Station Layered
+ Elastic Analysis) programmal is kiszámoltam, majd összehasonlítottam azokat
+ a végeselem szimuláció eredményeivel (ABAQUS).
+\end_layout
+
+\begin_layout Section
+Eredmények és megvitatásuk
+\end_layout
+
+\begin_layout Subsection
+A gumiabroncs modell viselkedése
+\end_layout
+
+\begin_layout Standard
+A végeselem gumiabroncs modell viselkedését különböző guminyomásoknál és
+ tengelyterheléseknél vizsgáltam 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:pave-tire-contact-sim-matrix}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+táblázat szerint.
+ A táblázatban szereplő minden gumiabroncsnyomás és kerékterhelés eset lefutott
+ hajlékony és félmerev útpályaszerkezeteken is.
+ A kontakt szimuláció eredménye a szerkezetekben ébredő igénybevételek,
+ az útburkolaton kialakuló abroncslenyomatok és a kontaktfeszültségek voltak,
+ amik jól visszaadták a szakirodalomban közölt értékeket 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wang2013experimental,zhou2015effectof"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A végeselem szimuláció alapján a komplex gumiabroncs modell abroncslenyomata
+ jó közelítéssel téglalapnak tekinthető.
+ Ez megfelel a valóságos radiálabroncsok viselkedésének, mivel azok keresztirány
+ban nem, csak hosszirányban képesek alakváltozást elszenvedni 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gent2006thepneumatic"
+literal "false"
+
+\end_inset
+
+.
+ Mind a két vizsgált szerkezettípusnál az érintkezési felület alakját egy
+ 
+\begin_inset Formula $L_{1}\times L_{2}$
+\end_inset
+
+ nagyságú téglalap közelítette legjobban (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:single-dual-tire-footprints"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A végeselem ikerlenyomatok nagyságát (
+\begin_inset Formula $A_{c}$
+\end_inset
+
+), a helyettesítő kör sugarát (
+\emph on
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\emph default
+), a fellépő maximális (
+\begin_inset Formula $q_{max}$
+\end_inset
+
+) és átlagos (
+\begin_inset Formula $q$
+\end_inset
+
+) kontaktfeszültségek értékét 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:results-pave-tyre-contact-sim}.
+\end_layout
+
+\end_inset
+
+ táblázat foglalja össze.
+ Mivel az elemzések azt mutatták, hogy a vizsgált két útpályaszerkezet felépítés
+éből származó merevség különbségek semmilyen hatással nem bírtak a gumiabroncs-ú
+tburkolat érintkezési kapcsolatra, ezért 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:results-pave-tyre-contact-sim}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+táblázat értékeit mind a két szerkezettípusra érvényesek 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kiraly2020agumiabroncs"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/single_dual_tire_footprints.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ikerabroncs végeselem lenyomatok: (a) helyettesítő körtárcsa és (b) ikerabroncs
+ körtárcsa modell
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:single-dual-tire-footprints"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/fem-tire/results_pave_tyre_contact_sim.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az útburkolat-gumiabroncs kontaktszimuláció eredményei
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:results-pave-tyre-contact-sim"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Üzemi nyomás és legnagyobb megengedett kerékterhelés mellett a kontaktfeszültség
+ek eloszlása jól közelíthető ellipszoiddal, de alacsony abroncsnyomásnál
+ a futófelület egyenlőtlenül érintkezik az útfelülettel, az abroncs közepe
+ kissé elemelkedik és a terhelést a gumiabroncs merevségéből következően
+ már annak két oldala veszi fel (lásd
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:fem-flexible-footprint"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+táblázat).
+ Az elmondottakból következik, hogy a teherelosztás nem lesz egyenletes,
+ és a kialakuló feszültségcsúcsok (
+\begin_inset Formula $q_{max}$
+\end_inset
+
+) az átlagos kontaktnyomás 2,5–3,0 szorosát is elérhetik.
+ Ez azonban nem okoz problémát, ha nem a kopóréteg igénybevételeit vagy
+ a nyomvályúképződés folyamatát vizsgáljuk, mivel a VEM modell szerint az
+ útburkolat felszíne alatt 
+\begin_inset Formula $h_{q}=5-8$
+\end_inset
+
+ centiméterre már ezek a túlnyomások kiegyenlítődének 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kiraly2020agumiabroncs"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref{fig:depth-q-flexpave}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ábrasorozat bemutatja az átlagos 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ kontaktnyomásnál nagyobb feszültségzónákat az ikerabroncsok alatt.
+ Jól látható, hogy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:pavement-dual-single-tires}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ábrán jelölt 
+\family sans
+B
+\family default
+ pont jóval mélyebben helyezkedik el, mint a 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ átlagos feszültségpontokat összekötő görbék maximuma, így az ott ébredő
+ igénybevételeket a 
+\begin_inset Formula $q_{max}$
+\end_inset
+
+ elhanyagolása már nem befolyásolja jelentősen.
+ A félmerev útpályaszerkezetnél 3–5 mm-rel nagyobb 
+\begin_inset Formula $h_{q}$
+\end_inset
+
+ határmélységet mutattak az eredmények a hajlékony útpályaszerkezethez képest.
+ Ez a merevebb szerkezetek túlterhelésre való érzékenységével magyarázható.
+ Összességében a kontaktszimuláció jól visszaadta a valódi gumiabroncsokról
+ szerzett ismereteket, így további elemzésekre alkalmasak találtam a végeselem
+ modell eredményeit.
+\end_layout
+
+\begin_layout Subsection
+A fajlagos érintkezési nyomás modellje
+\end_layout
+
+\begin_layout Standard
+A továbbiakban kapcsolatot kerestem az átlagos 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ kontaktnyomás, az 
+\emph on
+
+\begin_inset Formula $F$
+\end_inset
+
+
+\emph default
+ kerékterhelés és a 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+
+\emph default
+ gumiabroncsnyomás között.
+ Felhasználtam 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ laboratórium mérésekre alapozott 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:contact-press-tyre-gen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ számú empirikus összefüggését (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:avgq-results-plot"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.a
+\begin_inset space ~
+\end_inset
+
+ábra).
+ A függvény együtthatóit a legkisebb négyzetek módszerével meghatároztam
+ a komplex abroncsmodellre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:results-pave-tyre-contact-sim}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+táblázat adatait felhasználva:
+\begin_inset Formula 
+\begin{equation}
+q=6,22F+0,30p+158,7\qquad\textrm{ahol}\qquad R^{2}=0,998\label{eq:contact-press-tyre-fem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A kontaktszimuláció szerint a 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+
+\emph default
+ és 
+\emph on
+
+\begin_inset Formula $F$
+\end_inset
+
+
+\emph default
+ együttes (kevert) hatása nem kimutatható, ellenben az abroncs „hajlékonyságára”
+ jellemző 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ konstans fontosságát a végeselem szimuláció is megerősítette.
+ Igen hasonló összefüggést találunk 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ikeda1985consideration"
+literal "false"
+
+\end_inset
+
+ munkájában:
+\begin_inset Formula 
+\begin{equation}
+q=4,20F+0,29p+142,0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figyelembe véve, hogy az abroncsgyártók az üzemi működésre megadják a megengedet
+t gumiabroncsnyomás és kerékterhelés értékeket, a fenti 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:contact-press-tyre-fem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggés tovább egyszerűsíthető (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:avgq-results-plot"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.b
+\begin_inset space ~
+\end_inset
+
+ábra).
+ Gyártói adatlap alapján a megengedett kerékterhelés és az abroncsnyomás
+ összefüggése egy lineáris függvénykapcsolattal leírható:
+\begin_inset Formula 
+\begin{equation}
+F=0,0248p+6,30\qquad\textrm{ahol}\qquad R^{2}=0,998\label{eq:force-press-tyre}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Végül 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:force-press-tyre"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ egyenletet behelyettesítve 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:contact-press-tyre-fem})
+\end_layout
+
+\end_inset
+
+ egyenletbe megkapjuk az üzemi körülményekre vonatkozó átlagos kontaktnyomás
+ és gumiabroncsnyomás összefüggést:
+\begin_inset Formula 
+\begin{equation}
+\colorbox{lightgray}{\boxed{q=0,454p+197,87}}\label{eq:contact-press-tyre-fem-final}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A levezetett 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:contact-press-tyre-fem-final"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggéssel már kiszámítható a burkolatra jutó átlagos 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ kontaktfeszültség a gumiabroncs belső 
+\emph on
+
+\begin_inset Formula $p$
+\end_inset
+
+
+\emph default
+ légnyomásából.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fem-tire/avgq_results_plot.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A komplex gumiabroncs nyomásviszonyai: az átlagos kontaknyomás és az egy
+ abroncsra jutó (F/2) kerékterhelés összefüggése (a), az abroncsgyártó által
+ üzemi működésre javasolt gumiabroncsnyomás és az egy abroncsra jutó (F/2)
+ kerékterhelés összefüggése (b), az átlagos kontaktnyomás és az üzemi gumiabronc
+snyomás összefüggése (c)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:avgq-results-plot"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ eredeti munkájában több gyártó pl.
+ 
+\emph on
+Michelin
+\emph default
+, 
+\emph on
+Firestone
+\emph default
+, 
+\emph on
+Goodyear
+\emph default
+, 
+\emph on
+General
+\emph default
+ gumiabroncsira is elvégezte a fenti elemzést, és a laboratóriumi mérések
+ átlagolásával hasonló lineáris összefüggésre jutott.
+ Ábrázolva a két modellt jól látható (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:avgq-results-plot"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.c
+\begin_inset space ~
+\end_inset
+
+ábra), hogy az egy abroncsra lefuttatott végeselem szimuláció eredménye
+ az „átlagos” egyeneshez igen közel esik, így azt igazoltnak tekinthetjük.
+ Meg kell azonban jegyeznünk, hogy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:contact-press-tyre-fem-final})
+\end_layout
+
+\end_inset
+
+ egyenlet csak radiális kialakítású, és nem gördülő abroncsra igaz.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "debeer1997determination"
+literal "false"
+
+\end_inset
+
+ szerint 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ modellje gördülő diagonál gumiabroncsoknál alábecsüli az ébredő kontaktfeszülts
+éget és használatát nem javasolják.
+ A továbbiakban az útpályaszerkezetben ébredő igénybevételek szempontjából
+ vizsgáltam a végeselem gumiabroncs-útburkolat szimulációt és a levezett
+ egyszerűsített nyomásmodellt.
+\end_layout
+
+\begin_layout Subsection
+A kerékterhelés hatása az útpályaszerkezetekre
+\end_layout
+
+\begin_layout Standard
+Gyakorlati számításoknál pl.
+ burkolat megerősítésnél az ikerabroncsok által terhelt felületet olyan
+ körrel helyettesítjük, ami megegyezik a tényleges érintkezési felülettel.
+ Az átlagos 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ kontaktnyomások és az azokból számított 
+\begin_inset Formula $a$
+\end_inset
+
+ helyettesítő körtárcsa sugarak ismeretében a WESLEA programmal kiszámoltam
+ a hajlékony és félmerev szerkezetek kritikus pontjaiban (
+\family sans
+A
+\family default
+, 
+\family sans
+B
+\family default
+, 
+\family sans
+C
+\family default
+, 
+\family sans
+D
+\family default
+, 
+\family sans
+E
+\family default
+, 
+\family sans
+F
+\family default
+) az igénybevételeket, és azokat összehasonlítottam az ikerabroncs végeselem
+ kontaktszimuláció eredményeivel (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:single-tire-responses"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.–
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:dual-tire-responses"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ táblázatok).
+\end_layout
+
+\begin_layout Standard
+A legnagyobb eltéréseket a függőleges 
+\begin_inset Formula $u_{zz}$
+\end_inset
+
+ elmozdulásoknál, vagyis a behajlásoknál találtam (
+\family sans
+A
+\family default
+–
+\family sans
+D
+\family default
+
+\begin_inset space ~
+\end_inset
+
+pontok).
+ Mind a két vizsgált szerkezetnél a végeselem pályaszerkezeti modell – a
+ végtelen elemek ellenére is – jelentősen, 50–55%-kal kisebb értékeket adott
+ eredményül, mint a rugalmas rétegek elméletén alapuló számítás.
+ Ezt magyarázhatja az a körülmény, hogy a 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "burmister1943thetheory"
+literal "false"
+
+\end_inset
+
+ elméletén alapuló WESLEA program a függőleges alakváltozásokat a végtelenig
+ összegzi, így az a valósághoz képest feltehetően mindig nagyobb elmozdulásokat
+ ad.
+ A behajlásoknál tapasztalt nagy eltérésekre leginkább a függőleges alakváltozás
+on alapuló teherbírásmérés módszerek pl.
+ Benkelman-gerenda, Lacroix-mérőkocsi vagy Curviameter eredményeinek kiértékelés
+énél kell odafigyelnünk 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "toth2007ateherbirokepesseg,toth2008utpalyaszerkezetek"
+literal "false"
+
+\end_inset
+
+.
+ Az aszfaltréteg alsó szálában a 
+\family sans
+B
+\family default
+ pontban ébredő 
+\emph on
+x
+\emph default
+-irányú és 
+\emph on
+y
+\emph default
+-irányú 
+\begin_inset Formula $\varepsilon_{xx}$
+\end_inset
+
+ és 
+\begin_inset Formula $\varepsilon_{yy}$
+\end_inset
+
+ fajlagos nyúlások értékei az ikerabroncs végeselem modellben jelentősen
+ eltérnek egymástól (
+\begin_inset Formula $\varepsilon_{xx}>\varepsilon_{yy}$
+\end_inset
+
+), míg a helyettesítő körtárcsa modellnél – a terhelési szimmetriából következőe
+n – megegyeznek egymással (
+\begin_inset Formula $\varepsilon_{t}=\varepsilon_{xx}=\varepsilon_{yy}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+A méretezés szempontjából számunkra a mértékadó, a haladó kerék hosszmetszetével
+ megegyező 
+\begin_inset Formula $\varepsilon_{xx}$
+\end_inset
+
+ (vagy 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+) fajlagos nyúlásérték lesz a fontos.
+ A végeselem szimuláció és a WESLEA program eredményei mind a két szerkezettípus
+ esetében nagyon szoros egyezést mutattak a helyettesítő körtárcsa modellel
+ (csupán 5–8% eltérés volt kimutatható).
+ Ez azzal magyarázható, hogy az ikerabroncs elrendezésnél is a terhelés
+ tengelyében ébrednek a legnagyobb nyúlások.
+ Még jobb egyezést tapasztalunk az ikerabroncs körtárcsa modellnél a 
+\family sans
+B–E
+\family default
+ pontokban ébredő fajlagos nyúlásokat vizsgálva, mivel azok szinte teljesen
+ megegyeznek a végeselem szimuláció eredményeivel (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:dual-tire-responses"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+táblázat).
+ A helyettesítő körtárcsa modellnél a földműréteg tetején a 
+\family sans
+C
+\family default
+ pontban ébredő függőleges 
+\begin_inset Formula $\varepsilon_{zz}$
+\end_inset
+
+ (vagy 
+\begin_inset Formula $\varepsilon_{v}$
+\end_inset
+
+) fajlagos összenyomódásnál már magasabb, kb.
+ 10–15%-os eltérést lehetett kimutatni az analitikus megoldás javára, de
+ ez még mindig igen jó egyezésnek mondható.
+ Az ikerabroncs körtárcsa modell viszont a 
+\family sans
+C–F
+\family default
+ pontokban ennél jóval kisebb, csak 4–5%-os eltérést mutatott a végeselem
+ szimulációhoz képest (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:dual-tire-responses"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+táblázat).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref{tab:single-tire-responses}.
+\end_layout
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:dual-tire-responses"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ táblázatok adatai alapján megállapítható, hogy az aszfaltrétegek fáradási
+ (
+\family sans
+B–E
+\family default
+
+\begin_inset space ~
+\end_inset
+
+pontok) és az altalaj-összenyomódási (
+\family sans
+C–F
+\family default
+
+\begin_inset space ~
+\end_inset
+
+pontok) kritériumokhoz a mértékadó igénybevételeket az ikerabroncsokat helyettes
+ítő két körtárcsán egyenletesen megoszló erőrendszerrel jól meg lehet becsülni,
+ ha a 
+\begin_inset Formula $q$
+\end_inset
+
+ átlagos kontaktfeszültségeket reálisan megválasztjuk.
+ A lehajlási kritériumhoz szükséges mértékadó behajlás (
+\family sans
+A
+\family default
+–
+\family sans
+D
+\family default
+
+\begin_inset space ~
+\end_inset
+
+pontok) számításánál, már nem igaz ez a megállapítás.
+\end_layout
+
+\begin_layout Section
+Összefoglalás
+\end_layout
+
+\begin_layout Standard
+Az ABAQUS programban sikerült több lépésen keresztül felépíteni a gumiabroncs-út
+burkolat érintkezési kapcsolatának komplex végeselem modelljét, ami elég
+ összetett volt az érintkezési kapcsolat részletes elemzéséhez, de megfelelő
+ anyagparaméterekkel a modell még további vizsgálatokra is alkalmassá tehető.
+ A végeselem szimuláció elkészítésében nagy segítség volt az ABAQUS program
+ kézikönyve, amiben rendkívül sok hasznos példa és információ található
+ meg a témakörről.
+ Nehézséget okozott viszont a gumiabroncs modell összeállításánál, hogy
+ a fellehető források nagy részében hiányos a dokumentáció, ami valószínűleg
+ a nem nyilvános gyártói információkkal magyarázható.
+\end_layout
+
+\begin_layout Standard
+Mivel a szimuláció eredményei, vagyis a kontakt feszültségek és lenyomatok
+ jól egyeztek a szakirodalmi adatokkal, ezért a továbbiakban kapcsolatot
+ kerestem az átlagos 
+\begin_inset Formula $q$
+\end_inset
+
+ kontaktnyomás, az 
+\begin_inset Formula $F$
+\end_inset
+
+ kerékterhelés és a 
+\begin_inset Formula $p$
+\end_inset
+
+ gumiabroncsnyomás között.
+ A vizsgálatok azt mutatták, hogy 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ laboratórium mérések alapján felállított összefüggése még mindig jól használhat
+ó az átlagos 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ kontaktfeszültség számítására, mivel a túlterhelt abroncsokra jellemző
+ nem egyenletes teherelosztás következtében ébredő feszültségcsúcsok az
+ útburkolat felszíne alatt 5–8 centiméterre már kiegyenlítődnek.
+\end_layout
+
+\begin_layout Standard
+Az átlagos 
+\emph on
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\emph default
+ kontaktfesztültség és a helyettesítő kör 
+\begin_inset Formula $a$
+\end_inset
+
+ sugarának ismertében összehasonlító számításokat végeztem az ikerabroncs
+ végeselem szimuláció és a helyettesítő körtárcsamodellek között.
+ A végeselem szimuláció eredményei jó egyezést mutattak a WESLEA program
+ számításaival a függőleges 
+\begin_inset Formula $u_{zz}$
+\end_inset
+
+ elmozdulások kivételéve.
+ Az aszfaltréteg fáradási és az altalaj-összenyomódási kritériumokhoz a
+ mértékadó igénybevételeket a helyettesítő körtárcsa vagy ikerabroncs körtárcsa
+ modellel pontosan meglehet határozni.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status open
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd,literature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,3760 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\input{preamble}
+\end_preamble
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+A terhelési sebesség és frekvencia kapcsolata
+\end_layout
+
+\begin_layout Section
+Bevezetés
+\end_layout
+
+\begin_layout Standard
+Széles körben ismert a hajlékony útpályaszerkezetekkel foglalkozó szakemberek
+ számára, hogy az aszfaltkeverékek viszkoelasztikus viselkedése nagymértékben
+ függ a hőmérséklettől és a terhelési frekvenciától.
+ Alacsony hőmérsékleten és magas terhelési frekvencián inkább a rugalmas,
+ míg magas hőmérsékleten és alacsony terhelési frekvencián inkább a viszkózus
+ viselkedésük a meghatározó.
+ A mechanisztikus alapú útpályaszerkezet méretezési eljárások ezért ma már
+ megkövetelik, hogy a méretezéshez ismerjük az aszfaltkeverékek 
+\begin_inset Formula $\left|E^{*}\right|$
+\end_inset
+
+ dinamikus modulus mestergörbéjét.
+ A dinamikus modulus mestergörbét különböző hőmérsékleten és különböző frekvenci
+ákon végrehajtott laboratóriumi vizsgálatok adataiból szerkesztjük.
+ A dinamikus modulus jól megragadja a viszkoelasztikus anyagok viselkedését
+ periodikus gerjesztés esetén 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pellinen2003asphalt"
+literal "true"
+
+\end_inset
+
+.
+ A valóságban viszont az útpályaszerkezeteket nem frekvenciatartományban,
+ hanem időtartományban vannak kitéve a mozgó járművek terheléseinek 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "romeo2023optimal"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A kerékterhelés időtartama, és így a terhelés frekvenciája egyaránt függ
+ a forgalmi sebességtől, a gumiabroncsok érintkezési felületétől és alakjától,
+ a terhelés nagyságától és az útpályaszerkezet felépítésétől 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cheng2022effects"
+literal "false"
+
+\end_inset
+
+.
+ A felsorolt tényezők kölcsönhatásából alakul ki végül a keresett terhelési
+ frekvencia, amelynek megállapítása nem könnyű feladat.
+ A terhelési frekvencia a laboratóriumi fárasztási vizsgálatok döntő fontosságú
+ beállítási paramétere, mivel befolyásolja a vizsgált aszfaltkeverék merevségi
+ modulusát 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pereira1997comparison"
+literal "false"
+
+\end_inset
+
+.
+ Belátható, hogy pontos meghatározása különösen fontos a mechanisztikus-empiriku
+s útpályaszerkezet méretezési módszerek számára.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/frequency/wheel_load_vs_test.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A terhelési idő meghatározásának sematikus ábrája: (a) az MEPDG-ben és (b)
+ a laboratóriumi vizsgálatokban
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:loading-time"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cheng2022effects"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az irodalomból ismert terhelési frekvencia becslő modellek felépítése igen
+ hasonló, első lépésként megadják a kerékterhelés 
+\begin_inset Formula $V$
+\end_inset
+
+ sebességének és a szerkezetben ébredő 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+ impulzusidőnek a kapcsolatát, majd alkalmaznak egy idő-frekvencia átváltási
+ módszert.
+ Az MEPDG (Mechanistic-Empirical Pavement Design Guide) alkalmazott terhelési
+ idő pl.
+ megegyezik a mozgó kerékterhelés hatására a helyszíni útpályaszerkezetben
+ ébredő függőleges nyomófeszültség impulzusidejével, amint azt 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:loading-time}.a
+\end_layout
+
+\end_inset
+
+ ábra is mutatja.
+ A dinamikus laboratóriumi alakváltozási vizsgálatoknál viszont a terhelési
+ időt a folyamatos szinusz vagy fél-verszinusz (haversine) terhelési hullámok
+ periódusidejével adják meg (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:loading-time"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.b
+\begin_inset space ~
+\end_inset
+
+ábra), ami bizonyos mértékig eltér az MEPDG módszerben figyelembe vett helyszíni
+ állapottól.
+\end_layout
+
+\begin_layout Standard
+A kutatók különböző idő-frekvencia átváltási módszereket dolgoztak ki, hogy
+ a forgalom által kiváltott feszültség- vagy alakváltozási impulzusok időtartamá
+ból pontosan kiszámítsák a kapcsolódó frekvenciát (lásd 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:time-freq"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ pont).
+ Ezen átváltási módszerek közül az 
+\begin_inset Formula $f=1/t_{p}$
+\end_inset
+
+ és 
+\begin_inset Formula $f=1/2πt_{p}$
+\end_inset
+
+ összefüggések széles körben elterjedtek a frekvencia kiszámítására, ahol
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ a frekvencia Hz-ben, 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+ pedig az impulzusidő másodpercben 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shafiee2015analysis"
+literal "false"
+
+\end_inset
+
+.
+ A kutatási anyagok többsége szerint a második megközelítés a helyénvaló,
+ mivel a reológia területén széles körben használják.
+ Ennek ellenére mind a mai napig az idő- és frekvenciatartományok közötti
+ közvetlen átváltás kérdésében nem alakult ki egyetértés a kutatók között
+ (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "christensen1982theoryof"
+literal "false"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "daniel1998relationships"
+literal "false"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dongre2006conversion"
+literal "false"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "katicha2008conversion"
+literal "false"
+
+\end_inset
+
+; 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "al-qadi2008frequency"
+literal "false"
+
+\end_inset
+
+).
+ A legfrissebb eredményeket a kérdésben 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "romeo2023optimal"
+literal "false"
+
+\end_inset
+
+ tanulmányában találjuk, ahol a 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "witczak1996revised"
+literal "false"
+
+\end_inset
+
+ által bevezetett négyparaméteres szigmoid függvényre az optimális átváltási
+ tényezőt 
+\begin_inset Formula $f\thickapprox0,0673/t_{p}$
+\end_inset
+
+-ban adja meg, 30 db aszfaltpróbatest adatai alapján.
+ Ez egy jóval alacsonyabb terhelési frekvenciát jelent az irodalomban megszokott
+hoz képest.
+ Ami felveti annak a lehetőségét, hogy az eddigi modellek a pontatlan idő-frekve
+ncia átváltási tényező miatt a frekvencia értékeket torzítva adják meg.
+\end_layout
+
+\begin_layout Standard
+Tovább bonyolítja a kérdést az, hogy a függőleges 
+\begin_inset Formula $σ_{z}$
+\end_inset
+
+ nyomófeszültség és a hosszirányú 
+\begin_inset Formula $ε_{xx}$
+\end_inset
+
+ alakváltozás terhelési ideje jelentősen eltér.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref{fig:sinus-signal-time}.
+\end_layout
+
+\end_inset
+
+ ábrán jól látható, hogy 2–3 pontok közötti impulzusidő jóval kisebb, mint
+ az 1–4 pontok által meghatározott.
+ Ezért univerzális terhelési frekvencia nem adható meg a teljes útpályaszerkezet
+re, csak kiválasztott szerkezeti válaszra.
+\end_layout
+
+\begin_layout Standard
+A probléma megoldásához felhasználom az előző fejezetben ismertetett új
+ 4 paraméteres empirikus RAMBO anyagmodellt.
+ Célom, hogy felírjak a modellre támaszkodva egy elvi formulát a terhelési
+ sebesség és a frekvencia között.
+ Az elméleti képlet lehetőséget biztosít arra, hogy szétválasszam a terhelési
+ frekvenciát befolyásoló paraméterek hatásait, amelyek sokszor összevontan,
+ egy kísérleti állandó formájában jelennek meg a már kidolgozott összefüggésekbe
+n.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/frequency/sinus_signal_time.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Terhelési idő értelmezése a szerkezeti választól függően: (a) aszfalt terhelési
+ periódusok és a hozzájuk tartozó megnyúlás és (b) a függőleges nyomófeszültség
+ alsó rétegre gyakorolt hatásintervallumának maximuma
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:sinus-signal-time"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Kapcsolódó munkák
+\end_layout
+
+\begin_layout Standard
+A hajlékony útpályaszerkezetek függőleges nyomófeszültségének impulzusidejét
+ elsőként 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "barksdale1971compressive"
+literal "false"
+
+\end_inset
+
+ vizsgálta.
+ Munkájában az AASHO
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+American Association of State Highway Officials 
+\end_layout
+
+\end_inset
+
+ útkísérletek feszültségimpulzus adatsorát elemezte az inerciális és viszkózus
+ hatások figyelembevételével, hogy összefüggést találjon a legfeljebb 
+\begin_inset Formula $\unit[72]{km/h}$
+\end_inset
+
+ (45
+\begin_inset space ~
+\end_inset
+
+mph) sebességgel haladó kerékterhelés és a különböző mélységű egyenértékű
+ terhelésimpulzusok időtartama között.
+ A 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "barksdale1971compressive"
+literal "false"
+
+\end_inset
+
+ által kidolgozott összefüggést mind a mai napig szokták az egyes méretezési
+ rendszerek a terhelésimpulzusok időtartamának kiszámítására alkalmazni.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "brown1973determination"
+literal "false"
+
+\end_inset
+
+ tovább elemezte a Barksdale és mások által közölt adatokat, hogy kapcsolatot
+ teremtsen a reprezentatív terhelési impulzusidő és a kerékterhelés sebessége
+ között az aszfaltréteg vastagságának függvényében:
+\begin_inset Formula 
+\begin{equation}
+\log\left(t_{p}\right)=0,5h-0,2-0,94\log\left(V\right)\label{eq:brown}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $t_{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+impulzusidő [s]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rétegvastagság [m]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kerékterhelés sebesség [km/h]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Megjegyzendő, hogy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:brown})
+\end_layout
+
+\end_inset
+
+ egyenlete a 
+\begin_inset Formula $h$
+\end_inset
+
+ vastagságú réteg közepére adja meg a terhelési időt.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "brown1973determination"
+literal "false"
+
+\end_inset
+
+ munkáján alapul a terhelési impulzusidő kiszámításának összefüggése a jelenleg
+ érvényben lévő Ausztrál szabályozásban is (Austroads Guide to Pavement
+ Technology, Austroads 2012).
+\end_layout
+
+\begin_layout Standard
+Brown 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:brown"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggését úgy egyszerűsítették, hogy a terhelési impulzusidő csak a
+ jármű sebességétől függ, amint 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{eq:austroads-t}
+\end_layout
+
+\end_inset
+
+ egyenletben is látható:
+\begin_inset Formula 
+\begin{equation}
+t_{p}\approx\frac{1}{V}\label{eq:austroads-t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ez az egyszerűsített összefüggés egyenértékűnek tekinthető 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:brown})
+\end_layout
+
+\end_inset
+
+ képlet eredményeivel, ha az aszfaltvastagság 200 mm.
+ Korábban 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jameson2000austroads"
+literal "true"
+
+\end_inset
+
+ vizsgálta egy a terhelés idő kiszámításához szükséges mélységfüggő összefüggés
+ bevezetésének lehetőségét.
+ A megközelítés az aszfaltburkolatok viszkoelasztikus válaszának modellezésén
+ alapult:
+\begin_inset Formula 
+\begin{equation}
+\log\left(t_{p}\right)=-1,798-2,738\log\left(0,981+0,352\log\left(V\right)\right)-0,314\log\left(h\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A fenti egyenlet csak 
+\begin_inset Formula $\unit[5]{km/h}$
+\end_inset
+
+-nál nagyobb sebesség és 20 mm-nél nagyobb rétegvastagság esetén érvényes.
+ Sajnos a modell legnagyobb korlátja az, hogy csak 100 mm aszfaltvastagságig
+ alkalmazható.
+ A 100 mm mélységre vonatkozó Jameson és Hopman-féle terhelési idő összefüggés
+ viszont igen hasonló az egyszerűbb 
+\begin_inset Formula $1/V$
+\end_inset
+
+ képlethez, kivéve a lassú (
+\begin_inset Formula $<\unit[40]{km/h}$
+\end_inset
+
+) forgalmi sebességet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ullidtz1987pavement"
+literal "false"
+
+\end_inset
+
+ szerint az impulzusidőt megkapjuk, ha a vizsgált aszfaltréteg közepén értelmeze
+tt effektív hosszt (terhelési sugarat) elosztjuk a mozgó kerékterhelés sebességé
+vel:
+\begin_inset Formula 
+\begin{equation}
+t_{p}=\frac{2a_{c}+h}{V}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az effektív hossz 
+\begin_inset Formula $L_{eff}=2\left(a_{c}+h/2\right)$
+\end_inset
+
+ kiszámításánál 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-os feszültségeloszlást feltételezett, ahol 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ a kerékterhelés érintkezési sugara.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "huang2004pavement"
+literal "false"
+
+\end_inset
+
+ szerint észszerű feltételezés, hogy a kerékterhelésnek már gyakorlatilag
+ nincs hatása az útpályaszerkezetre, ha a kiindulási ponttól 
+\begin_inset Formula $6a_{c}$
+\end_inset
+
+ távolságra eltávolodik.
+ Ennek figyelembevételévé felírható a terhelési időre a következő közelítés:
+\begin_inset Formula 
+\begin{equation}
+t_{p}=\frac{12a_{c}}{V}\label{eq:huang-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "loulizi2002measurement"
+literal "false"
+
+\end_inset
+
+ a Virginia Smart Roadon vizsgálták a mozgó kerékterhelés és az FWD berendezés
+ hatására ébredő nyomófeszültség impulzusidőket a burkolat felszíne alatt
+ eltérő mélységekben.
+ A mért impulzusidők 0,02 mp-tól (70 km/h sebességű jármű, 40 mm mélységben)
+ egészen 0,1 mp-ig terjedtek (10 km/h sebességű jármű, 597 mm mélységben).
+ Az FWD berendezés esetében viszont azt találták, hogy a 0,03 mp hosszúságú
+ terhelés idő jól megközelíti az előidézett feszültségimpulzust az útburkolat
+ felszíne alatti bármely mélységben.
+ Továbbá azt tapasztalták még, hogy a vizsgálati hőmérséklet (
+\begin_inset Formula $15-25\textrm{°C}$
+\end_inset
+
+) nem befolyásolta jelentősen a normalizált nyomófeszültség impulzusidőket.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cheneviere2005fullscale"
+literal "false"
+
+\end_inset
+
+ teljes léptékű útkísérletek alapján javasolta a következő egyszerű összefüggést
+:
+\begin_inset Formula 
+\begin{equation}
+f=0,46V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A mérések alapján a hőmérséklet hatását a frekvenciára 5°C és 30°C között
+ 10%-ra becsülték.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "losa2012evaluation"
+literal "false"
+
+\end_inset
+
+ elméleti úton határozta meg a reprezentatív frekvenciaértékeket úgy, hogy
+ minimalizálták a lineáris rugalmas és viszkoelasztikus útpályaszerkezet
+ modellekben ébredő maximális nyúlások közötti eltérést.
+ A 215
+\begin_inset space ~
+\end_inset
+
+db útpályaszerkezet variációra kiszámított reprezentatív frekvenciaértékeket
+ többváltozós regresszióval összefüggésbe hozták a szignifikáns változókkal.
+ A modellt mindhárom irányra külön-külön kidolgozták a mozgó kerékterhelés
+ anizotróp viselkedésének megfelelően:
+\begin_inset Formula 
+\begin{align}
+f_{x} & =0,027V\left(\frac{1}{2a}+\frac{1}{2b}\right)e^{-3,14z+\alpha\left(T\right)}\\
+f_{y} & =0,042\frac{V}{2a}e^{-3,34z+\beta\left(T\right)}\\
+f_{z} & =0,043\frac{V}{2a}e^{-2,65z+\beta\left(T\right)}\\
+\alpha\left(T\right) & =2,12\cdot10^{-5}T^{3}-2,6\cdot10^{-3}T^{2}+12,8\cdot10^{-2}T\\
+\beta\left(T\right) & =1,25\cdot10^{-5}T^{3}-1,6\cdot10^{-3}T^{2}+9,20\cdot10^{-2}T
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $f_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+frekvencia az 
+\emph on
+i
+\emph default
+.
+ irányban [Hz]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $z$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aszfaltréteg vizsgálati mélység [m]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aszfaltréteg hőmérséklet [°C]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\alpha\left(T\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aszfaltréteg hőmérséklet 
+\emph on
+x
+\emph default
+-irányú hatás
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\beta\left(T\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aszfaltréteg hőmérséklet 
+\emph on
+y-
+\emph default
+ és 
+\emph on
+z
+\emph default
+-irányú hatás
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+téglalap alakú keréklenyomat félhosszúsága [m]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+téglalap alakú keréklenyomat félszélessége [m]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ulloa2013equivalent"
+literal "false"
+
+\end_inset
+
+ szintén elméleti számítások alapján dolgozta ki a vizsgált útpályaszerkezeti
+ válaszhoz tartozó reprezentatív frekvenciaértékek előrejelzésére szolgáló
+ egyenleteket:
+\begin_inset Formula 
+\begin{align}
+f_{1} & =0,2187V\\
+f_{2} & =0,4681V
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az összefüggések nagymértékben függtek a jármű sebességétől (km/h-ban),
+ viszont az útpályaszerkezet felépítése és az aszfaltréteg hőmérséklete
+ nem bizonyult szignifikáns változónak.
+ Az
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ és
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ egyenleteket különböző típusú szerkezeti válaszokra javasolják a szerzők.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bodin2015temperature"
+literal "false"
+
+\end_inset
+
+ a keréksebesség és a laboratóriumi vizsgálati frekvencia között a következő
+ empirikus összefüggést állította fel:
+\begin_inset Formula 
+\begin{equation}
+f\approx0,3V\label{eq:bodin-f}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref({eq:bodin-f})
+\end_layout
+
+\end_inset
+
+ egyenlet csak a kidolgozásakor használt burkolathőmérséklet-tartományra
+ (20–41°C) érvényes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "shafiee2015analysis"
+literal "false"
+
+\end_inset
+
+ tanulmányában helyszínen mért feszültség és nyúlás impulzusok frekvenciáját
+ elemezték a gyors Fourier-transzformációval (FFT).
+ A vizsgálatai adatok megerősítik, hogy a mozgó kerékterhelés alatti frekvencias
+zámítás erősen függ a szerkezet válaszának típusától.
+ Az aszfaltréteg aljára a következő egyenleteket adták meg:
+\begin_inset Formula 
+\begin{align}
+f_{x} & =1,158V^{0,40}\\
+f_{y} & =1,165V^{0,45}\\
+f_{z} & =0,607V^{0,50}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $f_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{y}$
+\end_inset
+
+ és 
+\begin_inset Formula $f_{z}$
+\end_inset
+
+ a kereszt-, hossz- és függőleges irányú terhelési frekvenciákra utal [Hz].
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cheng2020comparative"
+literal "false"
+
+\end_inset
+
+ hajlékony, félmerev és acélszerkezetű (aszfaltburkolatú híd) útpályaszerkezetek
+en vizsgálta a forgalom által kiváltott nyúlási-impulzusok és a terhelési
+ frekvenciák kapcsolatát.
+ A mérések ebben az esetben is megerősítették, hogy az 
+\begin_inset Formula $f$
+\end_inset
+
+ terhelési frekvencia megközelítőleg lineárisan nő a 
+\begin_inset Formula $V$
+\end_inset
+
+ keréksebességgel, a három vizsgált burkolattípusra egyetlen közös modellt
+ sikerült találni:
+\begin_inset Formula 
+\begin{equation}
+f=0,127V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A frekvenciaértékek 35°C feletti hőmérsékleten meghaladták az alacsonyabb
+ hőmérsékleten mért értékeket, míg a 4–31°C közötti hőmérséklet-tartományban
+ a keréksebesség és a terhelési frekvencia közötti összefüggések közel azonosak
+ voltak a három vizsgált útpályaszerkezet típus esetében.
+ Később 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cheng2022bridging"
+literal "false"
+
+\end_inset
+
+ kiegészítette a terhelési frekvencia kapcsolatát a hőmérséklettel:
+\begin_inset Formula 
+\begin{equation}
+f=0,0984e^{0,0160T}V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A témában született korábbi munkák alapján egyértelműen megállapítható,
+ hogy a terhelési frekvencia a járműsebesség növekedésével nő, míg az útburkolat
+ mélységének vagy a kerékterhelés érintkezési sugárnak a növekedésével csökken.
+ A hőmérséklet szintén hatással van a terhelési frekvenciára, a hőmérséklet
+ emelkedésével nő a frekvencia értéke.
+ A felsorolt szignifikáns változók közöl a járműsebesség bizonyult a legjelentős
+ebbnek, összehasonlítva az útpályaszerkezet mélységével és a terhelés sugarával.
+ Ez a tény megfelel a várakozásoknak, mivel a járművek sebessége közvetlenül
+ befolyásolja a forgalmi terhelés időtartamát, és így döntően megváltoztatja
+ a terhelés frekvenciáját 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cheng2022fatigue"
+literal "false"
+
+\end_inset
+
+.
+ Érdemes azt is megjegyezni, hogy a terhelési frekvenciát sokszor mechanikai
+ modellekből elméletileg kiszámított válaszimpulzusok alapján vezetik le
+ a kutatók.
+ Mindazonáltal ezek az elméleti számítások nem feltétlenül tükrözik a helyszíni
+ aszfaltrétegek valós viselkedését.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cheng2022fatigue"
+literal "false"
+
+\end_inset
+
+ szerint ezek a tisztán elméleti modellek jelentősen túlbecsülik a helyszíni
+ méréseket, ami arra hívja fel a figyelmet, hogy az aszfaltkeverék terhelési
+ frekvenciáját célszerű helyszíni impulzusadatokból kiindulva meghatározni.
+\end_layout
+
+\begin_layout Section
+Anyagok és módszerek
+\end_layout
+
+\begin_layout Subsection
+Vizsgált útpályaszerkezetek bemutatása
+\end_layout
+
+\begin_layout Standard
+Jelen dolgozatban bemutatott terhelési frekvencia számítási eljárást három
+ eltérő merevségű közúti útpályaszerkezeten vizsgáltam.
+ Az ÁKMI Kht.
+ és a H-TPA Kft.
+ 2005-ben különböző pályaszerkezetű utakon (különösen-hajlékony, hajlékony
+ és félmerev) végzett összehasonlító méréseket a Benkelman-gerenda, a KUAB
+ és a Dynatest FWD típusú ejtősúlyos behajlásmérő berendezések között 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "primusz2009abehajlasi"
+literal "true"
+
+\end_inset
+
+.
+ Mérések az alábbi útszakaszokon és pályaszerkezeteken történtek:
+\end_layout
+
+\begin_layout Enumerate
+Félmerev (44.
+ sz.) Kecskemét–Békéscsaba–Gyulai főút, 10+000–10+180 km sz.
+\end_layout
+
+\begin_layout Enumerate
+Hajlékony (31.
+ sz.) Budapest–Jászberény–Dormándi főút, 30+600–30+780 km sz.
+\end_layout
+
+\begin_layout Enumerate
+Különösen hajlékony (51108 j.) Majosházai bekötőút, 1 km sz.
+ környéke.
+\end_layout
+
+\begin_layout Standard
+A vizsgált útpályaszerkezetek felépítéseit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:test-road-pavements}
+\end_layout
+
+\end_inset
+
+ táblázat foglalja össze.
+ Munkámhoz a 200
+\begin_inset space ~
+\end_inset
+
+m hosszú kijelölt útszakaszokon csak az 5
+\begin_inset space ~
+\end_inset
+
+m-es lépésközzel – KUAB típusú FWD berendezéssel – rögzített behajlásadatokat
+ használtam.
+ A terhelő erő minden ejtésnél 50 kN nagyságú volt, és a második ejtés adatait
+ dolgoztam fel.
+ A burkolat hőmérséklete mérés közben 20–22°C között változott.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/frequency/test_road_pavements.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az útpályaszerkezetek felépítése
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:test-road-pavements"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+A deformációs vonal matematikai leírása
+\end_layout
+
+\begin_layout Standard
+A deformációs vonal matematikai leírását 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "primusz2015effectof,primusz2009abehajlasi"
+literal "false"
+
+\end_inset
+
+ munkái alapján ismertetem abból a célból, hogy a levezetett összefüggéseket
+ a szerkezeti válaszok közelítésére később felhasználjam.
+\end_layout
+
+\begin_layout Standard
+A Boussinesq-féle feszültségképletekből kiindulva levezethető 
+\begin_inset Formula $d=2a_{c}$
+\end_inset
+
+ átmérőjű hajlékony köralap középpontja alatti 
+\begin_inset Formula $D_{0}$
+\end_inset
+
+ süllyedés, vagy lehajlás értéke 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nemesdy1985tplyaszerkezetek"
+literal "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+D_{0}=\frac{2pa_{c}}{E_{e}}\left(1-\mu^{2}\right)\label{eq:bq-d0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $D_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+függőleges elmozdulás a terhelés tengelyében [mm]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{e}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+egyenértékű modulus [MPa]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+felületi terhelés [MPa]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+terhelő körlap sugara [mm]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Poisson-féle tényező [-]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A központi lehajlás mellett Odemark az 
+\begin_inset Formula $E_{e}$
+\end_inset
+
+ modulusú rugalmas féltér deformációs vonalát is számította az 
+\begin_inset Formula $y=f(p,a_{c},E_{e})$
+\end_inset
+
+ függvénnyel.
+ Ennek az 
+\begin_inset Formula $r=0$
+\end_inset
+
+ helyen vett második differenciálhányadosa jól közelíti a görbületi sugarat.
+ Az 
+\begin_inset Formula $R_{0}$
+\end_inset
+
+ görbületi sugár így tehát egyrétegű féltér esetén a következő képlettel
+ számítható 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nemesdy1985tplyaszerkezetek"
+literal "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+R_{0}=\frac{E_{e}a_{c}}{p\left(1-\mu^{2}\right)}\label{eq:om-r0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mind a két összefüggés azonos eredményt szolgáltat homogén végtelen féltér
+ esetén, így belátható, hogy a központi lehajlás és a görbületi sugár között
+ függvénykapcsolat áll fenn.
+ Vegyük a fenti 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bq-d0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:om-r0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ egyenletekben szereplő egyenértékű modulusok hányadosát:
+\begin_inset Formula 
+\begin{equation}
+c=\frac{2a_{c}^{2}}{R_{0}D_{0}}\label{eq:c-r0d0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol a 
+\begin_inset Formula $c$
+\end_inset
+
+ tényező a modulusok hányadosát fejezi ki, ami homogén végtelen féltér esetén
+ 
+\begin_inset Formula $c=1$
+\end_inset
+
+ értéket vesz fel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/frequency/def_func_shape_param.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A behajlási teknő lefutása különféle 
+\emph on
+
+\begin_inset Formula $c$
+\end_inset
+
+
+\emph default
+ alaktényezők hatására 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "primusz2009abehajlasi"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:func-c-param"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A homogén féltér felületén kialakuló deformációk meghatározása Boussinesq
+ elméletével igen hosszadalmas számítást igényel, ezért ennek egyszerűsítése
+ érdekében egy közelítő függvény felvétele célszerű.
+ A közelítő függvény felírásánál pedig a geometriai korlátozásokból, vagyis
+ a geometriai peremfeltételekből tudunk kiindulni.
+ A bemutatott összefüggések alapján a következő feltételek fogalmazhatóak
+ meg: 
+\begin_inset Formula $r=0$
+\end_inset
+
+ ahol 
+\begin_inset Formula $D(r)=D_{0}$
+\end_inset
+
+, és a keresett 
+\begin_inset Formula $D(r)$
+\end_inset
+
+ függvény második deriváltja 
+\begin_inset Formula $D^{''}(r)\approx1/R_{0}$
+\end_inset
+
+ az 
+\begin_inset Formula $r=0$
+\end_inset
+
+ helyen.
+ Ezen felül a meghatározott 
+\begin_inset Formula $D_{0}$
+\end_inset
+
+ és 
+\begin_inset Formula $R_{0}$
+\end_inset
+
+ értékekre teljesülni kell 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:c-r0d0"
+
+\end_inset
+
+ mechanikai feltételnek is.
+ A feltételeket kielégítő függvényt 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cser1961azutpalya"
+literal "false"
+
+\end_inset
+
+ munkája alapján 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "primusz2015effectof,primusz2009abehajlasi"
+literal "false"
+
+\end_inset
+
+ dolgozta ki:
+\begin_inset Formula 
+\begin{equation}
+D\left(r\right)=D_{0}\frac{d^{2}}{c\cdot r^{2}+d^{2}}=D_{0}\frac{4a_{c}^{2}}{c\cdot r^{2}+4a_{c}^{2}}\label{eq:prim-c}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A javasolt függvényben 
+\begin_inset Formula $c$
+\end_inset
+
+ az ún.
+ 
+\emph on
+alaktényező
+\emph default
+ amely a deformációs vonal alakját befolyásolja, 
+\begin_inset Formula $r$
+\end_inset
+
+ pedig a sugárirányú távolság a terhelés tengelyétől mérve.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref{eq:prim-c}
+\end_layout
+
+\end_inset
+
+ számú függvény rugalmasságát mutatja be 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:func-c-param}
+\end_layout
+
+\end_inset
+
+ ábra a 
+\begin_inset Formula $c$
+\end_inset
+
+ alaktényező változásának hatására.
+\end_layout
+
+\begin_layout Standard
+A közelítő függvény valóban kielégíti az 
+\begin_inset Formula $r=0$
+\end_inset
+
+ és 
+\begin_inset Formula $D(r)=D_{0}$
+\end_inset
+
+ feltételt, ez könnyen belátható.
+ A behajlási teknő alakjának felírása után rátérhetünk a görbületi sugár
+ meghatározására is.
+ A 
+\begin_inset Formula $D=D(r)$
+\end_inset
+
+ függvény tetszőleges pontjához tartozó simulókör görbületi sugarát az alábbi
+ geometriai összefüggéssel határozhatjuk meg 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pattantyus1961gepeszes"
+literal "true"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\kappa\left(r\right)=\frac{1}{R\left(r\right)}=\frac{D^{''}\left(r\right)}{\left(1+D^{'}\left(r\right)^{2}\right)^{2/3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mivel csak kis alakváltozások jöhetnek létre, ezért 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ szögelfordulás is csak kis értéket vehet fel, kis szögek tangens értékei
+ pedig jó közelítéssel megegyeznek argumentumaikkal 
+\begin_inset Formula $D\left(r\right)^{'}=\tan\left(\varphi\right)\approx\varphi\ll1$
+\end_inset
+
+, amelyről feltételezzük, hogy olyan kicsi mennyiség, hogy az egységnél
+ lényegesen kisebb 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "szalai2006mhuszaki"
+literal "false"
+
+\end_inset
+
+, akkor 
+\begin_inset Formula $\kappa\left(r\right)\approx D^{''}\left(r\right)$
+\end_inset
+
+ függvénnyel közelíthetjük a fenti összefüggést:
+\begin_inset Formula 
+\begin{equation}
+\kappa\left(r\right)\approx\frac{\partial^{2}}{\partial x^{2}}\left(\frac{D_{0}4a_{c}^{2}}{cr^{2}+4a_{c}^{2}}\right)=8\frac{D_{0}a_{c}^{2}c\left(3cr^{2}-4a_{c}^{2}\right)}{\left(cr^{2}+4a_{c}^{2}\right)^{3}}\label{eq:def-curvature-func}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A görbület negatív előjele azt fejezi ki, hogy pozitív hajlító nyomaték
+ esetén a görbületi sugárral jellemzett simuló kör középpontja (0 pont)
+ a rúdtengely 
+\begin_inset Formula $-D$
+\end_inset
+
+ irányítású oldalára esik.
+ A görbület változását 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{fig:func-def-curvature}
+\end_layout
+
+\end_inset
+
+ ábra mutatja be.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/frequency/def_func_curvature.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A behajlási teknő és a görbület változása a terhelés tengelyétől távolodva
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:func-def-curvature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset Formula $\kappa\left(r\right)$
+\end_inset
+
+ függvénynek 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ lokális szélsőértéke van, ha 
+\begin_inset Formula $\kappa^{'}(r_{0})=0$
+\end_inset
+
+ de 
+\begin_inset Formula $\kappa^{''}(r_{0})\neq0$
+\end_inset
+
+.
+ Mivel 
+\begin_inset Formula $\kappa^{'}(r_{0})=D^{'''}\left(r_{0}\right)$
+\end_inset
+
+ ezért:
+\begin_inset Formula 
+\begin{equation}
+D^{'''}\left(r\right)=-96\frac{D_{0}a_{c}^{2}c^{2}r\left(cr^{2}-4a_{c}^{2}\right)}{\left(cr^{2}+4a_{c}^{2}\right)^{4}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az egyenlet triviális megoldása az 
+\begin_inset Formula $r_{1}=0$
+\end_inset
+
+, míg a másikat a 
+\begin_inset Formula $cr^{2}-4a_{c}^{2}=0$
+\end_inset
+
+ egyenlőség megoldása adja:
+\begin_inset Formula 
+\begin{equation}
+r_{2}=\frac{2a_{c}}{\sqrt{c}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A minimális görbületi sugár 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ és 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ helyen:
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ccc}
+R_{1}=-2\dfrac{a_{c}^{2}}{D_{0}c} & \textrm{és} & R_{2}=8\dfrac{a_{c}^{2}}{D_{0}c}=-4R_{1}\end{array}\label{eq:gsugar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Láthatjuk, hogy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{eq:c-r0d0}
+\end_layout
+
+\end_inset
+
+ mechanikai feltétel is teljesül, így a felvett függvény jó közelítése a
+ mechanikai úton meghatározott deformációs vonalnak.
+ A 
+\begin_inset Formula $D(r)$
+\end_inset
+
+ függvénynek az 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ helyen inflexiós pontja van, ha 
+\begin_inset Formula $D^{''}(r_{0})=0$
+\end_inset
+
+, de 
+\begin_inset Formula $D^{'''}(r_{0})\neq0$
+\end_inset
+
+, és így az eddigiekhez hasonlóan a 
+\begin_inset Formula $3cr^{2}-4a_{c}^{2}=0$
+\end_inset
+
+ egyenlőség megoldása szükséges:
+\begin_inset Formula 
+\begin{equation}
+r_{inf}=\frac{2a_{c}}{\sqrt{3c}}\label{eq:def-inflection-point}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az inflexiós pontban előjelet vált a görbület, így az azzal kapcsolatba
+ hozható alakváltozás is.
+ Ez lehetőséget ad arra, hogy a mért felszíni alakváltozásokból következtetni
+ tudjunk a kerékterhelés 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ hullámhosszára.
+\end_layout
+
+\begin_layout Subsection
+A terhelési frekvencia függése a mozgó kerékterheléstől
+\end_layout
+
+\begin_layout Standard
+Az idő-frekvencia összefüggés felírása után már meg lehet fogalmazni a mozgó
+ kerékterhelés sebességének a kapcsolatát az impulzusidővel.
+ Célszerű kiindulni a fizikában használt út-idő összefüggésből, ahol a 
+\begin_inset Formula $V$
+\end_inset
+
+ keréksebesség egyenlő a megtett út és az eltelt idő hányadosával:
+\begin_inset Formula 
+\begin{equation}
+V=\frac{2a_{c}}{t}\longrightarrow t=\frac{2a_{c}}{V}\label{eq:velocity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $V$
+\end_inset
+
+ a keréksebesség és 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ a gumiabroncs érintkezési felületének sugara.
+ Mivel a kerékterhelés hatására az útpályaszerkezetben ébredő feszültség
+ vagy nyúlás impulzusidők eltérnek egymástól, a fenti 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:velocity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ képletet megadhatjuk általános formában is:
+\begin_inset Formula 
+\begin{equation}
+t=\lambda V^{-k}\label{eq:time-wavelength}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $\lambda=2a_{c}$
+\end_inset
+
+ a hullámhossz, 
+\begin_inset Formula $k=1$
+\end_inset
+
+ pedig a kísérleti állandó.
+ Továbbá 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:time-wavelength"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ behelyettesítve a frekvencia-idő 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:gen-freq-time"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ általános összefüggésbe megkapjuk a terhelési frekvencia képletét:
+\begin_inset Formula 
+\begin{equation}
+f\approx\frac{\beta}{\lambda}V^{k}\label{eq:gen-freq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+feszültségnek vagy alakváltozásnak a hullámhossza
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az idő-frekvencia egyenértékűségi tényező, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta=1/k_{r}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kísérleti állandó
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+keréksebesség
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A hullámhossz meghatározása elsősorban kísérleti úton történik.
+ Kiindulhatunk a valós pályaszerkezetek behajlási vonalából.
+ A behajlási adatokra jól illeszkedik 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:prim-c})
+\end_layout
+
+\end_inset
+
+ függvény, amiből a görbületi sugár levezethető.
+ Továbbá 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jung1988directcalculation"
+literal "true"
+
+\end_inset
+
+ szerint a görbületi sugár a terhelés középpontjában megadja a 
+\begin_inset Formula $h$
+\end_inset
+
+ vastagságú pályaszerkezeti réteg alján ébredő 
+\begin_inset Formula $ε_{xx}$
+\end_inset
+
+ megnyúlás közelítő értékét:
+\begin_inset Formula 
+\begin{equation}
+\varepsilon_{xx}(r)\approx\frac{h}{2R(r)}\label{eq:jung}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $R(r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+görbületi sugár 
+\begin_inset Formula $r$
+\end_inset
+
+ radiális távolságban [mm]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aszfaltréteg vastagsága [mm]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sugárirányú távolság [mm]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref({eq:def-curvature-func})
+\end_layout
+
+\end_inset
+
+ görbületi függvény inflexiós pontja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:jung})
+\end_layout
+
+\end_inset
+
+ egyenlet miatt felfogható a 
+\begin_inset Formula $h$
+\end_inset
+
+ vastagságú aszfaltréteg alsó szálában ébredő fajlagos megnyúlás terhelési
+ hullámhosszának:
+\begin_inset Formula 
+\begin{equation}
+\frac{\lambda}{2}\approx\frac{2a_{c}}{\sqrt{3c}}\longrightarrow\lambda\approx\frac{4a_{c}}{\sqrt{3c}}\label{eq:strain-wavelength}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A levezett 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:strain-wavelength"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ képlet szerint a hullámhossz a terhelő kerék 
+\begin_inset Formula $a_{c}$
+\end_inset
+
+ érintkezési sugarától és a behajlási vonal 
+\begin_inset Formula $c$
+\end_inset
+
+ alaktényezőjétől függ.
+ Ez lehetővé teszi, hogy roncsolásmentesen és gyorsan tudjunk helyszíni
+ mérésekből következtetni a terhelési frekvenciára.
+\end_layout
+
+\begin_layout Section
+Eredmények és megvitatásuk
+\end_layout
+
+\begin_layout Standard
+Az idő-frekvencia egyenértékűségi tényező 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:time-kr})
+\end_layout
+
+\end_inset
+
+ egyenletének felírása után már meg lehet fogalmazni a mozgó kerékterhelés
+ sebességének a kapcsolatát a terhelési idővel vagy frekvenciával.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ulloa2013equivalent"
+literal "false"
+
+\end_inset
+
+ kimutatták, hogy a terhelési frekvencia a jármű sebességével arányos, független
+ül az aszfaltvastagságától és az útburkolat hőmérsékletétől.
+ Hasonló eredményre jutott dolgozatában Sullivan, Rickards és Yousefdoost
+ (2013) akik azt tapasztalták, hogy az aszfaltréteg vastagsága alig vagy
+ egyáltalán nem játszott szerepet a tényleges terhelési idő meghatározásában.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cheng2020comparative"
+literal "false"
+
+\end_inset
+
+ szerint 31°C alatt a frekvenciaértékek aránylag állandónak vehetők, mivel
+ sokkal kevésbé reagálnak a hőmérsékletre.
+ Ezért a továbbiakban én sem vizsgáltam részletesen az aszfaltréteg vastagságána
+k, vagy az aszfaltréteg hőmérsékletének hatását, mivel azok csak kis mértékben
+ módosítják a terhelési frekvencia értékét.
+\end_layout
+
+\begin_layout Standard
+A feszültségnek vagy az alakváltozásnak a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ hullámhosszát 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:strain-wavelength})
+\end_layout
+
+\end_inset
+
+ egyenletben kísérleti úton vagy elméleti megfontolások alapján is meglehet
+ határozni.
+ Az FWD berendezéssel mért behajlásokra, ha illesztjük 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:prim-c})
+\end_layout
+
+\end_inset
+
+ függvényt, akkor megkapjuk a 
+\begin_inset Formula $c$
+\end_inset
+
+ alaktényezőt.
+ Félmerev pályaszerkezetnél az átlagos alaktényező 0,06; hajlékonynál 0,185
+ és végül a különösen hajlékonynál 0,516 a helyszíni mérések alapján.
+ Megfigyelhető, hogy minél hajlékonyabb a szerkezet, annál nagyobb a 
+\begin_inset Formula $c$
+\end_inset
+
+ értéke.
+ Az alaktényezőkből 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:strain-wavelength})
+\end_layout
+
+\end_inset
+
+ összefüggéssel számított 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ hullámhosszok értékeit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:test-road-stats}.
+\end_layout
+
+\end_inset
+
+ táblázat foglalja össze.
+ Behelyettesítve 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:gen-freq})
+\end_layout
+
+\end_inset
+
+ egyenletbe 
+\begin_inset Formula $\beta\approx0,085$
+\end_inset
+
+ értéket (mivel 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ értéke 12 körül mozog) és a 
+\begin_inset Formula $V$
+\end_inset
+
+ keréksebesség km/h mértékegységről m/s-ra törtnő átváltásának konstansát
+ (1/3,6), az alábbi egyszerű összefüggést kapjuk:
+\begin_inset Formula 
+\begin{equation}
+f\approx\frac{0,024}{\lambda}V^{k}\label{eq:gen-freq-approx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $V$
+\end_inset
+
+ a keréksebesség [km/h], 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ a feszültségnek vagy alakváltozásnak a hullámhossza
+\begin_inset space ~
+\end_inset
+
+[m], 
+\begin_inset Formula $k$
+\end_inset
+
+ pedig kísérleti állandó.
+ A hullámhossz az eddigi kutatások alapján függ attól, hogy a pályaszerkezet
+ melyik válaszát (feszültség, alakváltozás, behajlás) vizsgáljuk a külső
+ terhelés hatására.
+ Mindazonáltal a mozgó kerékterhelés által ébresztett feszültségek jól ismertek,
+ ezért abból ki lehet indulni.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tables/frequency/test_road_stats.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Az FWD berendezéssel meghatározott pályaszerkezet jellemzők a vizsgált útszakasz
+okon
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:test-road-stats"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "barzegari2019amethod"
+literal "false"
+
+\end_inset
+
+ az aszfaltréteg alján a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ feszültség alapú hullámhosszt 0,2–0,4
+\begin_inset space ~
+\end_inset
+
+m-ben határozta meg, a jármű terhelési konfigurációjától függően.
+ Megfigyelhető volt, hogy 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ a gumiabroncsok és tengelyek számának növekedésével emelkedett.
+ Hasonló eredményre jutunk (0,3–0,4 m), ha 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "loulizi2002measurement"
+literal "false"
+
+\end_inset
+
+ által mért terhelési időkből visszaszámítjuk a felszínhez közel (40 mm)
+ a hullámhosszt.
+ Figyelembe véve, hogy korábbi kutatásaim alapján a terhelés érintkezési
+ körfelületről kiinduló feszültségkúp hajlásszöge aszfaltburkolatoknál csak
+ 20°±2° (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "toth2022development"
+literal "false"
+
+\end_inset
+
+), szemben az irodalomban gyakran idézett 34°-kal (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rohde1994determining"
+literal "false"
+
+\end_inset
+
+), így a hullámhossz jól közelíthetjük a 
+\begin_inset Formula $\lambda\approx2a_{c}$
+\end_inset
+
+ értékkel.
+ Ikerabroncs kerékmodellnél 
+\begin_inset Formula $a_{c}=0,12$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m, és 
+\begin_inset Formula $k\approx-1$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "loulizi2002measurement"
+literal "false"
+
+\end_inset
+
+, behelyettesítve a fenti 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:gen-freq-approx"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggésbe ezeket a jellemző adatokat, akkor az alábbi egyszerűsített
+ kapcsolatra jutunk:
+\begin_inset Formula 
+\begin{equation}
+f\approx0,1V\label{eq:freq-approx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $V$
+\end_inset
+
+ km/h-ban van értelmezve.
+ Az elméleti úton levezetett összefüggés meredeksége közel esik 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cheng2020comparative"
+literal "false"
+
+\end_inset
+
+ tanulmányában közölt 
+\begin_inset Formula $f=0,127V$
+\end_inset
+
+ képletéhez, amit helyszíni mérések alapján határoztak meg.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref({eq:freq-approx})
+\end_layout
+
+\end_inset
+
+ közelítő összefüggés igazolja 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "witzcak2002simpleperformance"
+literal "false"
+
+\end_inset
+
+ által javasolt 10 Hz-es értéket, miszerint az autópályákra jellemző sebességekn
+él (~110 km/h) a terhelés impulzusideje megközelítően 0,1 mp.
+ Abban az esetben, ha a fajlagos nyúlás hullámhosszával számolunk, akkor
+ kiindulhatunk 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mollenhauer2009loading"
+literal "false"
+
+\end_inset
+
+ munkájából, ahol az in situ aszfaltnyúlások impulzus idejére a következő
+ empirikus modellt állították fel:
+\begin_inset Formula 
+\begin{equation}
+t_{p}=1,805V^{-0,944}\label{eq:wistuba}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $V$
+\end_inset
+
+ a keréksebesség (km/h) és 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+ impulzusidő (s).
+ A fenti 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:wistuba"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ képletet 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:gen-freq-approx})
+\end_layout
+
+\end_inset
+
+ egyenletbe helyettesítve, majd átrendezve, megkapjuk a terhelési frekvencia
+ közelítő képletét a mozgó keréksebesség függvényében:
+\begin_inset Formula 
+\begin{equation}
+f\approx\frac{0,024}{1,805/3,6}V^{0,944}\approx0,0373V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az összefüggésből jól látható, hogy a nyúlási hullámhossz 
+\begin_inset Formula $\lambda=1,805/3,6=0,5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m.
+ Ez az érték 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref{tab:test-road-stats}.
+\end_layout
+
+\end_inset
+
+ táblázatban a különösen hajlékony útpályaszerkezet típus jellemző értékével
+ megegyezik.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "sullivan2013interconversion"
+literal "true"
+
+\end_inset
+
+ ausztrál útkísérleti adatok alapján egy igen hasonló meredekségű 
+\begin_inset Formula $f=0,0246V$
+\end_inset
+
+ összefüggést ajánl használni, mivel szerintük 
+\begin_inset Formula $\lambda=1,8$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m hullámhossz megegyezik a teljes behajlási teknő hosszával.
+ Az érdekes eredményt 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "coffman1967pavement"
+literal "false"
+
+\end_inset
+
+ korai munkájával magyarázzák a szerzők.
+ A két modell meredeksége azért tér el, mert az ausztrál kutatók a 
+\begin_inset Formula $\beta=1/2\pi$
+\end_inset
+
+ idő-frekvencia egyenértékűségi tényezővel számoltak, ami majdnem kétszer
+ nagyobb, mint az általam javasolt 0,085-ös érték.
+ Az eddigi eredmények alapján megfogalmazható a terhelési frekvencia általános
+ összefüggése, ha az alakváltozás 
+\begin_inset Formula $\varepsilon_{xx}$
+\end_inset
+
+ hullámhosszával számolunk:
+\begin_inset Formula 
+\begin{equation}
+\colorbox{lightgray}{\boxed{f\approx\frac{\sqrt{3c}}{4a_{c}}\beta V^{k}}}\label{eq:freq-gen-c}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top" special="@{ = }l">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+idő-frekvencia egyenértékűségi tényező [–]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kerék érintkezési körsugár [m]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kísérleti állandó [–]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+behajlási alaktényező [–]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+keréksebesség [m/s]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Aref{fig:freq-curves}.
+\end_layout
+
+\end_inset
+
+ ábra grafikusan bemutatja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+aref({eq:freq-gen-c})
+\end_layout
+
+\end_inset
+
+ általános modell eredményeit 
+\begin_inset Formula $a_{c}=0,15$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=0,085$
+\end_inset
+
+ és 
+\begin_inset Formula $k=1$
+\end_inset
+
+ rögzített értékek eseteire.
+ Az új modell eredményei – az alaktényező paramétert 0,2 és 0,8 között változtat
+va – 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "shafiee2015analysis"
+literal "false"
+
+\end_inset
+
+ és 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "sullivan2013interconversion"
+literal "true"
+
+\end_inset
+
+ terhelési frekvencia értékei között vannak.
+ Ez magyarázható azzal, hogy kutatásban én is Falling Weight Deflectometer
+ (FWD) berendezéssel vizsgáltam az útpályaszerkezeteket.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "sullivan2013interconversion"
+literal "true"
+
+\end_inset
+
+ elemzésükben szintén FWD adatokkal dolgoztak, ahol az aszfaltvastagság
+ hatása nem volt kimutatható.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/frequency/freq_curves.svg
+	lyxscale 25
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Korábbi frekvenciaszámítások összehasonlítása az új elméleti modellel
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:freq-curves"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "loulizi2002measurement"
+literal "false"
+
+\end_inset
+
+ szintén azt találták, hogy az FWD terhelés által előidézett feszültségimpulzus
+ 0,03 s időtartamú volt az útburkolat felszíne alatti tetszőleges mélységben.
+ Ebből arra következtethetünk, hogy a terhelési frekvenciát a mozgó járművek
+ és az impulzus alapú teherbírásmérő berendezések esetén eltérő módon kell
+ számolni.
+ Elfogadva az átlagos 
+\begin_inset Formula $t_{p}=0,03$
+\end_inset
+
+ s impulzusidőt és felhasználva az FWD berendezéssel meghatározott átlagos
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ hullámhosszokat (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:test-road-stats"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ táblázat) megbecsülhető az FWD berendezéssel szimulált mozgó kerékterhelés
+ 
+\begin_inset Formula $V$
+\end_inset
+
+ sebessége.
+ Különösen hajlékony útpályaszerkezetnél 
+\begin_inset Formula $V=57,6$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+km/h, míg hajlékony útpályaszerkezetnél már egy jóval magasabb 
+\begin_inset Formula $V=96$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+km/h sebességértéket kapunk eredményül.
+ Ezek az eredmények közel vannak Wang és Li (2016) megállapításaihoz, akik
+ szerint az FWD terhelés egyenértékű sebessége a maximális nyúlási alakváltozást
+ figyelembe véve 24–80 km/h az aszfaltréteg vastagságától és a hőmérséklettől
+ függően.
+\end_layout
+
+\begin_layout Section
+Összefoglalás
+\end_layout
+
+\begin_layout Standard
+Kutatásomban a terhelési frekvenciának és a mozgó kerékterhelésnek a kapcsolatát
+ vizsgáltam.
+ A feladat megoldásának egyik kulcseleme, hogy meghatározzuk az idő-frekvencia
+ egyenértékűségi tényezőt.
+ Az ezzel kapcsolatos eredményeket részletesen a 4.
+ fejezetben ismertettem.
+\end_layout
+
+\begin_layout Standard
+Az irodalomban közölt korábbi kísérleti eredmények azt mutatták, hogy a
+ terhelési frekvencia a jármű 
+\begin_inset Formula $V$
+\end_inset
+
+ sebességével arányos, függetlenül az aszfaltvastagságától és az útburkolat
+ hőmérsékletétől.
+ Ezért a terhelési frekvencia és a sebesség kapcsolata elméleti úton is
+ felírható.
+ A nehézséget az okozza, hogy ismerni kell a feszültségnek vagy alakváltozásnak
+ a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ hullámhosszát vagy 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+ impulzus idejét.
+ A hullámhossz értékét megbecsülhetjük a behajlási teknőből levezethető
+ görbületi függvényéből, vagy egyszerűen a kerékterhelés érintkezési átmérőjével
+ egyenértékűnek feltételezzük.
+\end_layout
+
+\begin_layout Standard
+Feszültség impulzust vizsgálva a RAMBO anyagmodell alapján levezethető a
+ mozgó kerékterhelés 
+\begin_inset Formula $V$
+\end_inset
+
+ sebessége és a dinamikus modulus 
+\begin_inset Formula $f$
+\end_inset
+
+ terhelési frekvenciája között egy közelítő összefüggés.
+ A dolgozatban vizsgált aszfaltkeverékek alapján a 100 km/h sebességgel
+ mozgó kerékterhelés megfeleltethető a 10 Hz-es dinamikus alakváltozási
+ frekvenciának.
+ Nyúlás impulzus esetében viszont ennél egy jóval kisebb, 3–4 Hz-es frekvenciát
+ kapunk ugyanerre a sebességre.
+ Fontos megjegyezni, hogy a szakirodalom szerint a terhelési frekvenciát
+ a mozgó járművek és az impulzus alapú teherbírásmérő berendezések esetén
+ eltérő módon kell számolni, ezért külön kell foglalkozni a két terhelési
+ esettel.
+ A jövőben az elméleti számítások helyett tovább kell folytatni a helyszíni
+ vizsgálatokat.
+ FWD és Curviametro berendezésekkel rögzíteni kell a vizsgált útszakasz
+ behajlását, valamint a szerkezetekbe épített érzékelőkkel az aszfaltrétegek
+ megnyúlását.
+ A vizsgált útpályaszerkezet aszfaltkeverékének laboratóriumi vizsgálatával
+ pontosan meg lehet állapítani a 
+\begin_inset Formula $\beta$
+\end_inset
+
+ idő-frekvencia egyenértékűségi tényezőt.
+ A dolgozatban bemutatott 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:gen-freq-approx"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ összefüggés 
+\begin_inset Formula $k$
+\end_inset
+
+ paraméterének meghatározása is nagy előrelépést jelenthet.
+ Erre jól felhasználható adatok a valóságos szerkezetekben ébredő feszültség
+ vagy alakváltozás impulzusok és az ismert kerékterhelés jellemzők.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

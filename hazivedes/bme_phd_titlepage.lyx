@@ -1,0 +1,306 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset Graphics
+	filename figures/bme/bme_logo_nagy.pdf
+	lyxscale 50
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\series bold
+BUDAPESTI MŰSZAKI ÉS GAZDASÁGTUDOMÁNYI EGYETEM
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+Építőmérnöki Kar – építőmérnök-képzés 1782 óta
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+Út és Vasútépítési Tanszék
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\series bold
+\size huge
+\noun on
+Aszfaltburkolatú útpályaszerkezetek méretezési rendszerének fejlesztése
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\size larger
+Doktori (PhD) értekezés
+\end_layout
+
+\begin_layout Standard
+\align center
+a munkahelyi vitához
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\series bold
+Készítette:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\size large
+Dr.
+ Primusz Péter
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+egyetemi adjunktus
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\series bold
+Témavezető:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\size large
+Dr.
+ Tóth Csaba
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+egyetemi docens
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\size large
+Budapest
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+
+\size large
+2023
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

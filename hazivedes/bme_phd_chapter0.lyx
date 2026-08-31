@@ -1,0 +1,958 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Témakiírás
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Téma} % add it to the ToC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az útpályaszerkezet-méretezési eljárások ugyan számos elemükben már mechanikai
+ méretezési elveket követnek, azonban az empirikus elvek és megoldások még
+ mindig döntő szerepet játszanak az alkalmazandó szerkezet meghatározásakor.
+ Az anyagtudományokban elért újabb eredmények, az informatika, a forgalmi,
+ illetve a meteorológiai adatgyűjtés és feldolgozás területén tapasztalható
+ ugrásszerű fejlődés azonban hatással van a pályaszerkezet-méretezés fejlődésére
+ is.
+ Így egyre korszerűbb eszközökkel egyre pontosabb pályaszerkezet-méretezési
+ eljárások dolgozhatók ki, amelyek segítségével jobban kezelhetők az anyagi
+ tulajdonságokban rejlő lehetőségek és típus megoldások helyett olyan eszköz
+ adható a tervezők kezébe, amely segítségével részletesebb műszaki alternatívák
+ dolgozhatók ki vagy hasonlíthatóak össze.
+\end_layout
+
+\begin_layout Section*
+Kutatási altémák
+\end_layout
+
+\begin_layout Itemize
+A tervezési forgalom meghatározás fejlesztési lehetőségeinek feltárása.
+ (Az input adatok súlyozása, az alkalmazható összefüggések érzékenységvizsgálata
+, a forgalmi terhelés okozta rongáló hatás elemzése).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Aszfaltburkolatú útpályaszerkezetek méretezése.
+ (Feszültségek és alakváltozások vizsgálata hajlékony pályaszerkezeti rétegekben.
+ Alapanyagokkal, aszfaltkeverékekkel szemben támasztott követelmények.
+ Méretezési modell)
+\end_layout
+
+\begin_layout Itemize
+Betonburkolatok méretezése.
+ (Feszültségek és alakváltozások vizsgálata merev pályaszerkezeti rétegekben.
+ Alapanyagokkal, pályabetonnal szemben támasztott követelmények.
+ Speciális technológiák: white-topping, kompozit szerkezet, repülőtéri burkolato
+k tanulmányozása.
+ Méretezési modell)
+\end_layout
+
+\begin_layout Itemize
+Meglévő pályaszerkezetek megerősítésének méretezése.
+ (Útpályaszerkezet-diagnosztikai elvek és módszerek tanulmányozása a megerősíten
+dő burkolat állapotértékelése során.
+ Mechanikai elvű modellalkotás a szükséges erősítőréteg meghatározás érdekében)
+\end_layout
+
+\begin_layout Itemize
+Innovatív útpályaszerkezetek.
+ (Másodnyersanyagok, ipari melléktermékek, bontott építési anyagok továbbá
+ zajcsökkentő aszfaltok, vízáteresztő burkolatok alkalmazhatósága, illetve
+ méretezési paramétereinek meghatározása)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+\noun on
+Dr.
+ Tóth Csaba
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Út és Vasútépítési Tanszék
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Tézisek
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Tézisek} % add it to the ToC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Kimutattam, hogy a mechanikai-empirikus (M-E) útpályaszerkezet méretezési
+ rendszerekben általánosan használt közelítés – miszerint a gumiabroncs
+ belső légnyomása közel azonosnak tekinthető a gumiabroncs által a burkolatnak
+ átadott fajlagos érintkezési nyomásával – felülbecsüli a diagonál és alulbecsül
+i a radiál kialakítású abroncsokra jellemző értékeket.
+ Ezért javasolt méretezési számításoknál a dolgozatban megadott paraméterű
+ nyomásmodellből kiindulni.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+A gumiabroncsok viselkedését és modellezési lehetőségeit már számos kutató
+ vizsgálta.
+ Munkámban ezért olyan bevált modellezési technikára támaszkodtam, mint
+ a végeselem módszer.
+ Az irodalmi adatok alapján felépített diagonál típusú komplex gumiabroncs
+ modell pontossága megfelelő volt, hogy vizsgálni tudjam a gumiabroncs-útpályasz
+erkezet interakciót.
+ A végeselem módszerrel kiszámított érintkezi nyomás értékeket 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ laboratóriumi eredményeivel vetettem össze, és az eredmények jó egyezést
+ mutattak.
+ Megállapítható, hogy 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanvuuren1974relationship"
+literal "false"
+
+\end_inset
+
+ által javasolt egyszerű nyomás modellel nagy pontossággal lehet a kerékterhelés
+t figyelembe venni útpályaszerkezetek méretezésekor, mivel a túlterhelt
+ abroncsokra jellemző nem egyenletes teherelosztás következtében ébredő
+ feszültségcsúcsok az útburkolat felszíne alatt 5–8 centiméterre már kiegyenlítő
+dnek.
+ A javasolt keréknyomás modell a mechanikai-empirikus (M-E) útpályaszerkezet
+ méretezés számára:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+q=0,454p+197,87
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $q$
+\end_inset
+
+ az átlagos érintkezési nyomás és 
+\begin_inset Formula $p$
+\end_inset
+
+ a gumiabroncs belső légnyomása kPa-ban.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+3.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P1
+\series default
+, 
+\series bold
+P2
+\series default
+, 
+\series bold
+P3
+\series default
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.25cm
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Megállapítottam, hogy a mechanikai-empirikus (M-E) útpályaszerkezet méretezési
+ rendszerekben használatos fáradási és altalaj-összenyomódási kritériumokhoz
+ a mértékadó igénybevételek a helyettesítő körtárcsa és az ikerabroncs körtárcsa
+ modellel egyaránt nagy pontossággal meghatározhatók, ha kielégítően ismerjük
+ a gumiabroncsnak a burkolaton keresztül átadott fajlagos érintkezési nyomását.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size small
+Az átlagos kontaktfesztültség és a helyettesítő kör sugarának ismertében
+ összehasonlító számításokat végeztem az ikerabroncs végeselem szimuláció
+ és a helyettesítő körtárcsamodellek között.
+ Az ABAQUS programban lefuttatott végeselem szimulációk eredményei jó egyezést
+ mutattak a WESLEA (Waterways Experiment Station Layered Elastic Analysis)
+ program számításaival a függőleges 
+\begin_inset Formula $u_{zz}$
+\end_inset
+
+ elmozdulások kivételéve.
+ Ezt magyarázhatja az a körülmény, hogy a 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "burmister1943thetheory"
+literal "false"
+
+\end_inset
+
+ elméletén alapuló WESLEA program a függőleges fajlagos alakváltozásokat
+ a végtelenig összegzi, így az a valósághoz képest feltehetően mindig nagyobb
+ elmozdulásokat ad.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+3.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P1
+\series default
+, 
+\series bold
+P2
+\series default
+, 
+\series bold
+P3
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Kidolgoztam egy új anyagmodellt az aszfaltkeverékek hőmérséklet és frekvencia
+ függő viselkedésének leírására a Kramers–Kronig-relációk alapján.
+ Kimutattam, hogy az általam kifejlesztett négyparaméteres empirikus modell
+ együtthatói egymástól teljesen függetlenek és nem változnak meg, ha frekvenciat
+artományból áttérünk időtartományba.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Az új modell 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kweon2008application"
+literal "true"
+
+\end_inset
+
+ munkáján alapul, ami sikeresen alkalmazta az aszfaltkeverékek merevség
+ mestergörbéjének leírására a Ramberg–Osgood anyagmodell matematikai alakját:
+\begin_inset Formula 
+\[
+E^{\ast}\left(f_{r}\right)=E_{e}^{*}+\frac{E_{g}^{*}-E_{e}^{*}}{1+Cf_{r}^{R-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dolgozatomban összehasonlítottam a RAMBO és a szigmoid-függvénnyel készült
+ merevség mestergörbéket, és kapcsolatot teremtettem azok modellegyütthatói
+ között.
+ Kimutattam, hogy a RAMBO modell jól képes helyettesíteni a szigmoid-függvényt
+ a merevségadatok leírásában, együtthatóinak függetlensége pedig lehetővé
+ teszi a mestergörbe teljes morfológiájának numerikus jellemzését.
+ Kiterjesztettem a RAMBO modellt a fázisszög előrejelzésére is a Kramers–Kronig-
+relációk felhasználásával:
+\begin_inset Formula 
+\[
+\phi\left(f_{r}\right)=-c\frac{\pi}{2}\dfrac{\left(E_{g}^{*}-E_{e}^{*}\right)\left(R-1\right)Cf_{r}^{R-1}}{\left(Cf_{r}^{R-1}+1\right)\left(E_{e}^{*}Cf_{r}^{R-1}+E_{g}^{*}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Összehasonlító számítások azt mutatták, hogy az új fázisszög-függvény nagyon
+ pontosan illeszkedik az általános Maxwell-modell eredményeire.
+ Végül kidolgoztam idő-frekvencia átalakítás összefüggéseit (
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+), amikkel már időtartományban is meglehet adni az anyagparaméterek mestergörbéi
+t a frekvencia tartományban meghatározott modellparaméterekkel:
+\begin_inset Formula 
+\[
+E\left(t_{r}\right)=E_{e}^{*}+\frac{E_{g}^{*}-E_{e}^{*}}{1+C\left(k_{r}t_{r}\right)^{1-R}}\quad\textrm{és}\quad D\left(t_{r}\right)=\frac{1+C\left(k_{c}t_{r}\right)^{1-R}}{E_{g}^{*}+E_{e}^{*}C\left(k_{c}t_{r}\right)^{1-R}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E\left(t_{r}\right)$
+\end_inset
+
+ a relaxációs modulus és 
+\begin_inset Formula $D\left(t_{r}\right)$
+\end_inset
+
+ a kúszási érzékenység.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+4.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: [
+\series bold
+P4
+\series default
+, 
+\series bold
+P5
+\series default
+, 
+\series bold
+P6
+\series default
+, 
+\series bold
+P7
+\series default
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Kimutattam, hogy az aszfaltkeverékek viszkoelasztikus anyagtulajdonságainak
+ frekvenciatartományból az időtartományba történő átváltása, nem csak a
+ két változó között fennálló fordított arányosságtól, hanem a RAMBO anyagmodell
+ – a mestergörbe meredekségét az alsó és a felső aszimptoták között meghatározó
+ – 
+\emph on
+R
+\emph default
+ paraméterétől is függ.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Az idő-frekvencia átszámításhoz szükséges 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+ konstansok megállapításához modellszámításokat végeztem.
+ A RAMBO modell paramétereit széles tartományban változtatva létrehoztam
+ egy 400 db hipotetikus mestergörbéből álló adatbázist.
+ A hipotetikus mestergörbék relaxációs modulusának és kúszás érzékenységének
+ becslésére 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ninomiya1959someapproximate"
+literal "true"
+
+\end_inset
+
+ összefüggéseit használtam, ami jó választásnak bizonyult.
+ Végül regresszió számítással kapcsolatot kerestem a RAMBO modell együtthatói
+ és a kérdéses 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ és 
+\begin_inset Formula $k_{c}$
+\end_inset
+
+ konstansok között:
+\begin_inset Formula 
+\begin{align*}
+k_{r}= & 16,31-7,04R\\
+k_{c}= & 5,150+6,26R
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\begin_inset Formula $R$
+\end_inset
+
+ a RAMBO anyagmodell alakparamétere.
+ Az idő-frekvencia átváltás javasolt összefüggése:
+\begin_inset Formula 
+\[
+f=\dfrac{1}{k_{r}t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Összehasonlító számítások azt mutatták, hogy a frekvencia tartományban meghatáro
+zott RAMBO modellegyütthatók az időtartományban is kiválóan jellemzik a
+ vizsgált keveréket.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+4.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: publikálás alatt
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+A RAMBO anyagmodell alapján levezettem a mozgó kerékterhelés 
+\emph on
+V
+\emph default
+ sebessége és a dinamikus modulus 
+\emph on
+f
+\emph default
+ terhelési frekvenciája között egy közelítő összefüggést.
+ Az értekezésben vizsgált aszfaltkeverékek alapján a 100 km/h sebességgel
+ mozgó kerékterhelés megfeleltethető a 10 Hz-es dinamikus alakváltozási
+ frekvenciának a 20°C-os referencia hőmérsékleten.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Az idő-frekvencia átszámítás képletéből kiindulva, levezettem a mozgó kerékterhe
+lésnek és a terhelési időnek a kapcsolatát.
+ Számításaim alapvetően az út-idő fizikai összefüggésből indultak ki.
+ A felírt képlet alapján a dinamikus alakváltozási frekvencia függ a 
+\begin_inset Formula $V$
+\end_inset
+
+ keréksebességtől, a gumiabroncs 
+\begin_inset Formula $2a$
+\end_inset
+
+ érintkezési lenyomattól és a RAMBO anyagmodell 
+\begin_inset Formula $k_{r}$
+\end_inset
+
+ paraméterétől:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+f=\frac{V}{2ak_{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Az értekezésben vizsgált aszfaltkeverékekre 
+\begin_inset Formula $k_{r}\approx12$
+\end_inset
+
+ és a végeselem analízisből az ikerabroncsra 
+\begin_inset Formula $2a\approx\unit[0,24]{m}$
+\end_inset
+
+ értékeket kapjuk, így azokat behelyettesítve az alábbi egyszerű összefüggésre
+ jutunk:
+\begin_inset Formula 
+\[
+f\approx0,1V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahol 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $V$
+\end_inset
+
+ km/h-ban van értelmezve.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+A közelítő összefüggés igazolja 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "witzcak2002simpleperformance"
+literal "false"
+
+\end_inset
+
+ által javasolt 10 Hz-es értéket, miszerint az autópályákra jellemző sebességekn
+él (~110
+\begin_inset space ~
+\end_inset
+
+km/h) a terhelés impulzusideje megközelítően 0,1
+\begin_inset space ~
+\end_inset
+
+mp.
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A dolgozat kapcsolódó része: 
+\series bold
+4.
+ fejezet
+\end_layout
+
+\begin_layout Standard
+
+\size small
+A tézishez kapcsolódó publikációk: publikálás alatt
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Publikációk
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Publikációk} % add it to the ToC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P0 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "toth2020newhungarian"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P1 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2020agumiabroncs"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P2 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2021ikerabroncsterheles"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P3 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "kiraly2022simulation"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P4 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "toth2020arambergosgood"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P5 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "cho2020application"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P6 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2023useof"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P7 
+\begin_inset CommandInset citation
+LatexCommand fullcite
+key "primusz2020aszfaltkeverekek"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

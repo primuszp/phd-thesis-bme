@@ -1,0 +1,482 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\options fleqn
+\use_default_options true
+\master bme_phd_maindoc.lyx
+\maintain_unincluded_children false
+\language magyar
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options firstinits=true, dashed=false, doi=true, clearlang=true, refsection=chapter
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\multibib chapter
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Childonly
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.25cm
+\topmargin 2.25cm
+\rightmargin 2.25cm
+\bottommargin 2.25cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\bullet 0 0 0 -1
+\bullet 1 0 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Kivonatok
+\end_layout
+
+\begin_layout Section*
+Útpályaszerkezetek méretezési rendszerének fejlesztése
+\end_layout
+
+\begin_layout Standard
+A kutatás célja az aszfaltburkolatú útpályaszerkezetek mechanikai-empirikus
+ (M-E) méretezési rendszerének fejlesztése.
+ Ennek egyik iránya, hogy a hazai méretezési eljárásba is beemeljük az anyagtudo
+mányokban elért újabb eredményeket, míg a másik az, hogy a mozgó kerékterhelést
+ a lehető legpontosabban figyelembe vegyük a viszkoelasztikus számításoknál.
+ A végeselem módszerre támaszkodva sikerült egy olyan egyszerű nyomásmodellt
+ megalkotni, amivel nagy pontossággal lehet a kerékterhelést figyelembe
+ venni útpályaszerkezetek méretezésekor a hagyományos többrétegű rugalmas
+ rendszerek elméletét alkalmazó programokban is.
+\end_layout
+
+\begin_layout Standard
+Az M-E tervezési módszerek igénylik a méretezéshez az aszfaltkeverékek dinamikus
+ modulus mestergörbéjének ismeretét.
+ A valóságban a tehergépkocsik a pályaszerkezeteket időtartományban terhelik,
+ nem frekvenciatartományban, ezért a frekvencia pontos beállítása nem egyértelmű
+ feladat.
+ A probléma megoldására egy új 4 paraméteres empirikus anyagmodell került
+ kifejlesztésre, amely megadja az aszfaltkeverék idő-frekvencia egyenértékűségi
+ tényezőjét.
+ Ez segít tárgyalni a mozgó kerékterhelés sebességének és a terhelési frekvenciá
+nak a kapcsolatát.
+ A dolgozat bemutatja a terhelési impulzus hullámhosszának meghatározására
+ szolgáló számítási eljárást.
+ Az elméletileg levezetett összefüggés szerint a 100 km/h sebességgel mozgó
+ kerékterhelés megfelel a 10
+\begin_inset space ~
+\end_inset
+
+Hz-es dinamikus terhelési frekvenciának feszültségimpulzus esetén, míg nyúlásimp
+ulzus esetén 3–4 Hz-es frekvenciát kapunk.
+\end_layout
+
+\begin_layout Standard
+A dolgozatban bemutatott új tudományos eredményekkel új hazai méretezési
+ rendszer alakítható ki, amellyel jobban kezelhető az anyagi tulajdonságokban
+ rejlő lehetőségek és részletesebb műszaki alternatívák dolgozhatók ki vagy
+ hasonlíthatók össze.
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+Development of an Asphalt Pavement Design System
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The research aims to create a mechanical-empirical (M-E) design system for
+ asphalt roads, incorporating new materials science findings and accurately
+ considering moving wheel load.
+ A pressure model was developed using a 3D radial truck tyre model for accurate
+ wheel load accounting in pavement design.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The M-E design methods need the dynamic modulus master curve of asphalt
+ mixtures, correct load frequency definition, and pavement temperature.
+ Pavements are loaded in the time domain, not frequency, making frequency
+ setup challenging.
+ A new 4-parameter empirical material model was developed to solve this,
+ determining the time-frequency equivalence factor for asphalt.
+ It helps discuss the relationship between moving wheel load speed and load
+ impulse time or frequency.
+ The research found that a wheel load moving at 100 km/h corresponds to
+ a 10 Hz dynamic load frequency for a stress pulse and 3–4 Hz for a strain
+ pulse.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The thesis’s new scientific results can help develop a new national design
+ system to better manage material properties and develop or compare more
+ detailed technological alternatives.
+\end_layout
+
+\begin_layout Chapter*
+Nyilatkozat
+\end_layout
+
+\begin_layout Standard
+Alulírott Primusz Péter, jelen nyilatkozat aláírásával kijelentem, hogy
+ az 
+\emph on
+Útpályaszerkezetek méretezési rendszerének fejlesztése
+\emph default
+ című PhD értekezésem önálló munkám, az értekezés készítésekor betartottam
+ a szerzői jogról szóló 1999.
+\begin_inset space ~
+\end_inset
+
+évi
+\begin_inset space ~
+\end_inset
+
+LXXVI.
+ törvény szabályait, különösen a hivatkozások és idézések tekintetében
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+1999.
+\begin_inset space ~
+\end_inset
+
+évi LXXVI.
+ tv.
+ 34.
+\begin_inset space ~
+\end_inset
+
+§
+\begin_inset space ~
+\end_inset
+
+(1) A mű részletét – az átvevő mű jellege és célja által indokolt terjedelemben
+ és az eredetihez híven – a forrás, valamint az ott megjelölt szerző megnevezésé
+vel bárki idézheti.
+ 36.
+\begin_inset space ~
+\end_inset
+
+§
+\begin_inset space ~
+\end_inset
+
+(1)
+\begin_inset space ~
+\end_inset
+
+Nyilvánosan tartott előadások és más hasonló művek részletei, valamint politikai
+ beszédek tájékoztatás céljára – a cél által indokolt terjedelemben – szabadon
+ felhasználhatók.
+ Ilyen felhasználás esetén a forrást – a szerző nevével együtt – fel kell
+ tüntetni, hacsak ez lehetetlennek nem bizonyul.
+\end_layout
+
+\end_inset
+
+.
+ Minden olyan részt, amelyet szó szerint, vagy azonos tartalomban, de átfogalmaz
+va más forrásból átvettem, egyértelműen, a forrás megadásával megjelöltem.
+\end_layout
+
+\begin_layout Standard
+Kijelentem továbbá, hogy az értekezés készítésekor az önálló kutatómunka
+ kitétel tekintetében témavezetőmet nem tévesztettem meg.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Budapest, 2024.
+ április 9.
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+makebox[65mm]{
+\backslash
+dotfill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primusz Péter
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Köszönetnyilvánítás
+\end_layout
+
+\begin_layout Standard
+Ezúton szeretnék köszönet mondani mindazoknak, akik segítették a disszertáció
+ elkészítését.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Elsősorban 
+\emph on
+Feleségemnek 
+\emph default
+köszönöm
+\emph on
+ 
+\emph default
+a végtelen türelmét, a támogatását és a kutatómunkához elengedhetetlen nyugodt
+ otthon megteremtését immár másodszor.
+ Nélküled nem ment volna!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Köszönetemet szeretném kifejezni témavezetőmnek, 
+\emph on
+Tóth Csabának
+\emph default
+, hogy mindvégig támogatott, emberileg megértett és segítette munkámat,
+ ahogy csak tudta.
+ Hálás vagyok azért, hogy egy rövid ideig részese lehettem az Út és Vasútépítési
+ Tanszék életének.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Köszönetet szeretnék mondani 
+\emph on
+Péterfalvi Józsefnek
+\emph default
+, aki az útpályaszerkezetekkel kapcsolatos érdeklődésemet és a műegyetemi
+ tanulmányaimat mindig támogatta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Köszönöm jelenlegi és volt kollégáimnak – a Soproni Egyetem Geomatikai és
+ Kultúrmérnöki Intézet munkatársainak –, hogy elvégezték helyettem azokat
+ a többletfeladatokat, amelyek a dolgozat írása közben rájuk hárultak.
+ Köszi 
+\emph on
+Balázs
+\emph default
+!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Köszönet végül mindazoknak, akik hittek és még mindig hisznek bennem...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Childonly
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "literature_phd"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
